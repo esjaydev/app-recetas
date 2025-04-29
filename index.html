@@ -22,20 +22,6 @@
 					</select>
 				</div>
 				<div class="nav-item-block">
-					<label for="input-proteina">Proteina</label>
-					<select name="input-proteina" id="input-proteina" class="nav-item">
-						<option value="">Selecciona una proteína</option>
-						<option value="res">Res</option>
-						<option value="pollo">Pollo</option>
-						<option value="cerdo">Cerdo</option>
-						<option value="Pescado">Pescado</option>
-						<option value="Mariscos">Mariscos</option>
-						<option value="Pavo">Pavo</option>
-						<option value="no-proteina">Sin carne / vegetariano</option>
-						<option value="proteina-cualquiera">Cualquiera</option>
-					</select>
-				</div>
-				<div class="nav-item-block">
 					<label for="input-tiempo">Tiempo de preparación</label>
 					<select name="input-tiempo" id="input-tiempo" class="nav-item">
 						<option value="">¿Cuánto tiempo tienes?</option>
@@ -43,6 +29,40 @@
 						<option value="moderado">Moderado <span class="small-txt">De 20 a 40 min.</span></option>
 						<option value="extendido">Extendido <span class="small-txt">De 40 a 120 min.</span></option>
 					</select>
+				</div>
+				<div class="nav-item-block">
+					<details class="input-ingredientes">
+						<summary>Ingredientes que tengo</summary>
+						<details class="input-ingredientes-grupo">
+							<summary>Carnes</summary>
+							
+						</details>
+						<details class="input-ingredientes-grupo">
+							<summary>Lácteos</summary>
+						</details>
+						<details class="input-ingredientes-grupo">
+							<summary>Frutas</summary>
+						</details>
+						<details class="input-ingredientes-grupo">
+							<summary>Vegetales</summary>
+							<div class="input-ing-cont">
+								<input type="checkbox" id="zanahoria">
+								<label for="zanahoria" class="input-ing">
+									<img src="./media/ingredientes/zanahoria.png" alt="zanahoria">
+									<span>Zanahoria</span>
+								</label>
+							</div>
+						</details>
+						<details class="input-ingredientes-grupo">
+							<summary>Cereales</summary>
+						</details>
+						<details class="input-ingredientes-grupo">
+							<summary>Legumbres</summary>
+						</details>
+						<details class="input-ingredientes-grupo">
+							<summary>Grasas, aceites y mantequilla.</summary>
+						</details>
+					</details>
 				</div>
 				<button class="primary" id="mostrar-recetas">Muéstrame recetas</button>
 			</nav>
