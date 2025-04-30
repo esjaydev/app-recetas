@@ -1,72 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>App Recetas</title>
-		<link rel="stylesheet" href="./styles.css" />
-	</head>
-	<body>
-		<div class="container">
-			<h1>App Recetas</h1>
-			<nav>
-				<div class="nav-item-block">
-					<label for="categoria">Categoría</label>
-					<select name="categoria" id="input-categoria" class="nav-item">
-						<option value="">Selecciona una categoría</option>
-						<option value="desayunos">Desayuno</option>
-						<option value="comidas">Comida</option>
-						<option value="cenas">Cena</option>
-						<option value="botanas">Botanas y Aderezos</option>
-						<option value="categoria-cualquiera">Cualquiera</option>
-					</select>
-				</div>
-				<div class="nav-item-block">
-					<label for="input-tiempo">Tiempo de preparación</label>
-					<select name="input-tiempo" id="input-tiempo" class="nav-item">
-						<option value="">¿Cuánto tiempo tienes?</option>
-						<option value="rapido">Rápido <span class="small-txt">De 5 a 20 min.</span></option>
-						<option value="moderado">Moderado <span class="small-txt">De 20 a 40 min.</span></option>
-						<option value="extendido">Extendido <span class="small-txt">De 40 a 120 min.</span></option>
-					</select>
-				</div>
-				<div class="nav-item-block">
-					<details class="input-ingredientes">
-						<summary>Ingredientes que tengo</summary>
-						<details class="input-ingredientes-grupo">
-							<summary>Carnes</summary>
-							
-						</details>
-						<details class="input-ingredientes-grupo">
-							<summary>Lácteos</summary>
-						</details>
-						<details class="input-ingredientes-grupo">
-							<summary>Frutas</summary>
-						</details>
-						<details class="input-ingredientes-grupo">
-							<summary>Vegetales</summary>
-							<div class="input-ing-cont">
-								<input type="checkbox" id="zanahoria">
-								<label for="zanahoria" class="input-ing">
-									<img src="./media/ingredientes/zanahoria.png" alt="zanahoria">
-									<span>Zanahoria</span>
-								</label>
-							</div>
-						</details>
-						<details class="input-ingredientes-grupo">
-							<summary>Cereales</summary>
-						</details>
-						<details class="input-ingredientes-grupo">
-							<summary>Legumbres</summary>
-						</details>
-						<details class="input-ingredientes-grupo">
-							<summary>Grasas, aceites y mantequilla.</summary>
-						</details>
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>App Recetas</title>
+	<link rel="stylesheet" href="./reset.css">
+	<link rel="stylesheet" href="./styles.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+		rel="stylesheet">
+</head>
+
+<body>
+	<div class="container">
+		<h1 class="logo">App Recetas</h1>
+		<nav>
+			<div class="nav-item-block">
+				<label for="categoria">Categoría</label>
+				<select name="categoria" id="input-categoria" class="nav-item">
+					<option value="">Selecciona una categoría</option>
+					<option value="desayunos">Desayuno</option>
+					<option value="comidas">Comida</option>
+					<option value="cenas">Cena</option>
+					<option value="botanas">Botanas y Aderezos</option>
+					<option value="categoria-cualquiera">Cualquiera</option>
+				</select>
+			</div>
+			<div class="nav-item-block">
+				<label for="input-tiempo">Tiempo de preparación</label>
+				<select name="input-tiempo" id="input-tiempo" class="nav-item">
+					<option value="">¿Cuánto tiempo tienes?</option>
+					<option value="rapido">Rápido <span class="small-txt">De 5 a 20 min.</span></option>
+					<option value="moderado">Moderado <span class="small-txt">De 20 a 40 min.</span></option>
+					<option value="extendido">Extendido <span class="small-txt">De 40 a 120 min.</span></option>
+				</select>
+			</div>
+			<div class="nav-item-block">
+				<details class="input-ingredientes">
+					<summary>Ingredientes que tengo</summary>
+					<details class="input-ingredientes-grupo">
+						<summary>Carnes</summary>
+
 					</details>
-				</div>
-				<button class="primary" id="mostrar-recetas">Muéstrame recetas</button>
-			</nav>
-		</div>
-	</body>
-	<script src="./scripts.js"></script>
+					<details class="input-ingredientes-grupo">
+						<summary>Lácteos</summary>
+					</details>
+					<details class="input-ingredientes-grupo">
+						<summary>Frutas</summary>
+					</details>
+					<details class="input-ingredientes-grupo">
+						<summary>Vegetales</summary>
+						<div class="input-ing-cont">
+							<input type="checkbox" id="zanahoria">
+							<label for="zanahoria" class="input-ing">
+								<img src="./media/ingredientes/zanahoria.png" alt="zanahoria">
+								<span>Zanahoria</span>
+							</label>
+						</div>
+					</details>
+					<details class="input-ingredientes-grupo">
+						<summary>Cereales</summary>
+					</details>
+					<details class="input-ingredientes-grupo">
+						<summary>Legumbres</summary>
+					</details>
+					<details class="input-ingredientes-grupo">
+						<summary>Grasas, aceites y mantequilla.</summary>
+					</details>
+				</details>
+			</div>
+			<button class="primary" id="mostrar-recetas">Muéstrame recetas</button>
+		</nav>
+	</div>
+</body>
+<script src="./scripts.js"></script>
+
 </html>
