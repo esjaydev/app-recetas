@@ -74,3 +74,6 @@ h6 {
 #__next {
     isolation: isolate;
 }
+*{      
+    -webkit-tap-highlight-color: transparent;
+     }
