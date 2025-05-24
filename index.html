@@ -1,143 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>App Recetas</title>
+    <link rel="stylesheet" href="./reset.css" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>App Recetas</title>
-	<link rel="stylesheet" href="./reset.css">
-	<link rel="stylesheet" href="./styles.css">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link
-		href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
-		rel="stylesheet">
-</head>
-
-<body>
-	<div class="container">
-		<header>
-			<h1 class="logo">App Recetas</h1>
-			<p>La App para cuando quieres ver recetas.</p>
-		</header>
-		<nav>
-			<div class="seccion-flex">
-				<div class="nav-item-block">
-					<label for="categoria">Categoría</label>
-					<select name="categoria" id="input-categoria" class="nav-item">
-						<option value="">Selecciona una categoría</option>
-						<option value="desayunos">Desayuno</option>
-						<option value="comidas">Comida</option>
-						<option value="cenas">Cena</option>
-						<option value="botanas">Botanas y Aderezos</option>
-						<option value="categoria-cualquiera">Cualquiera</option>
-					</select>
-				</div>
-				<div class="nav-item-block">
-					<label for="input-tiempo">Tiempo de preparación</label>
-					<select name="input-tiempo" id="input-tiempo" class="nav-item">
-						<option value="">¿Cuánto tiempo tienes?</option>
-						<option value="rapido">Rápido <span class="small-txt">De 5 a 20 min.</span></option>
-						<option value="moderado">Moderado <span class="small-txt">De 20 a 40 min.</span></option>
-						<option value="extendido">Extendido <span class="small-txt">De 40 a 120 min.</span></option>
-					</select>
-				</div>
-			</div>
-			<div class="ingredientes-block">
-				<label>Ingredientes que tengo</label>
-				<div>
-					<details class="ingredientes-grupo">
-						<summary class="ingredientes-grupo-titulo">Carnes</summary>
-					</details>
-					<details class="ingredientes-grupo">
-						<summary class="ingredientes-grupo-titulo">Lácteos</summary>
-					</details>
-					<details class="ingredientes-grupo">
-						<summary class="ingredientes-grupo-titulo">Frutas</summary>
-					</details>
-					<details class="ingredientes-grupo">
-						<summary class="ingredientes-grupo-titulo">Vegetales</summary>
-						<div class="ingredientes-contenido">
-							<div class="ingrediente">
-								<input type="checkbox" id="brocoli">
-								<label for="brocoli" class="input-ingrediente">
-									<img src="./media/ingredientes/broccoli.png" alt="Brócoli">
-									<span>Brócoli</span>
-								</label>
-							</div>
-							<div class="ingrediente">
-								<input type="checkbox" id="cebolla">
-								<label for="cebolla" class="input-ingrediente">
-									<img src="./media/ingredientes/cebolla.png" alt="Cebolla">
-									<span>Cebolla</span>
-								</label>
-							</div>
-							<div class="ingrediente">
-								<input type="checkbox" id="lechuga">
-								<label for="lechuga" class="input-ingrediente">
-									<img src="./media/ingredientes/lechuga.png" alt="Lechuga">
-									<span>Lechuga</span>
-								</label>
-							</div>
-							<div class="ingrediente">
-								<input type="checkbox" id="zanahoria">
-								<label for="zanahoria" class="input-ingrediente">
-									<img src="./media/ingredientes/zanahoria.png" alt="Zanahoria">
-									<span>Zanahoria</span>
-								</label>
-							</div>
-							<div class="ingrediente">
-								<input type="checkbox" id="pimiento">
-								<label for="pimiento" class="input-ingrediente">
-									<img src="./media/ingredientes/pimiento.png" alt="Pimiento">
-									<span>Pimiento</span>
-								</label>
-							</div>
-							<div class="ingrediente">
-								<input type="checkbox" id="pepino">
-								<label for="pepino" class="input-ingrediente">
-									<img src="./media/ingredientes/pepino.png" alt="Pepino">
-									<span>Pepino</span>
-								</label>
-							</div>
-							<div class="ingrediente">
-								<input type="checkbox" id="coliflor">
-								<label for="coliflor" class="input-ingrediente">
-									<img src="./media/ingredientes/coliflor.png" alt="Coliflor">
-									<span>Coliflor</span>
-								</label>
-							</div>
-							<div class="ingrediente">
-								<input type="checkbox" id="berenjena">
-								<label for="berenjena" class="input-ingrediente">
-									<img src="./media/ingredientes/berenjena.png" alt="Berenjena">
-									<span>Berenjena</span>
-								</label>
-							</div>
-							<div class="ingrediente">
-								<input type="checkbox" id="espinaca">
-								<label for="espinaca" class="input-ingrediente">
-									<img src="./media/ingredientes/espinaca.png" alt="Espinaca">
-									<span>Espinaca</span>
-								</label>
-							</div>
-						</div>
-					</details>
-					<details class="ingredientes-grupo">
-						<summary class="ingredientes-grupo-titulo">Cereales</summary>
-					</details>
-					<details class="ingredientes-grupo">
-						<summary class="ingredientes-grupo-titulo">Legumbres</summary>
-					</details>
-					<details class="ingredientes-grupo">
-						<summary class="ingredientes-grupo-titulo">Grasas, aceites y mantequilla.</summary>
-					</details>
-				</div>
-			</div>
-			<button class="primary" id="mostrar-recetas">Muéstrame recetas</button>
-		</nav>
-	</div>
-</body>
-<script src="./scripts.js"></script>
-
+  <body>
+    <div class="container">
+      <header>
+        <h1 class="logo">App Recetas</h1>
+        <p>La App para cuando quieres ver recetas.</p>
+      </header>
+      <nav>
+        <div class="seccion-flex">
+          <div class="nav-item-block">
+            <label for="categoria">Categoría</label>
+            <select name="categoria" id="input-categoria" class="nav-item">
+              <option value="">Selecciona una categoría</option>
+              <option value="desayunos">🥞 Desayuno</option>
+              <option value="comidas">🍝 Comida</option>
+              <option value="cenas">🥘 Cena</option>
+              <option value="botanas">🍟 Botanas y Aderezos</option>
+              <option value="categoria-cualquiera">🤷 Cualquiera</option>
+            </select>
+          </div>
+          <div class="nav-item-block">
+            <label for="input-tiempo">Tiempo de preparación</label>
+            <select name="input-tiempo" id="input-tiempo" class="nav-item">
+              <option value="">¿Cuánto tiempo tienes?</option>
+              <option value="rapido">
+                Rápido <span class="small-txt">De 5 a 20 min.</span>
+              </option>
+              <option value="moderado">
+                Moderado <span class="small-txt">De 20 a 40 min.</span>
+              </option>
+              <option value="extendido">
+                Extendido <span class="small-txt">De 40 a 120 min.</span>
+              </option>
+            </select>
+          </div>
+        </div>
+        <div class="ingredientes-block">
+          <label>Ingredientes que tengo</label>
+          <div>
+            <details class="ingredientes-grupo">
+              <summary class="ingredientes-grupo-titulo">Carnes</summary>
+              <div class="ingredientes-contenido" id="seccion-carnes"></div>
+            </details>
+            <details class="ingredientes-grupo">
+              <summary class="ingredientes-grupo-titulo">Lácteos</summary>
+              <div class="ingredientes-contenido" id="seccion-lacteos"></div>
+            </details>
+            <details class="ingredientes-grupo">
+              <summary class="ingredientes-grupo-titulo">Frutas</summary>
+              <div class="ingredientes-contenido" id="seccion-frutas"></div>
+            </details>
+            <details class="ingredientes-grupo">
+              <summary class="ingredientes-grupo-titulo">Vegetales</summary>
+              <div class="ingredientes-contenido" id="seccion-vegetales">
+                <div class="ingrediente">
+                  <input type="checkbox" id="brocoli" />
+                  <label for="brocoli" class="input-ingrediente">
+                    <img
+                      src="./media/ingredientes/broccoli.png"
+                      alt="Brócoli"
+                    />
+                    <span>Brócoli</span>
+                  </label>
+                </div>
+                <div class="ingrediente">
+                  <input type="checkbox" id="cebolla" />
+                  <label for="cebolla" class="input-ingrediente">
+                    <img src="./media/ingredientes/cebolla.png" alt="Cebolla" />
+                    <span>Cebolla</span>
+                  </label>
+                </div>
+                <div class="ingrediente">
+                  <input type="checkbox" id="lechuga" />
+                  <label for="lechuga" class="input-ingrediente">
+                    <img src="./media/ingredientes/lechuga.png" alt="Lechuga" />
+                    <span>Lechuga</span>
+                  </label>
+                </div>
+                <div class="ingrediente">
+                  <input type="checkbox" id="zanahoria" />
+                  <label for="zanahoria" class="input-ingrediente">
+                    <img
+                      src="./media/ingredientes/zanahoria.png"
+                      alt="Zanahoria"
+                    />
+                    <span>Zanahoria</span>
+                  </label>
+                </div>
+                <div class="ingrediente">
+                  <input type="checkbox" id="pimiento" />
+                  <label for="pimiento" class="input-ingrediente">
+                    <img
+                      src="./media/ingredientes/pimiento.png"
+                      alt="Pimiento"
+                    />
+                    <span>Pimiento</span>
+                  </label>
+                </div>
+                <div class="ingrediente">
+                  <input type="checkbox" id="pepino" />
+                  <label for="pepino" class="input-ingrediente">
+                    <img src="./media/ingredientes/pepino.png" alt="Pepino" />
+                    <span>Pepino</span>
+                  </label>
+                </div>
+                <div class="ingrediente">
+                  <input type="checkbox" id="coliflor" />
+                  <label for="coliflor" class="input-ingrediente">
+                    <img
+                      src="./media/ingredientes/coliflor.png"
+                      alt="Coliflor"
+                    />
+                    <span>Coliflor</span>
+                  </label>
+                </div>
+                <div class="ingrediente">
+                  <input type="checkbox" id="berenjena" />
+                  <label for="berenjena" class="input-ingrediente">
+                    <img
+                      src="./media/ingredientes/berenjena.png"
+                      alt="Berenjena"
+                    />
+                    <span>Berenjena</span>
+                  </label>
+                </div>
+                <div class="ingrediente">
+                  <input type="checkbox" id="espinaca" />
+                  <label for="espinaca" class="input-ingrediente">
+                    <img
+                      src="./media/ingredientes/espinaca.png"
+                      alt="Espinaca"
+                    />
+                    <span>Espinaca</span>
+                  </label>
+                </div>
+              </div>
+            </details>
+            <details class="ingredientes-grupo">
+              <summary class="ingredientes-grupo-titulo">Cereales</summary>
+              <div class="ingredientes-contenido" id="seccion-cereales"></div>
+            </details>
+            <details class="ingredientes-grupo">
+              <summary class="ingredientes-grupo-titulo">Legumbres</summary>
+              <div class="ingredientes-contenido" id="seccion-legumbres"></div>
+            </details>
+            <details class="ingredientes-grupo">
+              <summary class="ingredientes-grupo-titulo">
+                Grasas, aceites y mantequilla.
+              </summary>
+              <div class="ingredientes-contenido" id="seccion-legumbres"></div>
+            </details>
+          </div>
+        </div>
+        <button class="primary" id="mostrar-recetas">Muéstrame recetas</button>
+      </nav>
+    </div>
+  </body>
+  <script src="./scripts.js"></script>
 </html>
