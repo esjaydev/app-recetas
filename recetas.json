@@ -1,0 +1,172 @@
+[
+  {
+    "titulo": "Tacos al pastor",
+    "tiempoPreparacion": 90,
+    "ingredientesObligatorios": [
+      { "ingrediente": "carne de cerdo", "tipoDePorcion": "gramos", "porcion": 500 },
+      { "ingrediente": "piña", "tipoDePorcion": "gramos", "porcion": 100 }
+    ],
+    "ingredientesOpcionales": [
+      { "ingrediente": "cilantro", "tipoDePorcion": "ramas", "porcion": 5 },
+      { "ingrediente": "cebolla", "tipoDePorcion": "gramos", "porcion": 50 }
+    ],
+    "pasos": [
+      "Marinar la carne con achiote y especias.",
+      "Asar la carne y la piña.",
+      "Servir en tortillas con cilantro y cebolla."
+    ]
+  },
+  {
+    "titulo": "Pozole rojo",
+    "tiempoPreparacion": 180,
+    "ingredientesObligatorios": [
+      { "ingrediente": "carne de cerdo", "tipoDePorcion": "gramos", "porcion": 600 },
+      { "ingrediente": "maíz para pozole", "tipoDePorcion": "gramos", "porcion": 400 }
+    ],
+    "ingredientesOpcionales": [
+      { "ingrediente": "lechuga", "tipoDePorcion": "hojas", "porcion": 4 },
+      { "ingrediente": "rábanos", "tipoDePorcion": "unidades", "porcion": 3 }
+    ],
+    "pasos": [
+      "Cocer la carne y el maíz por separado.",
+      "Preparar la salsa roja y añadirla al caldo.",
+      "Servir con lechuga y rábanos."
+    ]
+  },
+  {
+    "titulo": "Chiles en nogada",
+    "tiempoPreparacion": 150,
+    "ingredientesObligatorios": [
+      { "ingrediente": "chiles poblanos", "tipoDePorcion": "unidades", "porcion": 4 },
+      { "ingrediente": "carne molida", "tipoDePorcion": "gramos", "porcion": 400 }
+    ],
+    "ingredientesOpcionales": [
+      { "ingrediente": "granada", "tipoDePorcion": "gramos", "porcion": 50 },
+      { "ingrediente": "nuez", "tipoDePorcion": "gramos", "porcion": 100 }
+    ],
+    "pasos": [
+      "Asar y pelar los chiles.",
+      "Preparar el relleno de carne con frutas.",
+      "Cubrir con nogada y decorar con granada."
+    ]
+  },
+  {
+    "titulo": "Enchiladas verdes",
+    "tiempoPreparacion": 60,
+    "ingredientesObligatorios": [
+      { "ingrediente": "tortillas de maíz", "tipoDePorcion": "unidades", "porcion": 8 },
+      { "ingrediente": "pollo deshebrado", "tipoDePorcion": "gramos", "porcion": 300 }
+    ],
+    "ingredientesOpcionales": [
+      { "ingrediente": "crema", "tipoDePorcion": "cucharadas", "porcion": 4 },
+      { "ingrediente": "queso fresco", "tipoDePorcion": "gramos", "porcion": 100 }
+    ],
+    "pasos": [
+      "Preparar salsa verde con tomatillo.",
+      "Rellenar tortillas con pollo.",
+      "Cubrir con salsa y hornear."
+    ]
+  },
+  {
+    "titulo": "Tamales de elote",
+    "tiempoPreparacion": 120,
+    "ingredientesObligatorios": [
+      { "ingrediente": "elotes", "tipoDePorcion": "unidades", "porcion": 6 },
+      { "ingrediente": "manteca", "tipoDePorcion": "gramos", "porcion": 150 }
+    ],
+    "ingredientesOpcionales": [
+      { "ingrediente": "azúcar", "tipoDePorcion": "gramos", "porcion": 50 },
+      { "ingrediente": "canela", "tipoDePorcion": "cucharaditas", "porcion": 1 }
+    ],
+    "pasos": [
+      "Moldear la masa de elote.",
+      "Agregar azúcar y manteca.",
+      "Cocer en hojas de maíz al vapor."
+    ]
+  },
+  {
+    "titulo": "Sopes mexicanos",
+    "tiempoPreparacion": 45,
+    "ingredientesObligatorios": [
+      { "ingrediente": "masa de maíz", "tipoDePorcion": "gramos", "porcion": 400 },
+      { "ingrediente": "frijoles refritos", "tipoDePorcion": "gramos", "porcion": 200 }
+    ],
+    "ingredientesOpcionales": [
+      { "ingrediente": "lechuga", "tipoDePorcion": "hojas", "porcion": 3 },
+      { "ingrediente": "queso rallado", "tipoDePorcion": "gramos", "porcion": 50 }
+    ],
+    "pasos": [
+      "Formar y freír los sopes.",
+      "Untar frijoles y añadir ingredientes.",
+      "Servir con crema y salsa."
+    ]
+  },
+  {
+    "titulo": "Mole poblano",
+    "tiempoPreparacion": 180,
+    "ingredientesObligatorios": [
+      { "ingrediente": "pollo", "tipoDePorcion": "gramos", "porcion": 500 },
+      { "ingrediente": "pasta de mole", "tipoDePorcion": "gramos", "porcion": 200 }
+    ],
+    "ingredientesOpcionales": [
+      { "ingrediente": "ajonjolí", "tipoDePorcion": "gramos", "porcion": 20 },
+      { "ingrediente": "chocolate", "tipoDePorcion": "gramos", "porcion": 30 }
+    ],
+    "pasos": [
+      "Cocer el pollo.",
+      "Preparar mole con chocolate y pasta.",
+      "Servir con arroz y espolvorear ajonjolí."
+    ]
+  },
+  {
+    "titulo": "Tostadas de tinga",
+    "tiempoPreparacion": 60,
+    "ingredientesObligatorios": [
+      { "ingrediente": "pollo", "tipoDePorcion": "gramos", "porcion": 400 },
+      { "ingrediente": "jitomate", "tipoDePorcion": "gramos", "porcion": 300 }
+    ],
+    "ingredientesOpcionales": [
+      { "ingrediente": "cebolla", "tipoDePorcion": "gramos", "porcion": 100 },
+      { "ingrediente": "aguacate", "tipoDePorcion": "unidades", "porcion": 1 }
+    ],
+    "pasos": [
+      "Sofreír cebolla y jitomate.",
+      "Añadir pollo y cocinar.",
+      "Servir sobre tostadas con aguacate."
+    ]
+  },
+  {
+    "titulo": "Quesadillas de flor de calabaza",
+    "tiempoPreparacion": 40,
+    "ingredientesObligatorios": [
+      { "ingrediente": "tortillas de maíz", "tipoDePorcion": "unidades", "porcion": 6 },
+      { "ingrediente": "flor de calabaza", "tipoDePorcion": "gramos", "porcion": 200 }
+    ],
+    "ingredientesOpcionales": [
+      { "ingrediente": "queso Oaxaca", "tipoDePorcion": "gramos", "porcion": 150 },
+      { "ingrediente": "epazote", "tipoDePorcion": "hojas", "porcion": 5 }
+    ],
+    "pasos": [
+      "Saltear flor con epazote.",
+      "Rellenar tortillas con queso y flor.",
+      "Dorar en comal."
+    ]
+  },
+  {
+    "titulo": "Chilaquiles rojos",
+    "tiempoPreparacion": 35,
+    "ingredientesObligatorios": [
+      { "ingrediente": "totopos", "tipoDePorcion": "gramos", "porcion": 200 },
+      { "ingrediente": "salsa roja", "tipoDePorcion": "mililitros", "porcion": 300 }
+    ],
+    "ingredientesOpcionales": [
+      { "ingrediente": "crema", "tipoDePorcion": "cucharadas", "porcion": 3 },
+      { "ingrediente": "queso fresco", "tipoDePorcion": "gramos", "porcion": 50 }
+    ],
+    "pasos": [
+      "Calentar la salsa y añadir los totopos.",
+      "Cocinar hasta que se suavicen.",
+      "Servir con crema y queso."
+    ]
+  }
+]
