@@ -7,7 +7,16 @@ let alimentos = {
   Legumbres: ["Frijoles", "Lentejas", "Soya", "Chicharos"],
   Grasas: ["Aceite de oliva", "Manteca", "Aguacate", "Nueces", "Aceite Vegetal"]
 }
+async function cargarRecetas(ingredientesUsuario) {
+  try {
+    const response = await fetch('./recetas.json');
+    const recetas = await response.json();
 
+
+  } catch (error) {
+    console.error('Error cargando recetas:', error);
+  }
+}
 let inputCategoria = document.getElementById('input-categoria')
 let inputTiempo = document.getElementById('input-tiempo')
 
@@ -19,34 +28,34 @@ let seccionCereales = document.getElementById('seccion-cereales')
 let seccionLegumbres = document.getElementById('seccion-legumbres')
 let seccionGrasas = document.getElementById('seccion-grasas')
 
-function mostrarIngredientesInputs(seccion, tipo){
-    tipo.forEach(e => {      
-        const ingrediente = document.createElement('div')
-        ingrediente.setAttribute('class', 'ingrediente')
-        
-        const ingredienteCheckBox = document.createElement('input')
-        ingredienteCheckBox.type = 'checkbox'
-        ingredienteCheckBox.setAttribute('id', e)
-        ingredienteCheckBox.setAttribute('class', 'checkboxes-inputs')
+function mostrarIngredientesInputs(seccion, tipo) {
+  tipo.forEach(e => {
+    const ingrediente = document.createElement('div')
+    ingrediente.setAttribute('class', 'ingrediente')
 
-        const labelIngrediente = document.createElement('label')
-        labelIngrediente.setAttribute('for', e)
-        labelIngrediente.setAttribute('class', 'input-ingrediente')
+    const ingredienteCheckBox = document.createElement('input')
+    ingredienteCheckBox.type = 'checkbox'
+    ingredienteCheckBox.setAttribute('id', e)
+    ingredienteCheckBox.setAttribute('class', 'checkboxes-inputs')
 
-        const iconoIngrediente = document.createElement('img')
-        iconoIngrediente.src = `./media/ingredientes/${e}.png`
-        iconoIngrediente.alt = e
-        
-        const nombreIngrediente = document.createElement('span')
-        nombreIngrediente.innerText = e
-        
-        ingrediente.appendChild(ingredienteCheckBox)
-        labelIngrediente.appendChild(iconoIngrediente)
-        labelIngrediente.appendChild(nombreIngrediente)
-        ingrediente.appendChild(labelIngrediente)
-                seccion.appendChild(ingrediente)
-            })
-    
+    const labelIngrediente = document.createElement('label')
+    labelIngrediente.setAttribute('for', e)
+    labelIngrediente.setAttribute('class', 'input-ingrediente')
+
+    const iconoIngrediente = document.createElement('img')
+    iconoIngrediente.src = `./media/ingredientes/${e}.png`
+    iconoIngrediente.alt = e
+
+    const nombreIngrediente = document.createElement('span')
+    nombreIngrediente.innerText = e
+
+    ingrediente.appendChild(ingredienteCheckBox)
+    labelIngrediente.appendChild(iconoIngrediente)
+    labelIngrediente.appendChild(nombreIngrediente)
+    ingrediente.appendChild(labelIngrediente)
+    seccion.appendChild(ingrediente)
+  })
+
 }
 mostrarIngredientesInputs(seccionVegetales, alimentos.Vegetales)
 mostrarIngredientesInputs(seccionCarnes, alimentos.Carnes)
@@ -58,21 +67,24 @@ mostrarIngredientesInputs(seccionGrasas, alimentos.Grasas)
 
 let checkboxesInputs = document.querySelectorAll('.checkboxes-inputs')
 const botonMostrarRecetas = document.getElementById('mostrar-recetas')
-botonMostrarRecetas.addEventListener('click', function(){
-  console.log(`Mostrar recetas que se realicen ${inputTiempo.value}`);
-  console.log(`Mostrar recetas para ${inputCategoria.value}`);
-  
+
+botonMostrarRecetas.addEventListener('click', function () {
+  let ingredientesInput = []
   checkboxesInputs.forEach(e => {
-    if(e.checked == true){
-      console.log(e.id);
-    } 
+    if (e.checked == true) {
+      ingredientesInput.push(e.id)
+    }
   })
+  cargarRecetas(ingredientesInput)
+  console.log(ingredientesInput);
 })
 
-// const recetasFiltradas = recetas.filter(receta =>
-//   ingredientesBuscados.every(ingBuscado =>
-//     receta.ingredientesObligatorios.some(ing =>
-//       ing.ingrediente === ingBuscado
-//     )
-//   )
-// );
+
+/*
+const recetasFiltradas = recetas.filter(receta =>
+  ingredientesBuscados.every(ingBuscado =>
+    receta.ingredientesObligatorios.some(ing =>
+      ing.ingrediente === ingBuscado
+    )
+  )
+)*/
