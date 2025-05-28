@@ -1,21 +1,51 @@
 let alimentos = {
-  Carnes: ["Pollo", "Res", "Cerdo", "Cordero", "Pavo", "Pescado"],
-  Lácteos: ["Leche", "Queso", "Yogurt", "Mantequilla", "Crema"],
-  Frutas: ["Manzana", "Banana", "Naranja", "Uva", "Fresa", "Piña"],
-  Vegetales: ["Zanahoria", "Espinaca", "Lechuga", "Brócoli", "Pepino", "Pimiento"],
-  Cereales: ["Arroz", "Harina de Trigo", "Avena", "Harina de Maíz", "Elote", "Cebada"],
-  Legumbres: ["Frijoles", "Lentejas", "Soya", "Chicharos"],
-  Grasas: ["Aceite de oliva", "Manteca", "Aguacate", "Nueces", "Aceite Vegetal"]
+	Carnes: ['Pollo', 'Res', 'Cerdo', 'Cordero', 'Pavo', 'Pescado'],
+	Lácteos: ['Leche', 'Queso', 'Yogurt', 'Mantequilla', 'Crema'],
+	Frutas: ['Manzana', 'Banana', 'Naranja', 'Uva', 'Fresa', 'Piña'],
+	Vegetales: [
+		'Zanahoria',
+		'Espinaca',
+		'Lechuga',
+		'Brócoli',
+		'Pepino',
+		'Pimiento',
+	],
+	Cereales: [
+		'Arroz',
+		'Harina de Trigo',
+		'Avena',
+		'Harina de Maíz',
+		'Elote',
+		'Cebada',
+	],
+	Legumbres: ['Frijoles', 'Lentejas', 'Soya', 'Chicharos'],
+	Grasas: [
+		'Aceite de oliva',
+		'Manteca',
+		'Aguacate',
+		'Nueces',
+		'Aceite Vegetal',
+	],
 }
-async function cargarRecetas(ingredientesUsuario) {
-  try {
-    const response = await fetch('./recetas.json');
-    const recetas = await response.json();
-
-
-  } catch (error) {
-    console.error('Error cargando recetas:', error);
-  }
+async function buscarRecetas(ingredientesUsuario) {
+	try {
+		const response = await fetch('./recetas.json')
+		const recetas = await response.json()
+		recetas.forEach((e) => {
+			let resultadosIngredientes = []
+			let revision = e.ingredientes.obligatoria.some(
+				checkIngrediente(ing)
+			)
+			if (revision == true) {
+				resultadosIngredientes.push(e)
+			}
+			function checkIngrediente(ing) {
+				return (ing = true)
+			}
+		})
+	} catch (error) {
+		console.error('Error cargando recetas:', error)
+	}
 }
 let inputCategoria = document.getElementById('input-categoria')
 let inputTiempo = document.getElementById('input-tiempo')
@@ -29,33 +59,32 @@ let seccionLegumbres = document.getElementById('seccion-legumbres')
 let seccionGrasas = document.getElementById('seccion-grasas')
 
 function mostrarIngredientesInputs(seccion, tipo) {
-  tipo.forEach(e => {
-    const ingrediente = document.createElement('div')
-    ingrediente.setAttribute('class', 'ingrediente')
+	tipo.forEach((e) => {
+		const ingrediente = document.createElement('div')
+		ingrediente.setAttribute('class', 'ingrediente')
 
-    const ingredienteCheckBox = document.createElement('input')
-    ingredienteCheckBox.type = 'checkbox'
-    ingredienteCheckBox.setAttribute('id', e)
-    ingredienteCheckBox.setAttribute('class', 'checkboxes-inputs')
+		const ingredienteCheckBox = document.createElement('input')
+		ingredienteCheckBox.type = 'checkbox'
+		ingredienteCheckBox.setAttribute('id', e)
+		ingredienteCheckBox.setAttribute('class', 'checkboxes-inputs')
 
-    const labelIngrediente = document.createElement('label')
-    labelIngrediente.setAttribute('for', e)
-    labelIngrediente.setAttribute('class', 'input-ingrediente')
+		const labelIngrediente = document.createElement('label')
+		labelIngrediente.setAttribute('for', e)
+		labelIngrediente.setAttribute('class', 'input-ingrediente')
 
-    const iconoIngrediente = document.createElement('img')
-    iconoIngrediente.src = `./media/ingredientes/${e}.png`
-    iconoIngrediente.alt = e
+		const iconoIngrediente = document.createElement('img')
+		iconoIngrediente.src = `./media/ingredientes/${e}.png`
+		iconoIngrediente.alt = e
 
-    const nombreIngrediente = document.createElement('span')
-    nombreIngrediente.innerText = e
+		const nombreIngrediente = document.createElement('span')
+		nombreIngrediente.innerText = e
 
-    ingrediente.appendChild(ingredienteCheckBox)
-    labelIngrediente.appendChild(iconoIngrediente)
-    labelIngrediente.appendChild(nombreIngrediente)
-    ingrediente.appendChild(labelIngrediente)
-    seccion.appendChild(ingrediente)
-  })
-
+		ingrediente.appendChild(ingredienteCheckBox)
+		labelIngrediente.appendChild(iconoIngrediente)
+		labelIngrediente.appendChild(nombreIngrediente)
+		ingrediente.appendChild(labelIngrediente)
+		seccion.appendChild(ingrediente)
+	})
 }
 mostrarIngredientesInputs(seccionVegetales, alimentos.Vegetales)
 mostrarIngredientesInputs(seccionCarnes, alimentos.Carnes)
@@ -69,16 +98,8 @@ let checkboxesInputs = document.querySelectorAll('.checkboxes-inputs')
 const botonMostrarRecetas = document.getElementById('mostrar-recetas')
 
 botonMostrarRecetas.addEventListener('click', function () {
-  let ingredientesInput = []
-  checkboxesInputs.forEach(e => {
-    if (e.checked == true) {
-      ingredientesInput.push(e.id)
-    }
-  })
-  cargarRecetas(ingredientesInput)
-  console.log(ingredientesInput);
+	mostrarRecetas()
 })
-
 
 /*
 const recetasFiltradas = recetas.filter(receta =>
@@ -88,3 +109,13 @@ const recetasFiltradas = recetas.filter(receta =>
     )
   )
 )*/
+function mostrarRecetas() {
+	let ingredientesInput = []
+	checkboxesInputs.forEach((e) => {
+		if (e.checked == true) {
+			ingredientesInput.push(e.id)
+		}
+	})
+	buscarRecetas(ingredientesInput)
+	console.log(ingredientesInput)
+}
