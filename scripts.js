@@ -1,47 +1,85 @@
 let alimentos = {
-	Carnes: ['Pollo', 'Res', 'Cerdo', 'Cordero', 'Pavo', 'Pescado'],
-	Lácteos: ['Leche', 'Queso', 'Yogurt', 'Mantequilla', 'Crema'],
-	Frutas: ['Manzana', 'Banana', 'Naranja', 'Uva', 'Fresa', 'Piña'],
-	Vegetales: [
-		'Zanahoria',
-		'Espinaca',
-		'Lechuga',
-		'Brócoli',
-		'Pepino',
-		'Pimiento',
+	"Carnes": [
+		"Pollo", "Res", "Cerdo", "Cordero", "Pavo", "Pescado",
+		"Cabrito", "Venado", "Atún",
+		"Salmón", "Bacalao", "Camarón", "Langosta", "Pulpo", "Mejillón",
+		"Calamar", "Almeja"
 	],
-	Cereales: [
-		'Arroz',
-		'Harina de Trigo',
-		'Avena',
-		'Harina de Maíz',
-		'Elote',
-		'Cebada',
+	"Lácteos": [
+		"Leche", "Queso", "Yogurt", "Mantequilla", "Crema",
+		"Leche Condensada", "Leche Evaporada", "Queso Crema",
+		"Queso Parmesano", "Queso Mozzarella", "Queso Oaxaca",
+		"Queso Manchego", "Queso Cotija", "Queso Ricotta"
 	],
-	Legumbres: ['Frijoles', 'Lentejas', 'Soya', 'Chicharos'],
-	Grasas: [
-		'Aceite de oliva',
-		'Manteca',
-		'Aguacate',
-		'Nueces',
-		'Aceite Vegetal',
+	"Frutas": [
+		"Manzana", "Banana", "Naranja", "Uva", "Fresa", "Piña",
+		"Sandía", "Melón", "Papaya", "Mango", "Kiwi", "Durazno",
+		"Ciruela", "Pera", "Mandarina", "Cereza", "Frambuesa",
+		"Mora Azul", "Granada", "Coco", "Lima", "Limón"
 	],
+	"Vegetales": [
+		"Zanahoria", "Espinaca", "Lechuga", "Brócoli", "Pepino",
+		"Pimiento", "Maíz Para Pozole", "Tomate", "Cebolla",
+		"Ajo", "Coliflor", "Calabacita", "Chayote", "Nopal",
+		"Betabel", "Perejil", "Apio", "Rábano", "Champiñón",
+		"Berenjena", "Repollo", "Jitomate", "Alcachofa"
+	],
+	"Cereales": [
+		"Arroz", "Harina De Trigo", "Avena", "Harina De Maíz",
+		"Elote", "Cebada", "Trigo", "Maíz", "Centeno",
+		"Sémola", "Quinoa", "Amaranto"
+	],
+	"Legumbres": [
+		"Frijoles", "Lentejas", "Soya", "Chícharos", "Garbanzos",
+		"Alubias", "Habas"
+	],
+	"Grasas": [
+		"Aceite De Oliva", "Manteca", "Aguacate", "Nueces",
+		"Aceite Vegetal", "Aceite De Coco", "Aceite De Canola",
+		"Aceite De Girasol", "Semillas De Girasol", "Semillas De Calabaza",
+		"Almendras", "Cacahuates", "Pistaches", "Mantequilla De Maní"
+	],
+	"Salsas": [
+		"Salsa De Tomate", "Salsa Verde", "Salsa Roja", "Salsa Picante",
+		"Salsa De Soya", "Salsa Inglesa", "Salsa Barbacoa", "Salsa De Ajo",
+		"Salsa Teriyaki", "Salsa De Chile", "Salsa De Mango",
+		"Salsa De Tamarindo", "Salsa De Queso", "Salsa De Mostaza",
+		"Salsa Alfredo", "Salsa Bechamel", "Salsa De Chipotle"
+	],
+	"Especias": [
+		"Sal", "Pimienta", "Orégano", "Comino", "Cúrcuma",
+		"Canela", "Clavo", "Nuez Moscada", "Laurel", "Tomillo",
+		"Romero", "Paprika", "Chile En Polvo", "Achiote",
+		"Anís", "Cardamomo", "Jengibre", "Azafrán", "Cilantro Seco",
+		"Mostaza En Polvo", "Curry", "Hinojo"
+	]
 }
+
 async function buscarRecetas(ingredientesUsuario) {
 	try {
 		const response = await fetch('./recetas.json')
 		const recetas = await response.json()
-		recetas.forEach((r) => {
-			// let comparacion
-			r['ingredientes'].forEach(e => {
-				for (let obligatoria in e) {
-					console.log(e[obligatoria]);
-
+		let recetasFiltradas = []
+		recetas.forEach((receta) => {
+			let comparacion = receta.ingredientes.map(ingrediente => {
+				// Si el ingrediente es obligatorio, revisamos si está en la lista del usuario
+				if (ingrediente.obligatoria) {
+					return ingredientesUsuario.includes(ingrediente.ingredienteTitulo);
 				}
+				// Si no es obligatorio, lo ignoramos
+				return true;
+			});
 
-				// comparacion.push(ingredientesUsuario.includes(e))
-			})
+			// Si todos los ingredientes obligatorios están presentes, se incluye la receta
+			if (comparacion.every(valor => valor)) {
+				recetasFiltradas.push(receta);
+			}
+		});
+		recetasFiltradas.forEach(e => {
+			console.log(e);
+
 		})
+
 	} catch (error) {
 		console.error('Error cargando recetas:', error)
 	}
@@ -100,14 +138,6 @@ botonMostrarRecetas.addEventListener('click', function () {
 	mostrarRecetas()
 })
 
-/*
-const recetasFiltradas = recetas.filter(receta =>
-  ingredientesBuscados.every(ingBuscado =>
-	receta.ingredientesObligatorios.some(ing =>
-	  ing.ingrediente === ingBuscado
-	)
-  )
-)*/
 function mostrarRecetas() {
 	let ingredientesInput = []
 	checkboxesInputs.forEach((e) => {
@@ -116,5 +146,5 @@ function mostrarRecetas() {
 		}
 	})
 	buscarRecetas(ingredientesInput)
-	console.log(ingredientesInput)
+	console.log('Ingredientes de usuario: ' + ingredientesInput)
 }

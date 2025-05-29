@@ -4,10 +4,10 @@
     "titulo": "Tacos al pastor",
     "tiempoPreparacion": 90,
     "ingredientes": [
-      { "ingrediente": "carne de cerdo", "tipoDePorcion": "gramos", "porcion": 500, "obligatoria": true },
-      { "ingrediente": "piña", "tipoDePorcion": "gramos", "porcion": 100, "obligatoria": true },
-      { "ingrediente": "cilantro", "tipoDePorcion": "ramas", "porcion": 5, "obligatoria": false },
-      { "ingrediente": "cebolla", "tipoDePorcion": "gramos", "porcion": 50, "obligatoria": false }
+      { "ingredienteTitulo": "Cerdo", "tipoDePorcion": "gramos", "porcion": 500, "obligatoria": true },
+      { "ingredienteTitulo": "Piña", "tipoDePorcion": "gramos", "porcion": 100, "obligatoria": true },
+      { "ingredienteTitulo": "Cilantro", "tipoDePorcion": "ramas", "porcion": 5, "obligatoria": false },
+      { "ingredienteTitulo": "Cebolla", "tipoDePorcion": "gramos", "porcion": 50, "obligatoria": false }
     ],
     "pasos": [
       "Marinar la carne con achiote y especias.",
@@ -20,10 +20,10 @@
     "titulo": "Pozole rojo",
     "tiempoPreparacion": 180,
     "ingredientes": [
-      { "ingrediente": "carne de cerdo", "tipoDePorcion": "gramos", "porcion": 600, "obligatoria": true },
-      { "ingrediente": "maíz para pozole", "tipoDePorcion": "gramos", "porcion": 400, "obligatoria": true },
-      { "ingrediente": "lechuga", "tipoDePorcion": "hojas", "porcion": 4, "obligatoria": false },
-      { "ingrediente": "rábanos", "tipoDePorcion": "unidades", "porcion": 3, "obligatoria": false }
+      { "ingredienteTitulo": "Cerdo", "tipoDePorcion": "gramos", "porcion": 600, "obligatoria": true },
+      { "ingredienteTitulo": "Maíz para pozole", "tipoDePorcion": "gramos", "porcion": 400, "obligatoria": true },
+      { "ingredienteTitulo": "Lechuga", "tipoDePorcion": "hojas", "porcion": 4, "obligatoria": false },
+      { "ingredienteTitulo": "Rábanos", "tipoDePorcion": "unidades", "porcion": 3, "obligatoria": false }
     ],
     "pasos": [
       "Cocer la carne y el maíz por separado.",
@@ -36,10 +36,10 @@
     "titulo": "Chiles en nogada",
     "tiempoPreparacion": 150,
     "ingredientes": [
-      { "ingrediente": "chiles poblanos", "tipoDePorcion": "unidades", "porcion": 4, "obligatoria": true },
-      { "ingrediente": "carne molida", "tipoDePorcion": "gramos", "porcion": 400, "obligatoria": true },
-      { "ingrediente": "granada", "tipoDePorcion": "gramos", "porcion": 50, "obligatoria": false },
-      { "ingrediente": "nuez", "tipoDePorcion": "gramos", "porcion": 100, "obligatoria": false }
+      { "ingredienteTitulo": "Chiles poblanos", "tipoDePorcion": "unidades", "porcion": 4, "obligatoria": true },
+      { "ingredienteTitulo": "Carne molida", "tipoDePorcion": "gramos", "porcion": 400, "obligatoria": true },
+      { "ingredienteTitulo": "Granada", "tipoDePorcion": "gramos", "porcion": 50, "obligatoria": false },
+      { "ingredienteTitulo": "Nuez", "tipoDePorcion": "gramos", "porcion": 100, "obligatoria": false }
     ],
     "pasos": [
       "Asar y pelar los chiles.",
@@ -52,10 +52,10 @@
     "titulo": "Enchiladas verdes",
     "tiempoPreparacion": 60,
     "ingredientes": [
-      { "ingrediente": "tortillas de maíz", "tipoDePorcion": "unidades", "porcion": 8, "obligatoria": true },
-      { "ingrediente": "pollo deshebrado", "tipoDePorcion": "gramos", "porcion": 300, "obligatoria": true },
-      { "ingrediente": "crema", "tipoDePorcion": "cucharadas", "porcion": 4, "obligatoria": false },
-      { "ingrediente": "queso fresco", "tipoDePorcion": "gramos", "porcion": 100, "obligatoria": false }
+      { "ingredienteTitulo": "Tortillas de maíz", "tipoDePorcion": "unidades", "porcion": 8, "obligatoria": true },
+      { "ingredienteTitulo": "Pollo deshebrado", "tipoDePorcion": "gramos", "porcion": 300, "obligatoria": true },
+      { "ingredienteTitulo": "Crema", "tipoDePorcion": "cucharadas", "porcion": 4, "obligatoria": false },
+      { "ingredienteTitulo": "Queso fresco", "tipoDePorcion": "gramos", "porcion": 100, "obligatoria": false }
     ],
     "pasos": [
       "Preparar salsa verde con tomatillo.",
@@ -68,10 +68,10 @@
     "titulo": "Tamales de elote",
     "tiempoPreparacion": 120,
     "ingredientes": [
-      { "ingrediente": "elotes", "tipoDePorcion": "unidades", "porcion": 6, "obligatoria": true },
-      { "ingrediente": "manteca", "tipoDePorcion": "gramos", "porcion": 150, "obligatoria": true },
-      { "ingrediente": "azúcar", "tipoDePorcion": "gramos", "porcion": 50, "obligatoria": false },
-      { "ingrediente": "canela", "tipoDePorcion": "cucharaditas", "porcion": 1, "obligatoria": false }
+      { "ingredienteTitulo": "Elote", "tipoDePorcion": "unidades", "porcion": 6, "obligatoria": true },
+      { "ingredienteTitulo": "Manteca", "tipoDePorcion": "gramos", "porcion": 150, "obligatoria": true },
+      { "ingredienteTitulo": "Azúcar", "tipoDePorcion": "gramos", "porcion": 50, "obligatoria": false },
+      { "ingredienteTitulo": "Canela", "tipoDePorcion": "cucharaditas", "porcion": 1, "obligatoria": false }
     ],
     "pasos": [
       "Moldear la masa de elote.",
@@ -84,10 +84,10 @@
     "titulo": "Sopes mexicanos",
     "tiempoPreparacion": 45,
     "ingredientes": [
-      { "ingrediente": "masa de maíz", "tipoDePorcion": "gramos", "porcion": 400, "obligatoria": true },
-      { "ingrediente": "frijoles refritos", "tipoDePorcion": "gramos", "porcion": 200, "obligatoria": true },
-      { "ingrediente": "lechuga", "tipoDePorcion": "hojas", "porcion": 3, "obligatoria": false },
-      { "ingrediente": "queso rallado", "tipoDePorcion": "gramos", "porcion": 50, "obligatoria": false }
+      { "ingredienteTitulo": "Masa de maíz", "tipoDePorcion": "gramos", "porcion": 400, "obligatoria": true },
+      { "ingredienteTitulo": "Frijoles refritos", "tipoDePorcion": "gramos", "porcion": 200, "obligatoria": true },
+      { "ingredienteTitulo": "Lechuga", "tipoDePorcion": "hojas", "porcion": 3, "obligatoria": false },
+      { "ingredienteTitulo": "Queso rallado", "tipoDePorcion": "gramos", "porcion": 50, "obligatoria": false }
     ],
     "pasos": [
       "Formar y freír los sopes.",
@@ -100,10 +100,10 @@
     "titulo": "Mole poblano",
     "tiempoPreparacion": 180,
     "ingredientes": [
-      { "ingrediente": "pollo", "tipoDePorcion": "gramos", "porcion": 500, "obligatoria": true },
-      { "ingrediente": "pasta de mole", "tipoDePorcion": "gramos", "porcion": 200, "obligatoria": true },
-      { "ingrediente": "ajonjolí", "tipoDePorcion": "gramos", "porcion": 20, "obligatoria": false },
-      { "ingrediente": "chocolate", "tipoDePorcion": "gramos", "porcion": 30, "obligatoria": false }
+      { "ingredienteTitulo": "Pollo", "tipoDePorcion": "gramos", "porcion": 500, "obligatoria": true },
+      { "ingredienteTitulo": "Pasta de mole", "tipoDePorcion": "gramos", "porcion": 200, "obligatoria": true },
+      { "ingredienteTitulo": "Ajonjolí", "tipoDePorcion": "gramos", "porcion": 20, "obligatoria": false },
+      { "ingredienteTitulo": "Chocolate", "tipoDePorcion": "gramos", "porcion": 30, "obligatoria": false }
     ],
     "pasos": [
       "Cocer el pollo.",
@@ -116,10 +116,10 @@
     "titulo": "Tostadas de tinga",
     "tiempoPreparacion": 60,
     "ingredientes": [
-      { "ingrediente": "pollo", "tipoDePorcion": "gramos", "porcion": 400, "obligatoria": true },
-      { "ingrediente": "jitomate", "tipoDePorcion": "gramos", "porcion": 300, "obligatoria": true },
-      { "ingrediente": "cebolla", "tipoDePorcion": "gramos", "porcion": 100, "obligatoria": false },
-      { "ingrediente": "aguacate", "tipoDePorcion": "unidades", "porcion": 1, "obligatoria": false }
+      { "ingredienteTitulo": "Pollo", "tipoDePorcion": "gramos", "porcion": 400, "obligatoria": true },
+      { "ingredienteTitulo": "Jitomate", "tipoDePorcion": "gramos", "porcion": 300, "obligatoria": true },
+      { "ingredienteTitulo": "Cebolla", "tipoDePorcion": "gramos", "porcion": 100, "obligatoria": false },
+      { "ingredienteTitulo": "Aguacate", "tipoDePorcion": "unidades", "porcion": 1, "obligatoria": false }
     ],
     "pasos": [
       "Sofreír cebolla y jitomate.",
@@ -132,10 +132,10 @@
     "titulo": "Quesadillas de flor de calabaza",
     "tiempoPreparacion": 40,
     "ingredientes": [
-      { "ingrediente": "tortillas de maíz", "tipoDePorcion": "unidades", "porcion": 6, "obligatoria": true },
-      { "ingrediente": "flor de calabaza", "tipoDePorcion": "gramos", "porcion": 200, "obligatoria": true },
-      { "ingrediente": "queso Oaxaca", "tipoDePorcion": "gramos", "porcion": 150, "obligatoria": false },
-      { "ingrediente": "epazote", "tipoDePorcion": "hojas", "porcion": 5, "obligatoria": false }
+      { "ingredienteTitulo": "Tortillas de maíz", "tipoDePorcion": "unidades", "porcion": 6, "obligatoria": true },
+      { "ingredienteTitulo": "Flor de calabaza", "tipoDePorcion": "gramos", "porcion": 200, "obligatoria": true },
+      { "ingredienteTitulo": "Queso Oaxaca", "tipoDePorcion": "gramos", "porcion": 150, "obligatoria": false },
+      { "ingredienteTitulo": "Epazote", "tipoDePorcion": "hojas", "porcion": 5, "obligatoria": false }
     ],
     "pasos": [
       "Saltear flor con epazote.",
@@ -148,10 +148,10 @@
     "titulo": "Chilaquiles rojos",
     "tiempoPreparacion": 35,
     "ingredientes": [
-      { "ingrediente": "totopos", "tipoDePorcion": "gramos", "porcion": 200, "obligatoria": true },
-      { "ingrediente": "salsa roja", "tipoDePorcion": "mililitros", "porcion": 300, "obligatoria": true },
-      { "ingrediente": "crema", "tipoDePorcion": "cucharadas", "porcion": 3, "obligatoria": false },
-      { "ingrediente": "queso fresco", "tipoDePorcion": "gramos", "porcion": 50, "obligatoria": false }
+      { "ingredienteTitulo": "Totopos", "tipoDePorcion": "gramos", "porcion": 200, "obligatoria": true },
+      { "ingredienteTitulo": "Salsa roja", "tipoDePorcion": "mililitros", "porcion": 300, "obligatoria": true },
+      { "ingredienteTitulo": "Crema", "tipoDePorcion": "cucharadas", "porcion": 3, "obligatoria": false },
+      { "ingredienteTitulo": "Queso fresco", "tipoDePorcion": "gramos", "porcion": 50, "obligatoria": false }
     ],
     "pasos": [
       "Calentar la salsa y añadir los totopos.",
