@@ -4,159 +4,399 @@
     "titulo": "Tacos al pastor",
     "tiempoPreparacion": 90,
     "ingredientes": [
-      { "ingredienteTitulo": "Cerdo", "tipoDePorcion": "gramos", "porcion": 500, "obligatoria": true },
-      { "ingredienteTitulo": "Piña", "tipoDePorcion": "gramos", "porcion": 100, "obligatoria": true },
-      { "ingredienteTitulo": "Cilantro", "tipoDePorcion": "ramas", "porcion": 5, "obligatoria": false },
-      { "ingredienteTitulo": "Cebolla", "tipoDePorcion": "gramos", "porcion": 50, "obligatoria": false }
+      {
+        "ingredienteTitulo": "Cerdo",
+        "tipoDePorcion": "gramos",
+        "porcion": 500,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Piña",
+        "tipoDePorcion": "gramos",
+        "porcion": 100,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Cilantro",
+        "tipoDePorcion": "ramas",
+        "porcion": 5,
+        "obligatoria": false
+      },
+      {
+        "ingredienteTitulo": "Cebolla",
+        "tipoDePorcion": "gramos",
+        "porcion": 50,
+        "obligatoria": false
+      }
     ],
     "pasos": [
       "Marinar la carne con achiote y especias.",
       "Asar la carne y la piña.",
       "Servir en tortillas con cilantro y cebolla."
-    ]
+    ],
+    "EsDesayuno": false,
+    "EsComida": true,
+    "EsCena": true,
+    "EsBotana": true
   },
   {
     "codigo": "0002",
     "titulo": "Pozole rojo",
     "tiempoPreparacion": 180,
     "ingredientes": [
-      { "ingredienteTitulo": "Cerdo", "tipoDePorcion": "gramos", "porcion": 600, "obligatoria": true },
-      { "ingredienteTitulo": "Maíz para pozole", "tipoDePorcion": "gramos", "porcion": 400, "obligatoria": true },
-      { "ingredienteTitulo": "Lechuga", "tipoDePorcion": "hojas", "porcion": 4, "obligatoria": false },
-      { "ingredienteTitulo": "Rábanos", "tipoDePorcion": "unidades", "porcion": 3, "obligatoria": false }
+      {
+        "ingredienteTitulo": "Cerdo",
+        "tipoDePorcion": "gramos",
+        "porcion": 600,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Maíz Para Pozole",
+        "tipoDePorcion": "gramos",
+        "porcion": 400,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Lechuga",
+        "tipoDePorcion": "hojas",
+        "porcion": 4,
+        "obligatoria": false
+      },
+      {
+        "ingredienteTitulo": "Rábanos",
+        "tipoDePorcion": "unidades",
+        "porcion": 3,
+        "obligatoria": false
+      }
     ],
     "pasos": [
       "Cocer la carne y el maíz por separado.",
       "Preparar la salsa roja y añadirla al caldo.",
       "Servir con lechuga y rábanos."
-    ]
+    ],
+    "EsDesayuno": false,
+    "EsComida": true,
+    "EsCena": true,
+    "EsBotana": false
   },
   {
     "codigo": "0003",
     "titulo": "Chiles en nogada",
     "tiempoPreparacion": 150,
     "ingredientes": [
-      { "ingredienteTitulo": "Chiles poblanos", "tipoDePorcion": "unidades", "porcion": 4, "obligatoria": true },
-      { "ingredienteTitulo": "Carne molida", "tipoDePorcion": "gramos", "porcion": 400, "obligatoria": true },
-      { "ingredienteTitulo": "Granada", "tipoDePorcion": "gramos", "porcion": 50, "obligatoria": false },
-      { "ingredienteTitulo": "Nuez", "tipoDePorcion": "gramos", "porcion": 100, "obligatoria": false }
+      {
+        "ingredienteTitulo": "Chiles poblanos",
+        "tipoDePorcion": "unidades",
+        "porcion": 4,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Carne molida",
+        "tipoDePorcion": "gramos",
+        "porcion": 400,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Granada",
+        "tipoDePorcion": "gramos",
+        "porcion": 50,
+        "obligatoria": false
+      },
+      {
+        "ingredienteTitulo": "Nuez",
+        "tipoDePorcion": "gramos",
+        "porcion": 100,
+        "obligatoria": false
+      }
     ],
     "pasos": [
       "Asar y pelar los chiles.",
       "Preparar el relleno de carne con frutas.",
       "Cubrir con nogada y decorar con granada."
-    ]
+    ],
+    "EsDesayuno": false,
+    "EsComida": true,
+    "EsCena": true,
+    "EsBotana": false
   },
   {
     "codigo": "0004",
     "titulo": "Enchiladas verdes",
     "tiempoPreparacion": 60,
     "ingredientes": [
-      { "ingredienteTitulo": "Tortillas de maíz", "tipoDePorcion": "unidades", "porcion": 8, "obligatoria": true },
-      { "ingredienteTitulo": "Pollo deshebrado", "tipoDePorcion": "gramos", "porcion": 300, "obligatoria": true },
-      { "ingredienteTitulo": "Crema", "tipoDePorcion": "cucharadas", "porcion": 4, "obligatoria": false },
-      { "ingredienteTitulo": "Queso fresco", "tipoDePorcion": "gramos", "porcion": 100, "obligatoria": false }
+      {
+        "ingredienteTitulo": "Tortillas de maíz",
+        "tipoDePorcion": "unidades",
+        "porcion": 8,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Pollo deshebrado",
+        "tipoDePorcion": "gramos",
+        "porcion": 300,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Crema",
+        "tipoDePorcion": "cucharadas",
+        "porcion": 4,
+        "obligatoria": false
+      },
+      {
+        "ingredienteTitulo": "Queso fresco",
+        "tipoDePorcion": "gramos",
+        "porcion": 100,
+        "obligatoria": false
+      }
     ],
     "pasos": [
       "Preparar salsa verde con tomatillo.",
       "Rellenar tortillas con pollo.",
       "Cubrir con salsa y hornear."
-    ]
+    ],
+    "EsDesayuno": true,
+    "EsComida": true,
+    "EsCena": true,
+    "EsBotana": false
   },
   {
     "codigo": "0005",
     "titulo": "Tamales de elote",
     "tiempoPreparacion": 120,
     "ingredientes": [
-      { "ingredienteTitulo": "Elote", "tipoDePorcion": "unidades", "porcion": 6, "obligatoria": true },
-      { "ingredienteTitulo": "Manteca", "tipoDePorcion": "gramos", "porcion": 150, "obligatoria": true },
-      { "ingredienteTitulo": "Azúcar", "tipoDePorcion": "gramos", "porcion": 50, "obligatoria": false },
-      { "ingredienteTitulo": "Canela", "tipoDePorcion": "cucharaditas", "porcion": 1, "obligatoria": false }
+      {
+        "ingredienteTitulo": "Elote",
+        "tipoDePorcion": "unidades",
+        "porcion": 6,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Manteca",
+        "tipoDePorcion": "gramos",
+        "porcion": 150,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Azúcar",
+        "tipoDePorcion": "gramos",
+        "porcion": 50,
+        "obligatoria": false
+      },
+      {
+        "ingredienteTitulo": "Canela",
+        "tipoDePorcion": "cucharaditas",
+        "porcion": 1,
+        "obligatoria": false
+      }
     ],
     "pasos": [
       "Moldear la masa de elote.",
       "Agregar azúcar y manteca.",
       "Cocer en hojas de maíz al vapor."
-    ]
+    ],
+    "EsDesayuno": true,
+    "EsComida": false,
+    "EsCena": false,
+    "EsBotana": true
   },
   {
     "codigo": "0006",
     "titulo": "Sopes mexicanos",
     "tiempoPreparacion": 45,
     "ingredientes": [
-      { "ingredienteTitulo": "Masa de maíz", "tipoDePorcion": "gramos", "porcion": 400, "obligatoria": true },
-      { "ingredienteTitulo": "Frijoles refritos", "tipoDePorcion": "gramos", "porcion": 200, "obligatoria": true },
-      { "ingredienteTitulo": "Lechuga", "tipoDePorcion": "hojas", "porcion": 3, "obligatoria": false },
-      { "ingredienteTitulo": "Queso rallado", "tipoDePorcion": "gramos", "porcion": 50, "obligatoria": false }
+      {
+        "ingredienteTitulo": "Masa de maíz",
+        "tipoDePorcion": "gramos",
+        "porcion": 400,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Frijoles refritos",
+        "tipoDePorcion": "gramos",
+        "porcion": 200,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Lechuga",
+        "tipoDePorcion": "hojas",
+        "porcion": 3,
+        "obligatoria": false
+      },
+      {
+        "ingredienteTitulo": "Queso rallado",
+        "tipoDePorcion": "gramos",
+        "porcion": 50,
+        "obligatoria": false
+      }
     ],
     "pasos": [
       "Formar y freír los sopes.",
       "Untar frijoles y añadir ingredientes.",
       "Servir con crema y salsa."
-    ]
+    ],
+    "EsDesayuno": true,
+    "EsComida": true,
+    "EsCena": true,
+    "EsBotana": true
   },
   {
     "codigo": "0007",
     "titulo": "Mole poblano",
     "tiempoPreparacion": 180,
     "ingredientes": [
-      { "ingredienteTitulo": "Pollo", "tipoDePorcion": "gramos", "porcion": 500, "obligatoria": true },
-      { "ingredienteTitulo": "Pasta de mole", "tipoDePorcion": "gramos", "porcion": 200, "obligatoria": true },
-      { "ingredienteTitulo": "Ajonjolí", "tipoDePorcion": "gramos", "porcion": 20, "obligatoria": false },
-      { "ingredienteTitulo": "Chocolate", "tipoDePorcion": "gramos", "porcion": 30, "obligatoria": false }
+      {
+        "ingredienteTitulo": "Pollo",
+        "tipoDePorcion": "gramos",
+        "porcion": 500,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Pasta de mole",
+        "tipoDePorcion": "gramos",
+        "porcion": 200,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Ajonjolí",
+        "tipoDePorcion": "gramos",
+        "porcion": 20,
+        "obligatoria": false
+      },
+      {
+        "ingredienteTitulo": "Chocolate",
+        "tipoDePorcion": "gramos",
+        "porcion": 30,
+        "obligatoria": false
+      }
     ],
     "pasos": [
       "Cocer el pollo.",
       "Preparar mole con chocolate y pasta.",
       "Servir con arroz y espolvorear ajonjolí."
-    ]
+    ],
+    "EsDesayuno": false,
+    "EsComida": true,
+    "EsCena": true,
+    "EsBotana": false
   },
   {
     "codigo": "0008",
     "titulo": "Tostadas de tinga",
     "tiempoPreparacion": 60,
     "ingredientes": [
-      { "ingredienteTitulo": "Pollo", "tipoDePorcion": "gramos", "porcion": 400, "obligatoria": true },
-      { "ingredienteTitulo": "Jitomate", "tipoDePorcion": "gramos", "porcion": 300, "obligatoria": true },
-      { "ingredienteTitulo": "Cebolla", "tipoDePorcion": "gramos", "porcion": 100, "obligatoria": false },
-      { "ingredienteTitulo": "Aguacate", "tipoDePorcion": "unidades", "porcion": 1, "obligatoria": false }
+      {
+        "ingredienteTitulo": "Pollo",
+        "tipoDePorcion": "gramos",
+        "porcion": 400,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Jitomate",
+        "tipoDePorcion": "gramos",
+        "porcion": 300,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Cebolla",
+        "tipoDePorcion": "gramos",
+        "porcion": 100,
+        "obligatoria": false
+      },
+      {
+        "ingredienteTitulo": "Aguacate",
+        "tipoDePorcion": "unidades",
+        "porcion": 1,
+        "obligatoria": false
+      }
     ],
     "pasos": [
       "Sofreír cebolla y jitomate.",
       "Añadir pollo y cocinar.",
       "Servir sobre tostadas con aguacate."
-    ]
+    ],
+    "EsDesayuno": false,
+    "EsComida": true,
+    "EsCena": true,
+    "EsBotana": true
   },
   {
     "codigo": "0009",
     "titulo": "Quesadillas de flor de calabaza",
     "tiempoPreparacion": 40,
     "ingredientes": [
-      { "ingredienteTitulo": "Tortillas de maíz", "tipoDePorcion": "unidades", "porcion": 6, "obligatoria": true },
-      { "ingredienteTitulo": "Flor de calabaza", "tipoDePorcion": "gramos", "porcion": 200, "obligatoria": true },
-      { "ingredienteTitulo": "Queso Oaxaca", "tipoDePorcion": "gramos", "porcion": 150, "obligatoria": false },
-      { "ingredienteTitulo": "Epazote", "tipoDePorcion": "hojas", "porcion": 5, "obligatoria": false }
+      {
+        "ingredienteTitulo": "Tortillas de maíz",
+        "tipoDePorcion": "unidades",
+        "porcion": 6,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Flor de calabaza",
+        "tipoDePorcion": "gramos",
+        "porcion": 200,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Queso Oaxaca",
+        "tipoDePorcion": "gramos",
+        "porcion": 150,
+        "obligatoria": false
+      },
+      {
+        "ingredienteTitulo": "Epazote",
+        "tipoDePorcion": "hojas",
+        "porcion": 5,
+        "obligatoria": false
+      }
     ],
     "pasos": [
       "Saltear flor con epazote.",
       "Rellenar tortillas con queso y flor.",
       "Dorar en comal."
-    ]
+    ],
+    "EsDesayuno": true,
+    "EsComida": true,
+    "EsCena": true,
+    "EsBotana": true
   },
   {
     "codigo": "0010",
     "titulo": "Chilaquiles rojos",
     "tiempoPreparacion": 35,
     "ingredientes": [
-      { "ingredienteTitulo": "Totopos", "tipoDePorcion": "gramos", "porcion": 200, "obligatoria": true },
-      { "ingredienteTitulo": "Salsa roja", "tipoDePorcion": "mililitros", "porcion": 300, "obligatoria": true },
-      { "ingredienteTitulo": "Crema", "tipoDePorcion": "cucharadas", "porcion": 3, "obligatoria": false },
-      { "ingredienteTitulo": "Queso fresco", "tipoDePorcion": "gramos", "porcion": 50, "obligatoria": false }
+      {
+        "ingredienteTitulo": "Totopos",
+        "tipoDePorcion": "gramos",
+        "porcion": 200,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Salsa roja",
+        "tipoDePorcion": "mililitros",
+        "porcion": 300,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Crema",
+        "tipoDePorcion": "cucharadas",
+        "porcion": 3,
+        "obligatoria": false
+      },
+      {
+        "ingredienteTitulo": "Queso fresco",
+        "tipoDePorcion": "gramos",
+        "porcion": 50,
+        "obligatoria": false
+      }
     ],
     "pasos": [
       "Calentar la salsa y añadir los totopos.",
       "Cocinar hasta que se suavicen.",
       "Servir con crema y queso."
-    ]
+    ],
+    "EsDesayuno": true,
+    "EsComida": false,
+    "EsCena": false,
+    "EsBotana": true
   }
 ]

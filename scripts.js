@@ -60,17 +60,54 @@ async function buscarRecetas(ingredientesUsuario) {
 		const response = await fetch('./recetas.json')
 		const recetas = await response.json()
 		let recetasFiltradas = []
+		let filtroTipo = []
 		recetas.forEach((receta) => {
-			let comparacion = receta.ingredientes.map(ingrediente => {
+			switch (inputCategoria.value) {
+				case "":
+					console.log('Selecciona una categoría primero.');
+					break
+				case "desayunos":
+					console.log('Buscando desayunos...');
+					if (receta.EsDesayuno) {
+						filtroTipo.push(receta)
+					}
+					break
+				case "comidas":
+					console.log('Buscando comidas...');
+					if (receta.EsComida) {
+						filtroTipo.push(receta)
+					}
+					break
+				case "cenas":
+					console.log('Buscando cenas...');
+					if (receta.EsCena) {
+						filtroTipo.push(receta)
+					}
+					break
+				case "botanas":
+					console.log('Buscando botana...');
+					if (receta.EsBotana) {
+						filtroTipo.push(receta)
+					}
+					break
+				case "categoria-cualquiera":
+					if (receta.EsBotana || receta.EsDesayuno || receta.EsComida || receta.EsCena) {
+						filtroTipo.push(receta)
+					}
+					break
+			}
+		});
+		filtroTipo.forEach(receta => {
+			let filtroIngredientes = receta.ingredientes.map(ingrediente => {
 				if (ingrediente.obligatoria) {
 					return ingredientesUsuario.includes(ingrediente.ingredienteTitulo);
 				}
 				return true;
 			});
-			if (comparacion.every(valor => valor)) {
+			if (filtroIngredientes.every(valor => valor)) {
 				recetasFiltradas.push(receta);
 			}
-		});
+		})
 		recetasFiltradas.forEach(e => {
 			console.log(e);
 		})
