@@ -62,22 +62,17 @@ async function buscarRecetas(ingredientesUsuario) {
 		let recetasFiltradas = []
 		recetas.forEach((receta) => {
 			let comparacion = receta.ingredientes.map(ingrediente => {
-				// Si el ingrediente es obligatorio, revisamos si está en la lista del usuario
 				if (ingrediente.obligatoria) {
 					return ingredientesUsuario.includes(ingrediente.ingredienteTitulo);
 				}
-				// Si no es obligatorio, lo ignoramos
 				return true;
 			});
-
-			// Si todos los ingredientes obligatorios están presentes, se incluye la receta
 			if (comparacion.every(valor => valor)) {
 				recetasFiltradas.push(receta);
 			}
 		});
 		recetasFiltradas.forEach(e => {
 			console.log(e);
-
 		})
 
 	} catch (error) {
