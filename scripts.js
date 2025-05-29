@@ -31,17 +31,16 @@ async function buscarRecetas(ingredientesUsuario) {
 	try {
 		const response = await fetch('./recetas.json')
 		const recetas = await response.json()
-		recetas.forEach((e) => {
-			let resultadosIngredientes = []
-			let revision = e.ingredientes.obligatoria.some(
-				checkIngrediente(ing)
-			)
-			if (revision == true) {
-				resultadosIngredientes.push(e)
-			}
-			function checkIngrediente(ing) {
-				return (ing = true)
-			}
+		recetas.forEach((r) => {
+			// let comparacion
+			r['ingredientes'].forEach(e => {
+				for (let obligatoria in e) {
+					console.log(e[obligatoria]);
+
+				}
+
+				// comparacion.push(ingredientesUsuario.includes(e))
+			})
 		})
 	} catch (error) {
 		console.error('Error cargando recetas:', error)
@@ -104,9 +103,9 @@ botonMostrarRecetas.addEventListener('click', function () {
 /*
 const recetasFiltradas = recetas.filter(receta =>
   ingredientesBuscados.every(ingBuscado =>
-    receta.ingredientesObligatorios.some(ing =>
-      ing.ingrediente === ingBuscado
-    )
+	receta.ingredientesObligatorios.some(ing =>
+	  ing.ingrediente === ingBuscado
+	)
   )
 )*/
 function mostrarRecetas() {
