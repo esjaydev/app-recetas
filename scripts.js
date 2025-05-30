@@ -27,7 +27,7 @@ let alimentos = {
 	"Cereales": [
 		"Arroz", "Harina De Trigo", "Avena", "Harina De Maíz",
 		"Elote", "Cebada", "Trigo", "Maíz", "Centeno",
-		"Sémola", "Quinoa", "Amaranto"
+		"Sémola", "Quinoa", "Amaranto", 'Tortillas de Maíz'
 	],
 	"Legumbres": [
 		"Frijoles", "Lentejas", "Soya", "Chícharos", "Garbanzos",
@@ -61,31 +61,25 @@ async function buscarRecetas(ingredientesUsuario) {
 		const recetas = await response.json()
 		let recetasFiltradas = []
 		let filtroTipo = []
+		let filtroTiempo = []
 		recetas.forEach((receta) => {
 			switch (inputCategoria.value) {
-				case "":
-					console.log('Selecciona una categoría primero.');
-					break
 				case "desayunos":
-					console.log('Buscando desayunos...');
 					if (receta.EsDesayuno) {
 						filtroTipo.push(receta)
 					}
 					break
 				case "comidas":
-					console.log('Buscando comidas...');
 					if (receta.EsComida) {
 						filtroTipo.push(receta)
 					}
 					break
 				case "cenas":
-					console.log('Buscando cenas...');
 					if (receta.EsCena) {
 						filtroTipo.push(receta)
 					}
 					break
 				case "botanas":
-					console.log('Buscando botana...');
 					if (receta.EsBotana) {
 						filtroTipo.push(receta)
 					}
@@ -98,6 +92,25 @@ async function buscarRecetas(ingredientesUsuario) {
 			}
 		});
 		filtroTipo.forEach(receta => {
+			switch (inputTiempo.value) {
+				case "rapido":
+					if (receta.tiempoPreparacion <= 30) {
+						filtroTiempo.push(receta)
+					}
+					break
+				case "moderado":
+					if (receta.tiempoPreparacion > 30 || receta.tiempoPreparacion <= 90) {
+						filtroTiempo.push(receta)
+					}
+					break
+				case "extendido":
+					if (receta.tiempoPreparacion > 90) {
+						filtroTiempo.push(receta)
+					}
+					break
+			}
+		})
+		filtroTiempo.forEach(receta => {
 			let filtroIngredientes = receta.ingredientes.map(ingrediente => {
 				if (ingrediente.obligatoria) {
 					return ingredientesUsuario.includes(ingrediente.ingredienteTitulo);
