@@ -8,10 +8,12 @@
   --amarilloClaro: #fff6cf;
   --negro: #202020;
 }
+
 body {
   font-family: "DM Sans", sans-serif;
   background-color: var(--amarillo);
 }
+
 .container {
   width: 100%;
   max-width: 1200px;
@@ -22,21 +24,25 @@ body {
   gap: 1rem;
   padding: 0.5rem;
 }
+
 p,
 input,
 option,
 select {
   color: var(--grisObscuro);
 }
-header{
+
+header {
   width: 100%;
   text-align: center;
   color: var(--grisObscuro);
   padding-top: 1rem;
 }
-h1{
+
+h1 {
   line-height: 36px;
 }
+
 nav {
   background-color: var(--blanco);
   padding: 0.5rem;
@@ -45,25 +51,29 @@ nav {
   flex-direction: column;
   gap: 0.5rem;
 }
-.seccion-flex{
+
+.seccion-flex {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
 }
+
 label,
 summary {
   font-weight: 700;
   color: var(--grisObscuro);
   display: block;
 }
-.nav-item-block, .ingredientes-block {
+
+.nav-item-block {
   width: 100%;
   border-radius: 0.5rem;
   padding: 0.5rem;
   background-color: var(--grisClaro);
   text-align: center;
 }
-.nav-item, .ingredientes-grupo {
+
+.nav-item {
   width: 100%;
   text-align: center;
   border-radius: 0.5rem;
@@ -72,30 +82,52 @@ summary {
   background-color: var(--blanco);
   cursor: pointer;
 }
-.ingredientes-grupo-titulo, label{
-  padding: 0.5rem;
+
+.label-grande {
+  margin-bottom: 0.5rem;
   color: var(--grisObscuro);
+}
+
+.grupo-ingredientes {
+  overflow: hidden;
+  border-radius: 0.5rem;
+  border: 1px solid var(--amarillo);
+  margin-bottom: 0.5rem;
+}
+
+.grupo-ingredientes summary {
+  background-color: var(--amarilloClaro);
+  color: var(--grisObscuro);
+  padding: 0.5rem;
   cursor: pointer;
 }
-.ingredientes-grupo{
-  padding: 0;
+
+.subgrupo-ingredientes {
+  background-color: var(--blanco);
 }
-.ingredientes-block > div{
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  margin-top: 0.5rem;
+
+.subgrupo-ingredientes summary {
+  color: var(--naranja);
+  padding: 0.5rem;
+  padding-bottom: 5px;
+  border-bottom: 1px solid var(--grisMedio);
+  cursor: pointer;
+  background-color: var(--blanco);
 }
-.ingredientes-contenido{
-  padding: 0 0.5rem 0.5rem 0.5rem;
+
+.contenedor-ingredientes {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 0.5rem;
+  grid-column-gap: 0.5rem;
+  grid-row-gap: 0.5rem;
+  padding: 0.5rem;
 }
+
 .ingrediente>input[type="checkbox"] {
   display: none;
 }
-.input-ingrediente {  
+
+.input-ingrediente {
   display: flex;
   flex-direction: column;
   height: 100px;
@@ -115,6 +147,7 @@ summary {
   width: 40px;
   height: 40px;
 }
+
 .input-ingrediente span {
   font-size: 0.8rem;
   color: var(--grisObscuro);
@@ -129,7 +162,7 @@ summary {
   color: var(--blanco);
 }
 
-.primary{
+.primary {
   background-color: var(--naranja);
   border: 0;
   border-radius: 1rem;
@@ -139,45 +172,53 @@ summary {
   font-size: 1.25rem;
   transition: 200ms;
 }
-.primary:active{
+
+.primary:active {
   scale: 0.98 0.9;
 }
-@media (width <= 350px){
-  .ingredientes-contenido{
+
+@media (width <=350px) {
+  .ingredientes-contenido {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-@media (width > 500px){
-  .ingredientes-contenido{
+
+@media (width > 500px) {
+  .ingredientes-contenido {
     grid-template-columns: repeat(4, 1fr);
   }
 }
-@media (width > 700px){
-  .ingredientes-contenido{
+
+@media (width > 700px) {
+  .ingredientes-contenido {
     grid-template-columns: repeat(5, 1fr);
   }
-  .seccion-flex{
+
+  .seccion-flex {
     flex-direction: row;
   }
 }
-@media (width > 950px){
-  .ingredientes-contenido{
+
+@media (width > 950px) {
+  .ingredientes-contenido {
     grid-template-columns: repeat(6, 1fr);
   }
 }
-@media (width >= 1200px){
-  .ingredientes-contenido{
+
+@media (width >=1200px) {
+  .ingredientes-contenido {
     grid-template-columns: repeat(7, 1fr);
   }
 }
 
 @media (hover: hover) {
-  .primary:hover{
+  .primary:hover {
     background-color: var(--amarillo);
     cursor: pointer;
     color: var(--grisObscuro);
   }
-  .input-ingrediente:hover{
+
+  .input-ingrediente:hover {
     border-color: var(--amarillo);
     background-color: var(--amarilloClaro);
   }

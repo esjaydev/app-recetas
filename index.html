@@ -23,8 +23,8 @@
     <nav>
       <div class="seccion-flex">
         <div class="nav-item-block">
-          <label for="categoria">Categoría</label>
-          <select name="categoria" id="input-categoria" class="nav-item">
+          <label for="categoria" class="label-grande">Categoría</label>
+          <select title="Horario de comida" name="categoria" id="input-categoria" class="nav-item">
             <option value="">Selecciona una categoría</option>
             <option value="desayunos">🥞 Desayuno</option>
             <option value="comidas">🍝 Comida</option>
@@ -34,8 +34,8 @@
           </select>
         </div>
         <div class="nav-item-block">
-          <label for="input-tiempo">Tiempo de preparación</label>
-          <select name="input-tiempo" id="input-tiempo" class="nav-item">
+          <label for="input-tiempo" class="label-grande">Tiempo de preparación</label>
+          <select title="Tiempo de preparación" name="input-tiempo" id="input-tiempo" class="nav-item">
             <option value="">¿Cuánto tiempo tienes?</option>
             <option value="rapido">
               Rápido <span class="small-txt">Menos de 30 min.</span>
@@ -49,39 +49,11 @@
           </select>
         </div>
       </div>
-      <div class="ingredientes-block">
-        <label>Ingredientes que tengo</label>
-        <div>
-          <details class="ingredientes-grupo">
-            <summary class="ingredientes-grupo-titulo">Carnes</summary>
-            <div class="ingredientes-contenido" id="seccion-carnes"></div>
-          </details>
-          <details class="ingredientes-grupo">
-            <summary class="ingredientes-grupo-titulo">Lácteos</summary>
-            <div class="ingredientes-contenido" id="seccion-lacteos"></div>
-          </details>
-          <details class="ingredientes-grupo">
-            <summary class="ingredientes-grupo-titulo">Frutas</summary>
-            <div class="ingredientes-contenido" id="seccion-frutas"></div>
-          </details>
-          <details class="ingredientes-grupo">
-            <summary class="ingredientes-grupo-titulo">Vegetales</summary>
-            <div class="ingredientes-contenido" id="seccion-vegetales"></div>
-          </details>
-          <details class="ingredientes-grupo">
-            <summary class="ingredientes-grupo-titulo">Cereales</summary>
-            <div class="ingredientes-contenido" id="seccion-cereales"></div>
-          </details>
-          <details class="ingredientes-grupo">
-            <summary class="ingredientes-grupo-titulo">Legumbres</summary>
-            <div class="ingredientes-contenido" id="seccion-legumbres"></div>
-          </details>
-          <details class="ingredientes-grupo">
-            <summary class="ingredientes-grupo-titulo">
-              Grasas, aceites y mantequilla.
-            </summary>
-            <div class="ingredientes-contenido" id="seccion-grasas"></div>
-          </details>
+      <div class="nav-item-block">
+        <h2 class="label-grande">Ingredientes que tengo</h2>
+        <input type="checkbox" name="all" id="all">
+        <label for="all" style="display: inline;">Todos los Ingredientes</label>
+        <div id="display-ingredientes">
         </div>
       </div>
       <button class="primary" id="mostrar-recetas">Muéstrame recetas</button>

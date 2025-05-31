@@ -1,11 +1,11 @@
 [
   {
     "codigo": "0001",
-    "titulo": "Tacos al pastor",
+    "titulo": "Tacos al Pastor Caseros",
     "tiempoPreparacion": 90,
     "ingredientes": [
       {
-        "ingredienteTitulo": "Cerdo",
+        "ingredienteTitulo": "Lomo de Cerdo",
         "tipoDePorcion": "gramos",
         "porcion": 500,
         "obligatoria": true
@@ -13,11 +13,17 @@
       {
         "ingredienteTitulo": "Piña",
         "tipoDePorcion": "gramos",
-        "porcion": 100,
+        "porcion": 150,
         "obligatoria": true
       },
       {
-        "ingredienteTitulo": "Cilantro",
+        "ingredienteTitulo": "Tortilla de Maíz",
+        "tipoDePorcion": "unidades",
+        "porcion": 16,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Cilantro Fresco",
         "tipoDePorcion": "ramas",
         "porcion": 5,
         "obligatoria": false
@@ -27,12 +33,20 @@
         "tipoDePorcion": "gramos",
         "porcion": 50,
         "obligatoria": false
+      },
+      {
+        "ingredienteTitulo": "Salsa Picante",
+        "tipoDePorcion": "mililitros",
+        "porcion": 30,
+        "obligatoria": false
       }
     ],
     "pasos": [
-      "Marinar la carne con achiote y especias.",
-      "Asar la carne y la piña.",
-      "Servir en tortillas con cilantro y cebolla."
+      "Marinar el lomo de cerdo con achiote, especias y jugo de piña por al menos 1 hora.",
+      "Cocinar el cerdo marinado en una sartén o en un asador hasta que esté bien cocido.",
+      "Calentar las tortillas de maíz.",
+      "Picar finamente el cilantro y la cebolla.",
+      "Servir el cerdo en las tortillas con trozos de piña, cilantro, cebolla y salsa picante al gusto."
     ],
     "EsDesayuno": false,
     "EsComida": true,
@@ -41,11 +55,11 @@
   },
   {
     "codigo": "0002",
-    "titulo": "Pozole rojo",
+    "titulo": "Pozole Rojo Clásico",
     "tiempoPreparacion": 180,
     "ingredientes": [
       {
-        "ingredienteTitulo": "Cerdo",
+        "ingredienteTitulo": "Pierna de Cerdo",
         "tipoDePorcion": "gramos",
         "porcion": 600,
         "obligatoria": true
@@ -57,243 +71,9 @@
         "obligatoria": true
       },
       {
-        "ingredienteTitulo": "Lechuga",
-        "tipoDePorcion": "hojas",
-        "porcion": 4,
-        "obligatoria": false
-      },
-      {
-        "ingredienteTitulo": "Rábanos",
-        "tipoDePorcion": "unidades",
-        "porcion": 3,
-        "obligatoria": false
-      }
-    ],
-    "pasos": [
-      "Cocer la carne y el maíz por separado.",
-      "Preparar la salsa roja y añadirla al caldo.",
-      "Servir con lechuga y rábanos."
-    ],
-    "EsDesayuno": false,
-    "EsComida": true,
-    "EsCena": true,
-    "EsBotana": false
-  },
-  {
-    "codigo": "0003",
-    "titulo": "Chiles en nogada",
-    "tiempoPreparacion": 150,
-    "ingredientes": [
-      {
-        "ingredienteTitulo": "Chiles poblanos",
-        "tipoDePorcion": "unidades",
-        "porcion": 4,
-        "obligatoria": true
-      },
-      {
-        "ingredienteTitulo": "Carne molida",
-        "tipoDePorcion": "gramos",
-        "porcion": 400,
-        "obligatoria": true
-      },
-      {
-        "ingredienteTitulo": "Granada",
-        "tipoDePorcion": "gramos",
-        "porcion": 50,
-        "obligatoria": false
-      },
-      {
-        "ingredienteTitulo": "Nuez",
-        "tipoDePorcion": "gramos",
-        "porcion": 100,
-        "obligatoria": false
-      }
-    ],
-    "pasos": [
-      "Asar y pelar los chiles.",
-      "Preparar el relleno de carne con frutas.",
-      "Cubrir con nogada y decorar con granada."
-    ],
-    "EsDesayuno": false,
-    "EsComida": true,
-    "EsCena": true,
-    "EsBotana": false
-  },
-  {
-    "codigo": "0004",
-    "titulo": "Enchiladas verdes",
-    "tiempoPreparacion": 60,
-    "ingredientes": [
-      {
-        "ingredienteTitulo": "Tortillas de maíz",
-        "tipoDePorcion": "unidades",
-        "porcion": 8,
-        "obligatoria": true
-      },
-      {
-        "ingredienteTitulo": "Pollo",
-        "tipoDePorcion": "gramos",
-        "porcion": 300,
-        "obligatoria": true
-      },
-      {
-        "ingredienteTitulo": "Crema",
+        "ingredienteTitulo": "Chile en Polvo",
         "tipoDePorcion": "cucharadas",
-        "porcion": 4,
-        "obligatoria": false
-      },
-      {
-        "ingredienteTitulo": "Queso fresco",
-        "tipoDePorcion": "gramos",
-        "porcion": 100,
-        "obligatoria": false
-      }
-    ],
-    "pasos": [
-      "Preparar salsa verde con tomatillo.",
-      "Rellenar tortillas con pollo.",
-      "Cubrir con salsa y hornear."
-    ],
-    "EsDesayuno": true,
-    "EsComida": true,
-    "EsCena": true,
-    "EsBotana": false
-  },
-  {
-    "codigo": "0005",
-    "titulo": "Tamales de elote",
-    "tiempoPreparacion": 120,
-    "ingredientes": [
-      {
-        "ingredienteTitulo": "Elote",
-        "tipoDePorcion": "unidades",
-        "porcion": 6,
-        "obligatoria": true
-      },
-      {
-        "ingredienteTitulo": "Manteca",
-        "tipoDePorcion": "gramos",
-        "porcion": 150,
-        "obligatoria": true
-      },
-      {
-        "ingredienteTitulo": "Azúcar",
-        "tipoDePorcion": "gramos",
-        "porcion": 50,
-        "obligatoria": false
-      },
-      {
-        "ingredienteTitulo": "Canela",
-        "tipoDePorcion": "cucharaditas",
-        "porcion": 1,
-        "obligatoria": false
-      }
-    ],
-    "pasos": [
-      "Moldear la masa de elote.",
-      "Agregar azúcar y manteca.",
-      "Cocer en hojas de maíz al vapor."
-    ],
-    "EsDesayuno": true,
-    "EsComida": false,
-    "EsCena": false,
-    "EsBotana": true
-  },
-  {
-    "codigo": "0006",
-    "titulo": "Sopes mexicanos",
-    "tiempoPreparacion": 45,
-    "ingredientes": [
-      {
-        "ingredienteTitulo": "Masa de maíz",
-        "tipoDePorcion": "gramos",
-        "porcion": 400,
-        "obligatoria": true
-      },
-      {
-        "ingredienteTitulo": "Frijoles refritos",
-        "tipoDePorcion": "gramos",
-        "porcion": 200,
-        "obligatoria": true
-      },
-      {
-        "ingredienteTitulo": "Lechuga",
-        "tipoDePorcion": "hojas",
-        "porcion": 3,
-        "obligatoria": false
-      },
-      {
-        "ingredienteTitulo": "Queso rallado",
-        "tipoDePorcion": "gramos",
-        "porcion": 50,
-        "obligatoria": false
-      }
-    ],
-    "pasos": [
-      "Formar y freír los sopes.",
-      "Untar frijoles y añadir ingredientes.",
-      "Servir con crema y salsa."
-    ],
-    "EsDesayuno": true,
-    "EsComida": true,
-    "EsCena": true,
-    "EsBotana": true
-  },
-  {
-    "codigo": "0007",
-    "titulo": "Mole poblano",
-    "tiempoPreparacion": 180,
-    "ingredientes": [
-      {
-        "ingredienteTitulo": "Pollo",
-        "tipoDePorcion": "gramos",
-        "porcion": 500,
-        "obligatoria": true
-      },
-      {
-        "ingredienteTitulo": "Pasta de mole",
-        "tipoDePorcion": "gramos",
-        "porcion": 200,
-        "obligatoria": true
-      },
-      {
-        "ingredienteTitulo": "Ajonjolí",
-        "tipoDePorcion": "gramos",
-        "porcion": 20,
-        "obligatoria": false
-      },
-      {
-        "ingredienteTitulo": "Chocolate",
-        "tipoDePorcion": "gramos",
-        "porcion": 30,
-        "obligatoria": false
-      }
-    ],
-    "pasos": [
-      "Cocer el pollo.",
-      "Preparar mole con chocolate y pasta.",
-      "Servir con arroz y espolvorear ajonjolí."
-    ],
-    "EsDesayuno": false,
-    "EsComida": true,
-    "EsCena": true,
-    "EsBotana": false
-  },
-  {
-    "codigo": "0008",
-    "titulo": "Tostadas de tinga",
-    "tiempoPreparacion": 60,
-    "ingredientes": [
-      {
-        "ingredienteTitulo": "Pollo",
-        "tipoDePorcion": "gramos",
-        "porcion": 400,
-        "obligatoria": true
-      },
-      {
-        "ingredienteTitulo": "Jitomate",
-        "tipoDePorcion": "gramos",
-        "porcion": 300,
+        "porcion": 2,
         "obligatoria": true
       },
       {
@@ -303,16 +83,436 @@
         "obligatoria": false
       },
       {
-        "ingredienteTitulo": "Aguacate",
+        "ingredienteTitulo": "Ajo",
+        "tipoDePorcion": "dientes",
+        "porcion": 3,
+        "obligatoria": false
+      },
+      {
+        "ingredienteTitulo": "Lechuga",
+        "tipoDePorcion": "gramos",
+        "porcion": 50,
+        "obligatoria": false
+      },
+      {
+        "ingredienteTitulo": "Rábano",
+        "tipoDePorcion": "unidades",
+        "porcion": 4,
+        "obligatoria": false
+      },
+      {
+        "ingredienteTitulo": "Orégano Seco",
+        "tipoDePorcion": "cucharaditas",
+        "porcion": 1,
+        "obligatoria": false
+      },
+      {
+        "ingredienteTitulo": "Limón",
         "tipoDePorcion": "unidades",
         "porcion": 1,
         "obligatoria": false
       }
     ],
     "pasos": [
-      "Sofreír cebolla y jitomate.",
-      "Añadir pollo y cocinar.",
-      "Servir sobre tostadas con aguacate."
+      "Cocer la pierna de cerdo con cebolla y ajo hasta que esté suave y se pueda desmenuzar.",
+      "En una olla aparte, cocer el maíz para pozole.",
+      "Preparar la salsa roja con chiles secos (o chile en polvo) y especias, licuándolos y friéndolos.",
+      "Incorporar la salsa roja al caldo de cerdo y el maíz cocido, dejar que hierva a fuego lento.",
+      "Servir caliente con lechuga picada, rábanos rebanados, cebolla picada, orégano y jugo de limón al gusto."
+    ],
+    "EsDesayuno": false,
+    "EsComida": true,
+    "EsCena": true,
+    "EsBotana": false
+  },
+  {
+    "codigo": "0003",
+    "titulo": "Chiles en Nogada Tradicionales",
+    "tiempoPreparacion": 150,
+    "ingredientes": [
+      {
+        "ingredienteTitulo": "Poblano",
+        "tipoDePorcion": "unidades",
+        "porcion": 4,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Carne Molida de Res",
+        "tipoDePorcion": "gramos",
+        "porcion": 300,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Carne Molida de Cerdo",
+        "tipoDePorcion": "gramos",
+        "porcion": 200,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Queso Fresco",
+        "tipoDePorcion": "gramos",
+        "porcion": 100,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Leche Entera",
+        "tipoDePorcion": "mililitros",
+        "porcion": 200,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Nuez Moscada Molida",
+        "tipoDePorcion": "cucharaditas",
+        "porcion": 0.5,
+        "obligatoria": false
+      },
+      {
+        "ingredienteTitulo": "Pera",
+        "tipoDePorcion": "unidades",
+        "porcion": 1,
+        "obligatoria": false
+      },
+      {
+        "ingredienteTitulo": "Durazno",
+        "tipoDePorcion": "unidades",
+        "porcion": 1,
+        "obligatoria": false
+      },
+      {
+        "ingredienteTitulo": "Manzana",
+        "tipoDePorcion": "unidades",
+        "porcion": 1,
+        "obligatoria": false
+      },
+      {
+        "ingredienteTitulo": "Granada",
+        "tipoDePorcion": "gramos",
+        "porcion": 50,
+        "obligatoria": false
+      },
+      {
+        "ingredienteTitulo": "Perejil Fresco",
+        "tipoDePorcion": "ramas",
+        "porcion": 2,
+        "obligatoria": false
+      }
+    ],
+    "pasos": [
+      "Asar, pelar y desvenar los chiles poblanos.",
+      "Preparar el picadillo con las carnes, frutas picadas (pera, durazno, manzana) y especias.",
+      "Para la nogada, licuar queso fresco con leche y nuez moscada.",
+      "Rellenar los chiles con el picadillo y bañarlos con la nogada.",
+      "Decorar con granada y perejil fresco."
+    ],
+    "EsDesayuno": false,
+    "EsComida": true,
+    "EsCena": true,
+    "EsBotana": false
+  },
+  {
+    "codigo": "0004",
+    "titulo": "Enchiladas Verdes de Pollo",
+    "tiempoPreparacion": 60,
+    "ingredientes": [
+      {
+        "ingredienteTitulo": "Pechuga de Pollo",
+        "tipoDePorcion": "gramos",
+        "porcion": 300,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Tortilla de Maíz",
+        "tipoDePorcion": "unidades",
+        "porcion": 12,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Tomate",
+        "tipoDePorcion": "unidades",
+        "porcion": 5,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Jalapeño",
+        "tipoDePorcion": "unidades",
+        "porcion": 2,
+        "obligatoria": false
+      },
+      {
+        "ingredienteTitulo": "Cebolla",
+        "tipoDePorcion": "gramos",
+        "porcion": 50,
+        "obligatoria": false
+      },
+      {
+        "ingredienteTitulo": "Ajo",
+        "tipoDePorcion": "dientes",
+        "porcion": 2,
+        "obligatoria": false
+      },
+      {
+        "ingredienteTitulo": "Crema Agria",
+        "tipoDePorcion": "cucharadas",
+        "porcion": 4,
+        "obligatoria": false
+      },
+      {
+        "ingredienteTitulo": "Queso Fresco",
+        "tipoDePorcion": "gramos",
+        "porcion": 100,
+        "obligatoria": false
+      },
+      {
+        "ingredienteTitulo": "Cilantro Fresco",
+        "tipoDePorcion": "ramas",
+        "porcion": 3,
+        "obligatoria": false
+      }
+    ],
+    "pasos": [
+      "Cocer y desmenuzar la pechuga de pollo.",
+      "Cocer tomatillos, jalapeños, cebolla y ajo, luego licuarlos para hacer la salsa verde.",
+      "Pasar las tortillas por aceite caliente y luego por la salsa.",
+      "Rellenar las tortillas con el pollo desmenuzado, enrollarlas y colocarlas en un refractario.",
+      "Bañar con más salsa y hornear por unos minutos.",
+      "Servir con crema, queso fresco desmoronado y cilantro picado."
+    ],
+    "EsDesayuno": true,
+    "EsComida": true,
+    "EsCena": true,
+    "EsBotana": false
+  },
+  {
+    "codigo": "0005",
+    "titulo": "Tamales de Elote Dulces",
+    "tiempoPreparacion": 120,
+    "ingredientes": [
+      {
+        "ingredienteTitulo": "Elote",
+        "tipoDePorcion": "unidades",
+        "porcion": 6,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Manteca de Cerdo",
+        "tipoDePorcion": "gramos",
+        "porcion": 150,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Harina de Maíz",
+        "tipoDePorcion": "gramos",
+        "porcion": 50,
+        "obligatoria": false
+      },
+      {
+        "ingredienteTitulo": "Azúcar Blanca",
+        "tipoDePorcion": "gramos",
+        "porcion": 100,
+        "obligatoria": false
+      },
+      {
+        "ingredienteTitulo": "Canela Molida",
+        "tipoDePorcion": "cucharaditas",
+        "porcion": 1,
+        "obligatoria": false
+      },
+      {
+        "ingredienteTitulo": "Polvo para Hornear",
+        "tipoDePorcion": "cucharaditas",
+        "porcion": 1,
+        "obligatoria": false
+      }
+    ],
+    "pasos": [
+      "Desgranar los elotes y licuarlos con un poco de leche si es necesario.",
+      "Batir la manteca de cerdo con el azúcar hasta que esté esponjosa.",
+      "Incorporar la masa de elote, harina de maíz, canela y polvo para hornear, mezclando bien.",
+      "Rellenar las hojas de elote con la mezcla y doblarlas.",
+      "Cocer al vapor por aproximadamente 1 hora, o hasta que los tamales estén firmes."
+    ],
+    "EsDesayuno": true,
+    "EsComida": false,
+    "EsCena": false,
+    "EsBotana": true
+  },
+  {
+    "codigo": "0006",
+    "titulo": "Sopes con Nopal y Queso Fresco",
+    "tiempoPreparacion": 45,
+    "ingredientes": [
+      {
+        "ingredienteTitulo": "Harina de Maíz",
+        "tipoDePorcion": "gramos",
+        "porcion": 300,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Frijoles Negros",
+        "tipoDePorcion": "gramos",
+        "porcion": 200,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Queso Fresco",
+        "tipoDePorcion": "gramos",
+        "porcion": 100,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Nopal",
+        "tipoDePorcion": "piezas",
+        "porcion": 2,
+        "obligatoria": false
+      },
+      {
+        "ingredienteTitulo": "Lechuga",
+        "tipoDePorcion": "gramos",
+        "porcion": 50,
+        "obligatoria": false
+      },
+      {
+        "ingredienteTitulo": "Crema Agria",
+        "tipoDePorcion": "cucharadas",
+        "porcion": 3,
+        "obligatoria": false
+      },
+      {
+        "ingredienteTitulo": "Salsa Picante",
+        "tipoDePorcion": "mililitros",
+        "porcion": 30,
+        "obligatoria": false
+      }
+    ],
+    "pasos": [
+      "Preparar la masa de maíz y formar los sopes, pellizcando los bordes para crear una orilla.",
+      "Cocer los sopes en un comal y luego freírlos ligeramente.",
+      "Cocinar los nopales y picarlos.",
+      "Untar los sopes con frijoles refritos, añadir nopal, lechuga, queso fresco desmoronado, crema y salsa al gusto."
+    ],
+    "EsDesayuno": true,
+    "EsComida": true,
+    "EsCena": true,
+    "EsBotana": true
+  },
+  {
+    "codigo": "0007",
+    "titulo": "Mole Poblano con Pollo",
+    "tiempoPreparacion": 180,
+    "ingredientes": [
+      {
+        "ingredienteTitulo": "Pollo Entero",
+        "tipoDePorcion": "gramos",
+        "porcion": 1000,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Chile en Polvo",
+        "tipoDePorcion": "gramos",
+        "porcion": 50,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Chocolate Amargo",
+        "tipoDePorcion": "gramos",
+        "porcion": 50,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Tortilla de Maíz",
+        "tipoDePorcion": "unidades",
+        "porcion": 2,
+        "obligatoria": false
+      },
+      {
+        "ingredienteTitulo": "Semillas de Calabaza",
+        "tipoDePorcion": "gramos",
+        "porcion": 20,
+        "obligatoria": false
+      },
+      {
+        "ingredienteTitulo": "Aceite Vegetal",
+        "tipoDePorcion": "cucharadas",
+        "porcion": 2,
+        "obligatoria": false
+      },
+      {
+        "ingredienteTitulo": "Arroz Blanco",
+        "tipoDePorcion": "gramos",
+        "porcion": 200,
+        "obligatoria": false
+      }
+    ],
+    "pasos": [
+      "Cocer el pollo entero hasta que esté suave.",
+      "Preparar la pasta de mole con chiles, especias y chocolate amargo, licuando y cocinando a fuego lento.",
+      "Integrar el pollo cocido y deshebrado (o en piezas) a la salsa de mole.",
+      "Servir el mole con arroz blanco y espolvorear semillas de ajonjolí o calabaza tostadas."
+    ],
+    "EsDesayuno": false,
+    "EsComida": true,
+    "EsCena": true,
+    "EsBotana": false
+  },
+  {
+    "codigo": "0008",
+    "titulo": "Tostadas de Tinga de Res",
+    "tiempoPreparacion": 60,
+    "ingredientes": [
+      {
+        "ingredienteTitulo": "Bistec de Res",
+        "tipoDePorcion": "gramos",
+        "porcion": 400,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Tomate",
+        "tipoDePorcion": "gramos",
+        "porcion": 300,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Cebolla",
+        "tipoDePorcion": "gramos",
+        "porcion": 100,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Chipottle Adobado",
+        "tipoDePorcion": "unidades",
+        "porcion": 2,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Tortilla de Maíz",
+        "tipoDePorcion": "unidades",
+        "porcion": 8,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Aguacate",
+        "tipoDePorcion": "unidades",
+        "porcion": 1,
+        "obligatoria": false
+      },
+      {
+        "ingredienteTitulo": "Crema Agria",
+        "tipoDePorcion": "cucharadas",
+        "porcion": 3,
+        "obligatoria": false
+      },
+      {
+        "ingredienteTitulo": "Queso Fresco",
+        "tipoDePorcion": "gramos",
+        "porcion": 50,
+        "obligatoria": false
+      }
+    ],
+    "pasos": [
+      "Cocer el bistec de res y deshebrarlo.",
+      "Sofreír cebolla en julianas, añadir tomate picado y los chiles chipotles adobados.",
+      "Incorporar la carne deshebrada a la mezcla y cocinar hasta que los sabores se integren.",
+      "Servir la tinga sobre tostadas de maíz, acompañadas de rebanadas de aguacate, crema y queso fresco desmoronado."
     ],
     "EsDesayuno": false,
     "EsComida": true,
@@ -321,38 +521,45 @@
   },
   {
     "codigo": "0009",
-    "titulo": "Quesadillas de flor de calabaza",
+    "titulo": "Quesadillas de Champiñones y Epazote",
     "tiempoPreparacion": 40,
     "ingredientes": [
       {
-        "ingredienteTitulo": "Tortillas de maíz",
+        "ingredienteTitulo": "Tortilla de Maíz",
         "tipoDePorcion": "unidades",
         "porcion": 6,
         "obligatoria": true
       },
       {
-        "ingredienteTitulo": "Flor de calabaza",
+        "ingredienteTitulo": "Champiñones",
         "tipoDePorcion": "gramos",
-        "porcion": 200,
+        "porcion": 250,
         "obligatoria": true
       },
       {
-        "ingredienteTitulo": "Queso Oaxaca",
+        "ingredienteTitulo": "Queso Mozzarella",
         "tipoDePorcion": "gramos",
         "porcion": 150,
-        "obligatoria": false
+        "obligatoria": true
       },
       {
         "ingredienteTitulo": "Epazote",
-        "tipoDePorcion": "hojas",
-        "porcion": 5,
+        "tipoDePorcion": "ramas",
+        "porcion": 3,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Cebolla",
+        "tipoDePorcion": "gramos",
+        "porcion": 30,
         "obligatoria": false
       }
     ],
     "pasos": [
-      "Saltear flor con epazote.",
-      "Rellenar tortillas con queso y flor.",
-      "Dorar en comal."
+      "Sofreír los champiñones rebanados con cebolla y epazote hasta que estén suaves.",
+      "Calentar las tortillas de maíz.",
+      "Rellenar cada tortilla con queso mozzarella rallado y la mezcla de champiñones.",
+      "Doblar las quesadillas y cocinarlas en un comal hasta que el queso se derrita y las tortillas estén ligeramente doradas."
     ],
     "EsDesayuno": true,
     "EsComida": true,
@@ -361,42 +568,2329 @@
   },
   {
     "codigo": "0010",
-    "titulo": "Chilaquiles rojos",
+    "titulo": "Chilaquiles Rojos con Huevo y Frijoles",
     "tiempoPreparacion": 35,
     "ingredientes": [
       {
-        "ingredienteTitulo": "Totopos",
-        "tipoDePorcion": "gramos",
-        "porcion": 200,
+        "ingredienteTitulo": "Tortilla de Maíz",
+        "tipoDePorcion": "unidades",
+        "porcion": 10,
         "obligatoria": true
       },
       {
-        "ingredienteTitulo": "Salsa roja",
-        "tipoDePorcion": "mililitros",
-        "porcion": 300,
+        "ingredienteTitulo": "Tomate",
+        "tipoDePorcion": "unidades",
+        "porcion": 4,
         "obligatoria": true
       },
       {
-        "ingredienteTitulo": "Crema",
-        "tipoDePorcion": "cucharadas",
+        "ingredienteTitulo": "Chile de Árbol",
+        "tipoDePorcion": "unidades",
         "porcion": 3,
         "obligatoria": false
       },
       {
-        "ingredienteTitulo": "Queso fresco",
+        "ingredienteTitulo": "Cebolla",
+        "tipoDePorcion": "gramos",
+        "porcion": 50,
+        "obligatoria": false
+      },
+      {
+        "ingredienteTitulo": "Ajo",
+        "tipoDePorcion": "dientes",
+        "porcion": 2,
+        "obligatoria": false
+      },
+      {
+        "ingredienteTitulo": "Huevo de Gallina",
+        "tipoDePorcion": "unidades",
+        "porcion": 2,
+        "obligatoria": false
+      },
+      {
+        "ingredienteTitulo": "Frijoles Pintos",
+        "tipoDePorcion": "gramos",
+        "porcion": 100,
+        "obligatoria": false
+      },
+      {
+        "ingredienteTitulo": "Crema Agria",
+        "tipoDePorcion": "cucharadas",
+        "porcion": 2,
+        "obligatoria": false
+      },
+      {
+        "ingredienteTitulo": "Queso Panela",
         "tipoDePorcion": "gramos",
         "porcion": 50,
         "obligatoria": false
       }
     ],
     "pasos": [
-      "Calentar la salsa y añadir los totopos.",
-      "Cocinar hasta que se suavicen.",
-      "Servir con crema y queso."
+      "Cortar las tortillas en triángulos y freírlos hasta que estén crujientes (totopos).",
+      "Cocer tomates, chiles de árbol, cebolla y ajo, licuar para hacer la salsa roja.",
+      "Verter la salsa sobre los totopos en un sartén caliente, cocinar hasta que se suavicen un poco.",
+      "Servir los chilaquiles con un huevo frito, frijoles refritos, crema y queso panela desmoronado."
     ],
     "EsDesayuno": true,
     "EsComida": false,
     "EsCena": false,
+    "EsBotana": true
+  },
+  {
+    "codigo": "0011",
+    "titulo": "Sopa de Tortilla Tradicional",
+    "tiempoPreparacion": 45,
+    "ingredientes": [
+      {
+        "ingredienteTitulo": "Tortilla de Maíz",
+        "tipoDePorcion": "unidades",
+        "porcion": 6,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Tomate",
+        "tipoDePorcion": "unidades",
+        "porcion": 3,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Chile Pasilla",
+        "tipoDePorcion": "unidades",
+        "porcion": 2,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Caldo de Pollo",
+        "tipoDePorcion": "mililitros",
+        "porcion": 1000,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Aguacate",
+        "tipoDePorcion": "unidades",
+        "porcion": 1,
+        "obligatoria": false
+      },
+      {
+        "ingredienteTitulo": "Crema Agria",
+        "tipoDePorcion": "cucharadas",
+        "porcion": 2,
+        "obligatoria": false
+      },
+      {
+        "ingredienteTitulo": "Queso Panela",
+        "tipoDePorcion": "gramos",
+        "porcion": 50,
+        "obligatoria": false
+      }
+    ],
+    "pasos": [
+      "Freír tiras de tortilla hasta que estén crujientes.",
+      "Cocer tomates y chiles pasilla, licuarlos para hacer la base de la sopa.",
+      "Colar la salsa y agregar al caldo de pollo, cocinar a fuego lento.",
+      "Servir la sopa caliente con tiras de tortilla, aguacate en cubos, crema y queso panela."
+    ],
+    "EsDesayuno": false,
+    "EsComida": true,
+    "EsCena": true,
+    "EsBotana": false
+  },
+  {
+    "codigo": "0012",
+    "titulo": "Pescado Empapelado con Verduras",
+    "tiempoPreparacion": 40,
+    "ingredientes": [
+      {
+        "ingredienteTitulo": "Tilapia",
+        "tipoDePorcion": "gramos",
+        "porcion": 200,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Calabacín",
+        "tipoDePorcion": "unidades",
+        "porcion": 1,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Zanahoria",
+        "tipoDePorcion": "unidades",
+        "porcion": 1,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Cebolla",
+        "tipoDePorcion": "gramos",
+        "porcion": 50,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Limón",
+        "tipoDePorcion": "unidades",
+        "porcion": 1,
+        "obligatoria": false
+      },
+      {
+        "ingredienteTitulo": "Aceite de Oliva Extra Virgen",
+        "tipoDePorcion": "cucharadas",
+        "porcion": 1,
+        "obligatoria": false
+      },
+      {
+        "ingredienteTitulo": "Sal de Mar",
+        "tipoDePorcion": "cucharaditas",
+        "porcion": 0.5,
+        "obligatoria": false
+      },
+      {
+        "ingredienteTitulo": "Pimienta Negra Molida",
+        "tipoDePorcion": "cucharaditas",
+        "porcion": 0.25,
+        "obligatoria": false
+      }
+    ],
+    "pasos": [
+      "Cortar papel aluminio grande para cada porción de pescado.",
+      "Colocar el filete de tilapia en el centro del papel.",
+      "Cortar calabacín y zanahoria en julianas, y cebolla en rodajas finas, colocarlas sobre el pescado.",
+      "Rociar con aceite de oliva, jugo de limón, sal y pimienta.",
+      "Cerrar el papel aluminio formando un paquete hermético.",
+      "Hornear a 200°C por 20-25 minutos o hasta que el pescado esté cocido."
+    ],
+    "EsDesayuno": false,
+    "EsComida": true,
+    "EsCena": true,
+    "EsBotana": false
+  },
+  {
+    "codigo": "0013",
+    "titulo": "Ensalada de Quinoa con Camarones",
+    "tiempoPreparacion": 30,
+    "ingredientes": [
+      {
+        "ingredienteTitulo": "Quinoa",
+        "tipoDePorcion": "gramos",
+        "porcion": 150,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Camarones",
+        "tipoDePorcion": "gramos",
+        "porcion": 200,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Pepino",
+        "tipoDePorcion": "unidades",
+        "porcion": 0.5,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Tomate",
+        "tipoDePorcion": "unidades",
+        "porcion": 1,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Aguacate",
+        "tipoDePorcion": "unidades",
+        "porcion": 0.5,
+        "obligatoria": false
+      },
+      {
+        "ingredienteTitulo": "Limón",
+        "tipoDePorcion": "unidades",
+        "porcion": 1,
+        "obligatoria": false
+      },
+      {
+        "ingredienteTitulo": "Aceite de Oliva Extra Virgen",
+        "tipoDePorcion": "cucharadas",
+        "porcion": 2,
+        "obligatoria": false
+      },
+      {
+        "ingredienteTitulo": "Cilantro Fresco",
+        "tipoDePorcion": "ramas",
+        "porcion": 2,
+        "obligatoria": false
+      }
+    ],
+    "pasos": [
+      "Cocer la quinoa según las instrucciones del paquete, dejar enfriar.",
+      "Cocer los camarones en agua hirviendo con sal hasta que estén rosados, picar si son grandes.",
+      "Picar pepino, tomate y aguacate en cubos pequeños.",
+      "Mezclar la quinoa, camarones y vegetales picados en un bowl grande.",
+      "Aderezar con jugo de limón, aceite de oliva, sal y pimienta al gusto. Añadir cilantro picado."
+    ],
+    "EsDesayuno": false,
+    "EsComida": true,
+    "EsCena": true,
+    "EsBotana": false
+  },
+  {
+    "codigo": "0014",
+    "titulo": "Omelette de Claras con Espinaca y Queso Panela",
+    "tiempoPreparacion": 15,
+    "ingredientes": [
+      {
+        "ingredienteTitulo": "Clara de Huevo",
+        "tipoDePorcion": "unidades",
+        "porcion": 4,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Espinaca",
+        "tipoDePorcion": "gramos",
+        "porcion": 50,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Queso Panela",
+        "tipoDePorcion": "gramos",
+        "porcion": 50,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Cebolla",
+        "tipoDePorcion": "gramos",
+        "porcion": 20,
+        "obligatoria": false
+      },
+      {
+        "ingredienteTitulo": "Aceite de Oliva Extra Virgen",
+        "tipoDePorcion": "cucharaditas",
+        "porcion": 1,
+        "obligatoria": false
+      }
+    ],
+    "pasos": [
+      "Batir las claras de huevo con un poco de sal y pimienta.",
+      "Sofreír cebolla picada en una sartén con aceite, añadir la espinaca y cocinar hasta que se reduzca.",
+      "Verter las claras batidas sobre la espinaca en la sartén.",
+      "Cuando los bordes estén cocidos, añadir el queso panela desmoronado en un lado del omelette y doblar.",
+      "Cocinar hasta que el queso se derrita y el omelette esté a su gusto."
+    ],
+    "EsDesayuno": true,
+    "EsComida": false,
+    "EsCena": true,
+    "EsBotana": false
+  },
+  {
+    "codigo": "0015",
+    "titulo": "Licuado de Plátano y Avena",
+    "tiempoPreparacion": 5,
+    "ingredientes": [
+      {
+        "ingredienteTitulo": "Plátano",
+        "tipoDePorcion": "unidades",
+        "porcion": 1,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Avena",
+        "tipoDePorcion": "cucharadas",
+        "porcion": 3,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Leche Descremada",
+        "tipoDePorcion": "mililitros",
+        "porcion": 250,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Miel de Abeja",
+        "tipoDePorcion": "cucharaditas",
+        "porcion": 1,
+        "obligatoria": false
+      },
+      {
+        "ingredienteTitulo": "Canela Molida",
+        "tipoDePorcion": "cucharaditas",
+        "porcion": 0.25,
+        "obligatoria": false
+      }
+    ],
+    "pasos": [
+      "Pelar el plátano y cortarlo en trozos.",
+      "Colocar el plátano, avena, leche descremada, miel y canela en una licuadora.",
+      "Licuar hasta obtener una mezcla suave y homogénea.",
+      "Servir inmediatamente."
+    ],
+    "EsDesayuno": true,
+    "EsComida": false,
+    "EsCena": false,
+    "EsBotana": true
+  },
+  {
+    "codigo": "0016",
+    "titulo": "Salmón al Horno con Espárragos",
+    "tiempoPreparacion": 30,
+    "ingredientes": [
+      {
+        "ingredienteTitulo": "Salmón",
+        "tipoDePorcion": "gramos",
+        "porcion": 200,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Espárragos",
+        "tipoDePorcion": "gramos",
+        "porcion": 150,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Limón",
+        "tipoDePorcion": "unidades",
+        "porcion": 0.5,
+        "obligatoria": false
+      },
+      {
+        "ingredienteTitulo": "Aceite de Oliva Extra Virgen",
+        "tipoDePorcion": "cucharadas",
+        "porcion": 1,
+        "obligatoria": false
+      },
+      {
+        "ingredienteTitulo": "Ajo",
+        "tipoDePorcion": "dientes",
+        "porcion": 1,
+        "obligatoria": false
+      },
+      {
+        "ingredienteTitulo": "Sal de Mar",
+        "tipoDePorcion": "cucharaditas",
+        "porcion": 0.5,
+        "obligatoria": false
+      },
+      {
+        "ingredienteTitulo": "Pimienta Negra Molida",
+        "tipoDePorcion": "cucharaditas",
+        "porcion": 0.25,
+        "obligatoria": false
+      }
+    ],
+    "pasos": [
+      "Precalentar el horno a 200°C.",
+      "Colocar el filete de salmón y los espárragos en una bandeja para hornear.",
+      "Rociar con aceite de oliva, jugo de limón, ajo picado, sal y pimienta.",
+      "Hornear por 15-20 minutos o hasta que el salmón esté cocido y los espárragos tiernos."
+    ],
+    "EsDesayuno": false,
+    "EsComida": true,
+    "EsCena": true,
+    "EsBotana": false
+  },
+  {
+    "codigo": "0017",
+    "titulo": "Sopa de Lentejas con Verduras",
+    "tiempoPreparacion": 60,
+    "ingredientes": [
+      {
+        "ingredienteTitulo": "Lentejas",
+        "tipoDePorcion": "gramos",
+        "porcion": 200,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Zanahoria",
+        "tipoDePorcion": "unidades",
+        "porcion": 1,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Papa",
+        "tipoDePorcion": "unidades",
+        "porcion": 1,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Apio",
+        "tipoDePorcion": "tallos",
+        "porcion": 1,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Cebolla",
+        "tipoDePorcion": "gramos",
+        "porcion": 50,
+        "obligatoria": false
+      },
+      {
+        "ingredienteTitulo": "Ajo",
+        "tipoDePorcion": "dientes",
+        "porcion": 2,
+        "obligatoria": false
+      },
+      {
+        "ingredienteTitulo": "Caldo de Pollo",
+        "tipoDePorcion": "mililitros",
+        "porcion": 1000,
+        "obligatoria": false
+      },
+      {
+        "ingredienteTitulo": "Comino Molido",
+        "tipoDePorcion": "cucharaditas",
+        "porcion": 0.5,
+        "obligatoria": false
+      }
+    ],
+    "pasos": [
+      "Lavar las lentejas y remojarlas por 30 minutos (opcional).",
+      "Sofreír cebolla, ajo, zanahoria, papa y apio picados en una olla grande.",
+      "Añadir las lentejas y el caldo de pollo (o agua), junto con el comino.",
+      "Cocinar a fuego medio hasta que las lentejas y las verduras estén tiernas."
+    ],
+    "EsDesayuno": false,
+    "EsComida": true,
+    "EsCena": true,
+    "EsBotana": false
+  },
+  {
+    "codigo": "0018",
+    "titulo": "Tacos de Bistec con Guacamole",
+    "tiempoPreparacion": 30,
+    "ingredientes": [
+      {
+        "ingredienteTitulo": "Bistec de Res",
+        "tipoDePorcion": "gramos",
+        "porcion": 400,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Tortilla de Maíz",
+        "tipoDePorcion": "unidades",
+        "porcion": 12,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Aguacate",
+        "tipoDePorcion": "unidades",
+        "porcion": 2,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Cilantro Fresco",
+        "tipoDePorcion": "ramas",
+        "porcion": 3,
+        "obligatoria": false
+      },
+      {
+        "ingredienteTitulo": "Cebolla",
+        "tipoDePorcion": "gramos",
+        "porcion": 50,
+        "obligatoria": false
+      },
+      {
+        "ingredienteTitulo": "Limón",
+        "tipoDePorcion": "unidades",
+        "porcion": 1,
+        "obligatoria": false
+      }
+    ],
+    "pasos": [
+      "Cortar el bistec en tiras delgadas y cocinarlo en un sartén caliente hasta que esté dorado.",
+      "Calentar las tortillas de maíz.",
+      "Preparar guacamole machacando los aguacates y mezclándolos con cebolla, cilantro y jugo de limón.",
+      "Servir el bistec en las tortillas con guacamole y salsa al gusto."
+    ],
+    "EsDesayuno": false,
+    "EsComida": true,
+    "EsCena": true,
+    "EsBotana": true
+  },
+  {
+    "codigo": "0019",
+    "titulo": "Chiles Rellenos de Queso",
+    "tiempoPreparacion": 75,
+    "ingredientes": [
+      {
+        "ingredienteTitulo": "Poblano",
+        "tipoDePorcion": "unidades",
+        "porcion": 4,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Queso Panela",
+        "tipoDePorcion": "gramos",
+        "porcion": 200,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Huevo de Gallina",
+        "tipoDePorcion": "unidades",
+        "porcion": 3,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Harina de Trigo",
+        "tipoDePorcion": "gramos",
+        "porcion": 50,
+        "obligatoria": false
+      },
+      {
+        "ingredienteTitulo": "Tomate",
+        "tipoDePorcion": "unidades",
+        "porcion": 3,
+        "obligatoria": false
+      },
+      {
+        "ingredienteTitulo": "Cebolla",
+        "tipoDePorcion": "gramos",
+        "porcion": 50,
+        "obligatoria": false
+      }
+    ],
+    "pasos": [
+      "Asar, pelar y desvenar los chiles poblanos, procurando no romperlos.",
+      "Rellenar los chiles con rebanadas de queso panela.",
+      "Batir las claras de huevo a punto de nieve y luego incorporar las yemas para capear los chiles.",
+      "Pasar los chiles por harina y luego por el huevo batido, freírlos en aceite caliente.",
+      "Preparar una salsa de tomate licuando tomates con cebolla y sazonar, servir sobre los chiles."
+    ],
+    "EsDesayuno": false,
+    "EsComida": true,
+    "EsCena": true,
+    "EsBotana": false
+  },
+  {
+    "codigo": "0020",
+    "titulo": "Ensalada de Atún Fresco",
+    "tiempoPreparacion": 20,
+    "ingredientes": [
+      {
+        "ingredienteTitulo": "Atún",
+        "tipoDePorcion": "gramos",
+        "porcion": 200,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Lechuga",
+        "tipoDePorcion": "gramos",
+        "porcion": 100,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Pepino",
+        "tipoDePorcion": "unidades",
+        "porcion": 0.5,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Tomate",
+        "tipoDePorcion": "unidades",
+        "porcion": 1,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Aguacate",
+        "tipoDePorcion": "unidades",
+        "porcion": 0.5,
+        "obligatoria": false
+      },
+      {
+        "ingredienteTitulo": "Aceite de Oliva Extra Virgen",
+        "tipoDePorcion": "cucharadas",
+        "porcion": 2,
+        "obligatoria": false
+      },
+      {
+        "ingredienteTitulo": "Vinagre Balsámico",
+        "tipoDePorcion": "cucharadas",
+        "porcion": 1,
+        "obligatoria": false
+      }
+    ],
+    "pasos": [
+      "Cortar el atún fresco en cubos pequeños o desmenuzarlo si es de lata.",
+      "Lavar y picar la lechuga, pepino, tomate y aguacate.",
+      "Mezclar todos los ingredientes en un bowl grande.",
+      "Aderezar con aceite de oliva, vinagre balsámico, sal y pimienta al gusto."
+    ],
+    "EsDesayuno": false,
+    "EsComida": true,
+    "EsCena": true,
+    "EsBotana": true
+  },
+  {
+    "codigo": "0021",
+    "titulo": "Pollo al Limón con Arroz Integral",
+    "tiempoPreparacion": 40,
+    "ingredientes": [
+      {
+        "ingredienteTitulo": "Pechuga de Pollo",
+        "tipoDePorcion": "gramos",
+        "porcion": 400,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Limón",
+        "tipoDePorcion": "unidades",
+        "porcion": 2,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Arroz Integral",
+        "tipoDePorcion": "gramos",
+        "porcion": 200,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Perejil Fresco",
+        "tipoDePorcion": "ramas",
+        "porcion": 2,
+        "obligatoria": false
+      },
+      {
+        "ingredienteTitulo": "Ajo",
+        "tipoDePorcion": "dientes",
+        "porcion": 2,
+        "obligatoria": false
+      },
+      {
+        "ingredienteTitulo": "Aceite de Oliva Extra Virgen",
+        "tipoDePorcion": "cucharadas",
+        "porcion": 2,
+        "obligatoria": false
+      }
+    ],
+    "pasos": [
+      "Cortar las pechugas de pollo en filetes y sazonar con sal, pimienta y jugo de limón.",
+      "Cocinar el arroz integral según las instrucciones del paquete.",
+      "Calentar aceite de oliva en un sartén, añadir el ajo picado y luego el pollo.",
+      "Cocinar el pollo hasta que esté dorado y cocido por completo.",
+      "Servir el pollo al limón acompañado del arroz integral y espolvorear perejil fresco picado."
+    ],
+    "EsDesayuno": false,
+    "EsComida": true,
+    "EsCena": true,
+    "EsBotana": false
+  },
+  {
+    "codigo": "0022",
+    "titulo": "Pasta con Brócoli y Aceite de Oliva",
+    "tiempoPreparacion": 25,
+    "ingredientes": [
+      {
+        "ingredienteTitulo": "Espagueti",
+        "tipoDePorcion": "gramos",
+        "porcion": 200,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Brócoli",
+        "tipoDePorcion": "gramos",
+        "porcion": 150,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Ajo",
+        "tipoDePorcion": "dientes",
+        "porcion": 3,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Aceite de Oliva Extra Virgen",
+        "tipoDePorcion": "cucharadas",
+        "porcion": 3,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Queso Parmesano",
+        "tipoDePorcion": "gramos",
+        "porcion": 30,
+        "obligatoria": false
+      }
+    ],
+    "pasos": [
+      "Cocer el espagueti según las instrucciones del paquete.",
+      "Cocer el brócoli al vapor o blanquearlo hasta que esté tierno pero firme.",
+      "En un sartén grande, calentar el aceite de oliva y sofreír el ajo picado hasta que dore ligeramente.",
+      "Añadir el brócoli y la pasta cocida al sartén, mezclar bien.",
+      "Servir y espolvorear queso parmesano rallado al gusto."
+    ],
+    "EsDesayuno": false,
+    "EsComida": true,
+    "EsCena": true,
+    "EsBotana": false
+  },
+  {
+    "codigo": "0023",
+    "titulo": "Pan Francés con Frutas y Miel",
+    "tiempoPreparacion": 20,
+    "ingredientes": [
+      {
+        "ingredienteTitulo": "Pan Blanco",
+        "tipoDePorcion": "rebanadas",
+        "porcion": 4,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Huevo de Gallina",
+        "tipoDePorcion": "unidades",
+        "porcion": 2,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Leche Entera",
+        "tipoDePorcion": "mililitros",
+        "porcion": 100,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Miel de Abeja",
+        "tipoDePorcion": "cucharadas",
+        "porcion": 2,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Fresa",
+        "tipoDePorcion": "gramos",
+        "porcion": 50,
+        "obligatoria": false
+      },
+      {
+        "ingredienteTitulo": "Plátano",
+        "tipoDePorcion": "unidades",
+        "porcion": 0.5,
+        "obligatoria": false
+      },
+      {
+        "ingredienteTitulo": "Canela Molida",
+        "tipoDePorcion": "cucharaditas",
+        "porcion": 0.25,
+        "obligatoria": false
+      }
+    ],
+    "pasos": [
+      "Batir los huevos con la leche y la canela.",
+      "Remojar cada rebanada de pan en la mezcla por unos segundos por cada lado.",
+      "Calentar una sartén con un poco de mantequilla y cocinar el pan remojado hasta que esté dorado por ambos lados.",
+      "Servir el pan francés con fresas rebanadas, rodajas de plátano y un chorrito de miel de abeja."
+    ],
+    "EsDesayuno": true,
+    "EsComida": false,
+    "EsCena": false,
+    "EsBotana": true
+  },
+  {
+    "codigo": "0024",
+    "titulo": "Sopa de Champiñones Cremosa",
+    "tiempoPreparacion": 30,
+    "ingredientes": [
+      {
+        "ingredienteTitulo": "Champiñones",
+        "tipoDePorcion": "gramos",
+        "porcion": 300,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Cebolla",
+        "tipoDePorcion": "gramos",
+        "porcion": 50,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Ajo",
+        "tipoDePorcion": "dientes",
+        "porcion": 2,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Crema Agria",
+        "tipoDePorcion": "mililitros",
+        "porcion": 150,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Caldo de Pollo",
+        "tipoDePorcion": "mililitros",
+        "porcion": 500,
+        "obligatoria": false
+      },
+      {
+        "ingredienteTitulo": "Aceite de Oliva Extra Virgen",
+        "tipoDePorcion": "cucharadas",
+        "porcion": 1,
+        "obligatoria": false
+      },
+      {
+        "ingredienteTitulo": "Perejil Fresco",
+        "tipoDePorcion": "ramas",
+        "porcion": 1,
+        "obligatoria": false
+      }
+    ],
+    "pasos": [
+      "Rebanar los champiñones y picar finamente la cebolla y el ajo.",
+      "En una olla, sofreír la cebolla y el ajo en aceite de oliva hasta que estén transparentes.",
+      "Añadir los champiñones rebanados y cocinar hasta que suelten su líquido y se doren.",
+      "Incorporar el caldo de pollo, dejar que hierva y luego reducir el fuego.",
+      "Mezclar un poco de la sopa caliente con la crema agria, luego regresar a la olla y mezclar bien.",
+      "Cocinar a fuego lento por unos minutos sin dejar que hierva a borbotones. Servir caliente con perejil picado."
+    ],
+    "EsDesayuno": false,
+    "EsComida": true,
+    "EsCena": true,
+    "EsBotana": false
+  },
+  {
+    "codigo": "0025",
+    "titulo": "Huevos Rancheros con Salsa Casera",
+    "tiempoPreparacion": 25,
+    "ingredientes": [
+      {
+        "ingredienteTitulo": "Huevo de Gallina",
+        "tipoDePorcion": "unidades",
+        "porcion": 2,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Tortilla de Maíz",
+        "tipoDePorcion": "unidades",
+        "porcion": 2,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Tomate",
+        "tipoDePorcion": "unidades",
+        "porcion": 2,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Jalapeño",
+        "tipoDePorcion": "unidades",
+        "porcion": 1,
+        "obligatoria": false
+      },
+      {
+        "ingredienteTitulo": "Cebolla",
+        "tipoDePorcion": "gramos",
+        "porcion": 30,
+        "obligatoria": false
+      },
+      {
+        "ingredienteTitulo": "Cilantro Fresco",
+        "tipoDePorcion": "ramas",
+        "porcion": 1,
+        "obligatoria": false
+      },
+      {
+        "ingredienteTitulo": "Aceite Vegetal",
+        "tipoDePorcion": "cucharadas",
+        "porcion": 2,
+        "obligatoria": false
+      }
+    ],
+    "pasos": [
+      "Freír las tortillas de maíz ligeramente en aceite caliente.",
+      "En el mismo sartén, freír los huevos al gusto (estrellados son tradicionales).",
+      "Cocer los tomates, jalapeño y cebolla, luego licuarlos para hacer la salsa ranchera.",
+      "Servir los huevos sobre las tortillas y bañarlos con la salsa caliente.",
+      "Decorar con cilantro fresco picado."
+    ],
+    "EsDesayuno": true,
+    "EsComida": false,
+    "EsCena": false,
+    "EsBotana": false
+  },
+  {
+    "codigo": "0026",
+    "titulo": "Carne de Res con Brócoli y Arroz Blanco",
+    "tiempoPreparacion": 40,
+    "ingredientes": [
+      {
+        "ingredienteTitulo": "Bistec de Res",
+        "tipoDePorcion": "gramos",
+        "porcion": 300,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Brócoli",
+        "tipoDePorcion": "gramos",
+        "porcion": 200,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Arroz Blanco",
+        "tipoDePorcion": "gramos",
+        "porcion": 150,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Salsa de Soja",
+        "tipoDePorcion": "mililitros",
+        "porcion": 30,
+        "obligatoria": false
+      },
+      {
+        "ingredienteTitulo": "Ajo",
+        "tipoDePorcion": "dientes",
+        "porcion": 2,
+        "obligatoria": false
+      },
+      {
+        "ingredienteTitulo": "Aceite de Girasol",
+        "tipoDePorcion": "cucharadas",
+        "porcion": 1,
+        "obligatoria": false
+      }
+    ],
+    "pasos": [
+      "Cortar el bistec en tiras delgadas y saltearlo en un wok o sartén grande con aceite de girasol y ajo picado.",
+      "Añadir el brócoli en floretes y cocinar hasta que esté tierno pero crujiente.",
+      "Incorporar la salsa de soja y mezclar bien.",
+      "Servir la carne con brócoli acompañada de arroz blanco."
+    ],
+    "EsDesayuno": false,
+    "EsComida": true,
+    "EsCena": true,
+    "EsBotana": false
+  },
+  {
+    "codigo": "0027",
+    "titulo": "Burritos de Frijol y Queso",
+    "tiempoPreparacion": 25,
+    "ingredientes": [
+      {
+        "ingredienteTitulo": "Tortilla de Harina",
+        "tipoDePorcion": "unidades",
+        "porcion": 4,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Frijoles Pintos",
+        "tipoDePorcion": "gramos",
+        "porcion": 200,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Queso Cheddar",
+        "tipoDePorcion": "gramos",
+        "porcion": 100,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Arroz Blanco",
+        "tipoDePorcion": "gramos",
+        "porcion": 50,
+        "obligatoria": false
+      },
+      {
+        "ingredienteTitulo": "Salsa Picante",
+        "tipoDePorcion": "mililitros",
+        "porcion": 20,
+        "obligatoria": false
+      }
+    ],
+    "pasos": [
+      "Calentar las tortillas de harina.",
+      "Extender frijoles refritos sobre cada tortilla.",
+      "Añadir queso cheddar rallado y una porción de arroz blanco (opcional).",
+      "Enrollar los burritos firmemente y cocinarlos en un comal o sartén hasta que estén ligeramente dorados y el queso derretido.",
+      "Servir con salsa picante."
+    ],
+    "EsDesayuno": true,
+    "EsComida": true,
+    "EsCena": true,
+    "EsBotana": true
+  },
+  {
+    "codigo": "0028",
+    "titulo": "Smoothie de Bayas con Yogur",
+    "tiempoPreparacion": 5,
+    "ingredientes": [
+      {
+        "ingredienteTitulo": "Fresa",
+        "tipoDePorcion": "gramos",
+        "porcion": 50,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Arándano",
+        "tipoDePorcion": "gramos",
+        "porcion": 50,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Frambuesa",
+        "tipoDePorcion": "gramos",
+        "porcion": 50,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Yogur Natural",
+        "tipoDePorcion": "mililitros",
+        "porcion": 150,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Leche Descremada",
+        "tipoDePorcion": "mililitros",
+        "porcion": 100,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Miel de Abeja",
+        "tipoDePorcion": "cucharaditas",
+        "porcion": 1,
+        "obligatoria": false
+      }
+    ],
+    "pasos": [
+      "Colocar todas las bayas (fresas, arándanos, frambuesas), yogur natural y leche descremada en una licuadora.",
+      "Añadir miel de abeja al gusto si se desea más dulce.",
+      "Licuar hasta obtener una consistencia suave y cremosa.",
+      "Servir de inmediato."
+    ],
+    "EsDesayuno": true,
+    "EsComida": false,
+    "EsCena": false,
+    "EsBotana": true
+  },
+  {
+    "codigo": "0029",
+    "titulo": "Curry de Garbanzos con Leche de Coco",
+    "tiempoPreparacion": 45,
+    "ingredientes": [
+      {
+        "ingredienteTitulo": "Garbanzos",
+        "tipoDePorcion": "gramos",
+        "porcion": 250,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Leche de Coco",
+        "tipoDePorcion": "mililitros",
+        "porcion": 400,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Cebolla",
+        "tipoDePorcion": "gramos",
+        "porcion": 50,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Jengibre",
+        "tipoDePorcion": "gramos",
+        "porcion": 10,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Pimentón Dulce",
+        "tipoDePorcion": "cucharaditas",
+        "porcion": 1,
+        "obligatoria": false
+      },
+      {
+        "ingredienteTitulo": "Comino Molido",
+        "tipoDePorcion": "cucharaditas",
+        "porcion": 1,
+        "obligatoria": false
+      },
+      {
+        "ingredienteTitulo": "Espinaca",
+        "tipoDePorcion": "gramos",
+        "porcion": 100,
+        "obligatoria": false
+      },
+      {
+        "ingredienteTitulo": "Arroz Blanco",
+        "tipoDePorcion": "gramos",
+        "porcion": 150,
+        "obligatoria": false
+      }
+    ],
+    "pasos": [
+      "Sofreír cebolla picada y jengibre rallado en aceite de coco.",
+      "Añadir los garbanzos (previamente cocidos o de lata enjuagados), pimentón y comino.",
+      "Incorporar la leche de coco y cocinar a fuego lento por 15-20 minutos.",
+      "Añadir la espinaca y cocinar hasta que se ablande.",
+      "Servir el curry de garbanzos con arroz blanco."
+    ],
+    "EsDesayuno": false,
+    "EsComida": true,
+    "EsCena": true,
+    "EsBotana": false
+  },
+  {
+    "codigo": "0030",
+    "titulo": "Costillas de Cerdo en Salsa BBQ",
+    "tiempoPreparacion": 120,
+    "ingredientes": [
+      {
+        "ingredienteTitulo": "Costillas de Cerdo",
+        "tipoDePorcion": "gramos",
+        "porcion": 800,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Ketchup",
+        "tipoDePorcion": "mililitros",
+        "porcion": 100,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Vinagre de Manzana",
+        "tipoDePorcion": "mililitros",
+        "porcion": 50,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Azúcar Morena",
+        "tipoDePorcion": "gramos",
+        "porcion": 30,
+        "obligatoria": false
+      },
+      {
+        "ingredienteTitulo": "Ajo",
+        "tipoDePorcion": "dientes",
+        "porcion": 2,
+        "obligatoria": false
+      }
+    ],
+    "pasos": [
+      "Sazonar las costillas de cerdo con sal y pimienta.",
+      "Hornear las costillas a baja temperatura (aprox. 150°C) por 1 hora.",
+      "Mezclar ketchup, vinagre de manzana, azúcar morena y ajo picado para hacer la salsa BBQ casera.",
+      "Untar las costillas con la salsa y hornear por 30-60 minutos más, rociando con salsa cada cierto tiempo, hasta que estén tiernas y caramelizadas."
+    ],
+    "EsDesayuno": false,
+    "EsComida": true,
+    "EsCena": true,
+    "EsBotana": true
+  },
+  {
+    "codigo": "0031",
+    "titulo": "Sándwich de Pollo y Aguacate",
+    "tiempoPreparacion": 15,
+    "ingredientes": [
+      {
+        "ingredienteTitulo": "Pechuga de Pollo",
+        "tipoDePorcion": "gramos",
+        "porcion": 100,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Pan Integral",
+        "tipoDePorcion": "rebanadas",
+        "porcion": 2,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Aguacate",
+        "tipoDePorcion": "unidades",
+        "porcion": 0.5,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Lechuga",
+        "tipoDePorcion": "hojas",
+        "porcion": 2,
+        "obligatoria": false
+      },
+      {
+        "ingredienteTitulo": "Tomate",
+        "tipoDePorcion": "rebanadas",
+        "porcion": 2,
+        "obligatoria": false
+      },
+      {
+        "ingredienteTitulo": "Mayonesa",
+        "tipoDePorcion": "cucharadas",
+        "porcion": 1,
+        "obligatoria": false
+      }
+    ],
+    "pasos": [
+      "Cocer la pechuga de pollo y desmenuzarla o cortarla en rebanadas finas.",
+      "Tostar ligeramente el pan integral.",
+      "Untar mayonesa en una de las rebanadas de pan.",
+      "Colocar la lechuga, tomate, pollo cocido y rebanadas de aguacate entre las dos rebanadas de pan.",
+      "Cortar por la mitad y servir."
+    ],
+    "EsDesayuno": true,
+    "EsComida": true,
+    "EsCena": false,
+    "EsBotana": true
+  },
+  {
+    "codigo": "0032",
+    "titulo": "Arroz Frito con Camarones",
+    "tiempoPreparacion": 30,
+    "ingredientes": [
+      {
+        "ingredienteTitulo": "Arroz Blanco",
+        "tipoDePorcion": "gramos",
+        "porcion": 200,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Camarones",
+        "tipoDePorcion": "gramos",
+        "porcion": 150,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Zanahoria",
+        "tipoDePorcion": "unidades",
+        "porcion": 0.5,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Guisantes",
+        "tipoDePorcion": "gramos",
+        "porcion": 50,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Huevo de Gallina",
+        "tipoDePorcion": "unidades",
+        "porcion": 1,
+        "obligatoria": false
+      },
+      {
+        "ingredienteTitulo": "Salsa de Soja",
+        "tipoDePorcion": "mililitros",
+        "porcion": 30,
+        "obligatoria": false
+      },
+      {
+        "ingredienteTitulo": "Aceite Vegetal",
+        "tipoDePorcion": "cucharadas",
+        "porcion": 1,
+        "obligatoria": false
+      },
+      {
+        "ingredienteTitulo": "Cebolla",
+        "tipoDePorcion": "gramos",
+        "porcion": 30,
+        "obligatoria": false
+      }
+    ],
+    "pasos": [
+      "Cocer el arroz blanco y dejarlo enfriar (idealmente arroz del día anterior).",
+      "Calentar aceite vegetal en un wok o sartén grande, sofreír cebolla y los camarones hasta que estén rosados.",
+      "Añadir la zanahoria picada y los guisantes, cocinar por unos minutos.",
+      "Empujar los ingredientes a un lado y batir un huevo directamente en el sartén, revolver hasta que esté cocido.",
+      "Añadir el arroz cocido y la salsa de soja, mezclar todo bien y cocinar por unos minutos más."
+    ],
+    "EsDesayuno": false,
+    "EsComida": true,
+    "EsCena": true,
+    "EsBotana": false
+  },
+  {
+    "codigo": "0033",
+    "titulo": "Sopa de Frijol Negro Cremosa",
+    "tiempoPreparacion": 50,
+    "ingredientes": [
+      {
+        "ingredienteTitulo": "Frijoles Negros",
+        "tipoDePorcion": "gramos",
+        "porcion": 300,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Cebolla",
+        "tipoDePorcion": "gramos",
+        "porcion": 50,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Ajo",
+        "tipoDePorcion": "dientes",
+        "porcion": 3,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Caldo de Pollo",
+        "tipoDePorcion": "mililitros",
+        "porcion": 750,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Crema Agria",
+        "tipoDePorcion": "cucharadas",
+        "porcion": 2,
+        "obligatoria": false
+      },
+      {
+        "ingredienteTitulo": "Cilantro Fresco",
+        "tipoDePorcion": "ramas",
+        "porcion": 2,
+        "obligatoria": false
+      }
+    ],
+    "pasos": [
+      "Cocer los frijoles negros hasta que estén suaves (o usar frijoles de lata).",
+      "Sofreír cebolla y ajo en un poco de aceite.",
+      "Licuar los frijoles cocidos con un poco de caldo y la mezcla de cebolla y ajo hasta obtener una crema suave.",
+      "Regresar la crema a la olla, añadir el resto del caldo y cocinar a fuego lento, ajustando la consistencia si es necesario.",
+      "Servir caliente con un poco de crema agria y cilantro fresco picado."
+    ],
+    "EsDesayuno": false,
+    "EsComida": true,
+    "EsCena": true,
+    "EsBotana": false
+  },
+  {
+    "codigo": "0034",
+    "titulo": "Ensalada de Nopales con Queso Fresco",
+    "tiempoPreparacion": 30,
+    "ingredientes": [
+      {
+        "ingredienteTitulo": "Nopal",
+        "tipoDePorcion": "piezas",
+        "porcion": 4,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Tomate",
+        "tipoDePorcion": "unidades",
+        "porcion": 2,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Cebolla",
+        "tipoDePorcion": "gramos",
+        "porcion": 50,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Queso Fresco",
+        "tipoDePorcion": "gramos",
+        "porcion": 100,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Cilantro Fresco",
+        "tipoDePorcion": "ramas",
+        "porcion": 3,
+        "obligatoria": false
+      },
+      {
+        "ingredienteTitulo": "Aguacate",
+        "tipoDePorcion": "unidades",
+        "porcion": 0.5,
+        "obligatoria": false
+      },
+      {
+        "ingredienteTitulo": "Vinagre Blanco",
+        "tipoDePorcion": "cucharadas",
+        "porcion": 1,
+        "obligatoria": false
+      },
+      {
+        "ingredienteTitulo": "Aceite de Oliva Extra Virgen",
+        "tipoDePorcion": "cucharadas",
+        "porcion": 2,
+        "obligatoria": false
+      }
+    ],
+    "pasos": [
+      "Lavar y cocer los nopales hasta que estén tiernos y escurrir.",
+      "Picar los nopales cocidos en cubos o tiras.",
+      "Picar tomate, cebolla, cilantro y queso fresco en cubos.",
+      "Mezclar todos los ingredientes en un bowl.",
+      "Aderezar con vinagre blanco, aceite de oliva, sal y pimienta al gusto. Añadir aguacate rebanado."
+    ],
+    "EsDesayuno": false,
+    "EsComida": true,
+    "EsCena": true,
+    "EsBotana": true
+  },
+  {
+    "codigo": "0035",
+    "titulo": "Cereal con Frutas y Leche Vegetal",
+    "tiempoPreparacion": 5,
+    "ingredientes": [
+      {
+        "ingredienteTitulo": "Avena",
+        "tipoDePorcion": "gramos",
+        "porcion": 50,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Leche Vegetal (Almendra, Soya)",
+        "tipoDePorcion": "mililitros",
+        "porcion": 200,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Fresa",
+        "tipoDePorcion": "gramos",
+        "porcion": 30,
+        "obligatoria": false
+      },
+      {
+        "ingredienteTitulo": "Plátano",
+        "tipoDePorcion": "rebanadas",
+        "porcion": 0.5,
+        "obligatoria": false
+      },
+      {
+        "ingredienteTitulo": "Arándano",
+        "tipoDePorcion": "gramos",
+        "porcion": 20,
+        "obligatoria": false
+      }
+    ],
+    "pasos": [
+      "Colocar la avena en un bowl.",
+      "Añadir la leche vegetal.",
+      "Cortar las frutas (fresas, plátano, arándanos) y agregarlas al bowl.",
+      "Mezclar y consumir."
+    ],
+    "EsDesayuno": true,
+    "EsComida": false,
+    "EsCena": false,
+    "EsBotana": true
+  },
+  {
+    "codigo": "0036",
+    "titulo": "Enchiladas Suizas",
+    "tiempoPreparacion": 70,
+    "ingredientes": [
+      {
+        "ingredienteTitulo": "Pechuga de Pollo",
+        "tipoDePorcion": "gramos",
+        "porcion": 300,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Tortilla de Maíz",
+        "tipoDePorcion": "unidades",
+        "porcion": 10,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Queso Mozzarella",
+        "tipoDePorcion": "gramos",
+        "porcion": 200,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Tomate Verde",
+        "tipoDePorcion": "gramos",
+        "porcion": 300,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Crema Agria",
+        "tipoDePorcion": "mililitros",
+        "porcion": 100,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Cebolla",
+        "tipoDePorcion": "gramos",
+        "porcion": 50,
+        "obligatoria": false
+      },
+      {
+        "ingredienteTitulo": "Ajo",
+        "tipoDePorcion": "dientes",
+        "porcion": 2,
+        "obligatoria": false
+      },
+      {
+        "ingredienteTitulo": "Cilantro Fresco",
+        "tipoDePorcion": "ramas",
+        "porcion": 2,
+        "obligatoria": false
+      }
+    ],
+    "pasos": [
+      "Cocer la pechuga de pollo y deshebrarla.",
+      "Cocer los tomatillos verdes, cebolla y ajo, licuarlos para hacer la salsa verde.",
+      "En una olla, cocinar la salsa verde y añadir la crema agria, mezclar bien.",
+      "Rellenar las tortillas de maíz con el pollo deshebrado, enrollar y colocar en un refractario.",
+      "Bañar con la salsa cremosa, cubrir con queso mozzarella rallado y hornear hasta que el queso se derrita y dore."
+    ],
+    "EsDesayuno": false,
+    "EsComida": true,
+    "EsCena": true,
+    "EsBotana": false
+  },
+  {
+    "codigo": "0037",
+    "titulo": "Guisado de Res con Papas",
+    "tiempoPreparacion": 90,
+    "ingredientes": [
+      {
+        "ingredienteTitulo": "Asado de Res",
+        "tipoDePorcion": "gramos",
+        "porcion": 500,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Papa",
+        "tipoDePorcion": "unidades",
+        "porcion": 3,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Zanahoria",
+        "tipoDePorcion": "unidades",
+        "porcion": 2,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Cebolla",
+        "tipoDePorcion": "gramos",
+        "porcion": 70,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Tomate",
+        "tipoDePorcion": "unidades",
+        "porcion": 2,
+        "obligatoria": false
+      },
+      {
+        "ingredienteTitulo": "Ajo",
+        "tipoDePorcion": "dientes",
+        "porcion": 2,
+        "obligatoria": false
+      },
+      {
+        "ingredienteTitulo": "Laurel",
+        "tipoDePorcion": "hojas",
+        "porcion": 1,
+        "obligatoria": false
+      },
+      {
+        "ingredienteTitulo": "Aceite Vegetal",
+        "tipoDePorcion": "cucharadas",
+        "porcion": 2,
+        "obligatoria": false
+      }
+    ],
+    "pasos": [
+      "Cortar el asado de res en cubos, sellar en una olla con aceite.",
+      "Retirar la carne y sofreír cebolla, ajo, tomate picado.",
+      "Regresar la carne a la olla, añadir papas y zanahorias en cubos, hojas de laurel y caldo de res.",
+      "Cocinar a fuego lento hasta que la carne esté tierna y las verduras cocidas."
+    ],
+    "EsDesayuno": false,
+    "EsComida": true,
+    "EsCena": true,
+    "EsBotana": false
+  },
+  {
+    "codigo": "0038",
+    "titulo": "Queso Fundido con Chorizo",
+    "tiempoPreparacion": 20,
+    "ingredientes": [
+      {
+        "ingredienteTitulo": "Queso Oaxaca",
+        "tipoDePorcion": "gramos",
+        "porcion": 200,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Chorizo",
+        "tipoDePorcion": "gramos",
+        "porcion": 100,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Tortilla de Harina",
+        "tipoDePorcion": "unidades",
+        "porcion": 4,
+        "obligatoria": false
+      },
+      {
+        "ingredienteTitulo": "Jalapeño",
+        "tipoDePorcion": "rebanadas",
+        "porcion": 5,
+        "obligatoria": false
+      }
+    ],
+    "pasos": [
+      "Retirar la piel del chorizo y desmenuzarlo, cocinar en un sartén hasta que esté dorado y crujiente.",
+      "En un refractario apto para horno o en un sartén de hierro fundido, colocar el queso Oaxaca deshebrado.",
+      "Añadir el chorizo cocido por encima del queso.",
+      "Hornear o calentar en la estufa hasta que el queso esté completamente derretido y burbujeante.",
+      "Servir inmediatamente con tortillas de harina calientes y jalapeños encurtidos."
+    ],
+    "EsDesayuno": false,
+    "EsComida": true,
+    "EsCena": true,
+    "EsBotana": true
+  },
+  {
+    "codigo": "0039",
+    "titulo": "Pescado Zarandeado",
+    "tiempoPreparacion": 60,
+    "ingredientes": [
+      {
+        "ingredienteTitulo": "Mojarra",
+        "tipoDePorcion": "unidades",
+        "porcion": 1,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Mayonesa",
+        "tipoDePorcion": "cucharadas",
+        "porcion": 3,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Mostaza",
+        "tipoDePorcion": "cucharadas",
+        "porcion": 1,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Limón",
+        "tipoDePorcion": "unidades",
+        "porcion": 2,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Pimienta Negra Molida",
+        "tipoDePorcion": "cucharaditas",
+        "porcion": 0.5,
+        "obligatoria": false
+      },
+      {
+        "ingredienteTitulo": "Aceite Vegetal",
+        "tipoDePorcion": "cucharadas",
+        "porcion": 2,
+        "obligatoria": false
+      },
+      {
+        "ingredienteTitulo": "Cebolla Morada",
+        "tipoDePorcion": "gramos",
+        "porcion": 50,
+        "obligatoria": false
+      },
+      {
+        "ingredienteTitulo": "Pepino",
+        "tipoDePorcion": "unidades",
+        "porcion": 0.5,
+        "obligatoria": false
+      }
+    ],
+    "pasos": [
+      "Abrir la mojarra por la mitad (tipo mariposa) y sazonar con sal, pimienta y jugo de limón.",
+      "Preparar una mezcla con mayonesa y mostaza, untar el pescado.",
+      "Asar el pescado a la parrilla o en el horno hasta que esté bien cocido y dorado.",
+      "Servir el pescado con rodajas de cebolla morada, pepino y más limón."
+    ],
+    "EsDesayuno": false,
+    "EsComida": true,
+    "EsCena": true,
+    "EsBotana": false
+  },
+  {
+    "codigo": "0040",
+    "titulo": "Hamburguesa Casera de Res",
+    "tiempoPreparacion": 30,
+    "ingredientes": [
+      {
+        "ingredienteTitulo": "Carne Molida de Res",
+        "tipoDePorcion": "gramos",
+        "porcion": 200,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Pan de Hamburguesa",
+        "tipoDePorcion": "unidades",
+        "porcion": 1,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Queso Cheddar",
+        "tipoDePorcion": "rebanadas",
+        "porcion": 1,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Lechuga",
+        "tipoDePorcion": "hojas",
+        "porcion": 2,
+        "obligatoria": false
+      },
+      {
+        "ingredienteTitulo": "Tomate",
+        "tipoDePorcion": "rebanadas",
+        "porcion": 2,
+        "obligatoria": false
+      },
+      {
+        "ingredienteTitulo": "Cebolla",
+        "tipoDePorcion": "rebanadas",
+        "porcion": 2,
+        "obligatoria": false
+      },
+      {
+        "ingredienteTitulo": "Ketchup",
+        "tipoDePorcion": "cucharadas",
+        "porcion": 1,
+        "obligatoria": false
+      },
+      {
+        "ingredienteTitulo": "Mostaza",
+        "tipoDePorcion": "cucharaditas",
+        "porcion": 1,
+        "obligatoria": false
+      }
+    ],
+    "pasos": [
+      "Formar la carne molida en una hamburguesa y sazonar con sal y pimienta.",
+      "Cocinar la hamburguesa en un sartén o parrilla al gusto.",
+      "Durante los últimos minutos de cocción, colocar una rebanada de queso cheddar sobre la hamburguesa para que se derrita.",
+      "Tostar ligeramente el pan de hamburguesa.",
+      "Armar la hamburguesa con lechuga, tomate, cebolla, ketchup y mostaza."
+    ],
+    "EsDesayuno": false,
+    "EsComida": true,
+    "EsCena": true,
+    "EsBotana": false
+  },
+  {
+    "codigo": "0041",
+    "titulo": "Sopa de Verduras Mixtas",
+    "tiempoPreparacion": 45,
+    "ingredientes": [
+      {
+        "ingredienteTitulo": "Zanahoria",
+        "tipoDePorcion": "unidades",
+        "porcion": 1,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Papa",
+        "tipoDePorcion": "unidades",
+        "porcion": 1,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Calabacín",
+        "tipoDePorcion": "unidades",
+        "porcion": 0.5,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Elote",
+        "tipoDePorcion": "gramos",
+        "porcion": 50,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Tomate",
+        "tipoDePorcion": "unidades",
+        "porcion": 1,
+        "obligatoria": false
+      },
+      {
+        "ingredienteTitulo": "Cebolla",
+        "tipoDePorcion": "gramos",
+        "porcion": 30,
+        "obligatoria": false
+      },
+      {
+        "ingredienteTitulo": "Ajo",
+        "tipoDePorcion": "dientes",
+        "porcion": 1,
+        "obligatoria": false
+      },
+      {
+        "ingredienteTitulo": "Caldo de Pollo",
+        "tipoDePorcion": "mililitros",
+        "porcion": 1000,
+        "obligatoria": false
+      }
+    ],
+    "pasos": [
+      "Picar todas las verduras en cubos pequeños.",
+      "En una olla grande, sofreír cebolla y ajo en un poco de aceite.",
+      "Añadir el resto de las verduras y cocinar por unos minutos.",
+      "Verter el caldo de pollo, sazonar con sal y pimienta, y cocinar a fuego medio hasta que las verduras estén tiernas."
+    ],
+    "EsDesayuno": false,
+    "EsComida": true,
+    "EsCena": true,
+    "EsBotana": false
+  },
+  {
+    "codigo": "0042",
+    "titulo": "Crepas de Plátano y Chocolate",
+    "tiempoPreparacion": 30,
+    "ingredientes": [
+      {
+        "ingredienteTitulo": "Harina de Trigo",
+        "tipoDePorcion": "gramos",
+        "porcion": 100,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Huevo de Gallina",
+        "tipoDePorcion": "unidades",
+        "porcion": 1,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Leche Entera",
+        "tipoDePorcion": "mililitros",
+        "porcion": 200,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Plátano",
+        "tipoDePorcion": "unidades",
+        "porcion": 1,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Chocolate Amargo",
+        "tipoDePorcion": "gramos",
+        "porcion": 50,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Azúcar Blanca",
+        "tipoDePorcion": "cucharadas",
+        "porcion": 1,
+        "obligatoria": false
+      },
+      {
+        "ingredienteTitulo": "Mantequilla",
+        "tipoDePorcion": "gramos",
+        "porcion": 10,
+        "obligatoria": false
+      }
+    ],
+    "pasos": [
+      "Mezclar la harina, huevo, leche y azúcar para hacer la masa de las crepas, dejar reposar por 15 minutos.",
+      "Calentar una sartén antiadherente con un poco de mantequilla, verter una porción de masa y cocinar una crepa delgada.",
+      "Derretir el chocolate amargo a baño maría o en el microondas.",
+      "Rellenar cada crepa con rebanadas de plátano y un poco de chocolate derretido.",
+      "Doblar las crepas y servir con más chocolate si se desea."
+    ],
+    "EsDesayuno": true,
+    "EsComida": false,
+    "EsCena": false,
+    "EsBotana": true
+  },
+  {
+    "codigo": "0043",
+    "titulo": "Pechuga de Pavo Asada con Batata",
+    "tiempoPreparacion": 60,
+    "ingredientes": [
+      {
+        "ingredienteTitulo": "Pechuga de Pavo",
+        "tipoDePorcion": "gramos",
+        "porcion": 400,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Camote",
+        "tipoDePorcion": "unidades",
+        "porcion": 2,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Romero Fresco",
+        "tipoDePorcion": "ramas",
+        "porcion": 2,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Aceite de Oliva Extra Virgen",
+        "tipoDePorcion": "cucharadas",
+        "porcion": 2,
+        "obligatoria": false
+      },
+      {
+        "ingredienteTitulo": "Ajo",
+        "tipoDePorcion": "dientes",
+        "porcion": 2,
+        "obligatoria": false
+      }
+    ],
+    "pasos": [
+      "Precalentar el horno a 200°C.",
+      "Cortar el camote en cubos y sazonar con aceite de oliva, romero y sal.",
+      "Colocar la pechuga de pavo en una bandeja para hornear junto con el camote.",
+      "Sazonar el pavo con sal, pimienta, ajo picado y un poco de aceite de oliva.",
+      "Hornear por 40-50 minutos o hasta que el pavo esté cocido y el camote tierno."
+    ],
+    "EsDesayuno": false,
+    "EsComida": true,
+    "EsCena": true,
+    "EsBotana": false
+  },
+  {
+    "codigo": "0044",
+    "titulo": "Tacos de Pescado Ensenada Style",
+    "tiempoPreparacion": 40,
+    "ingredientes": [
+      {
+        "ingredienteTitulo": "Tilapia",
+        "tipoDePorcion": "gramos",
+        "porcion": 300,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Harina de Trigo",
+        "tipoDePorcion": "gramos",
+        "porcion": 100,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Repollo",
+        "tipoDePorcion": "gramos",
+        "porcion": 100,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Crema Agria",
+        "tipoDePorcion": "mililitros",
+        "porcion": 50,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Limón",
+        "tipoDePorcion": "unidades",
+        "porcion": 1,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Tortilla de Maíz",
+        "tipoDePorcion": "unidades",
+        "porcion": 8,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Salsa Picante",
+        "tipoDePorcion": "mililitros",
+        "porcion": 20,
+        "obligatoria": false
+      }
+    ],
+    "pasos": [
+      "Cortar el filete de tilapia en tiras y empanizar con harina de trigo y especias, luego freír hasta que estén doradas y crujientes.",
+      "Preparar una salsa de crema con crema agria, jugo de limón y un toque de salsa picante.",
+      "Calentar las tortillas de maíz.",
+      "Servir el pescado frito en las tortillas, cubierto con repollo rallado y la salsa de crema."
+    ],
+    "EsDesayuno": false,
+    "EsComida": true,
+    "EsCena": true,
+    "EsBotana": true
+  },
+  {
+    "codigo": "0045",
+    "titulo": "Aderezo de Limón y Cilantro para Ensaladas",
+    "tiempoPreparacion": 5,
+    "ingredientes": [
+      {
+        "ingredienteTitulo": "Limón",
+        "tipoDePorcion": "unidades",
+        "porcion": 2,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Aceite de Oliva Extra Virgen",
+        "tipoDePorcion": "mililitros",
+        "porcion": 100,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Cilantro Fresco",
+        "tipoDePorcion": "ramas",
+        "porcion": 5,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Ajo",
+        "tipoDePorcion": "dientes",
+        "porcion": 1,
+        "obligatoria": false
+      },
+      {
+        "ingredienteTitulo": "Sal de Mar",
+        "tipoDePorcion": "cucharaditas",
+        "porcion": 0.5,
+        "obligatoria": false
+      },
+      {
+        "ingredienteTitulo": "Pimienta Negra Molida",
+        "tipoDePorcion": "cucharaditas",
+        "porcion": 0.25,
+        "obligatoria": false
+      }
+    ],
+    "pasos": [
+      "Picar finamente el cilantro y el ajo.",
+      "En un bowl, mezclar el jugo de limón, aceite de oliva, cilantro picado, ajo picado, sal y pimienta.",
+      "Batir bien todos los ingredientes hasta que estén emulsionados.",
+      "Probar y ajustar el sazón si es necesario. Refrigerar antes de usar."
+    ],
+    "EsDesayuno": false,
+    "EsComida": false,
+    "EsCena": false,
+    "EsBotana": false
+  },
+  {
+    "codigo": "0046",
+    "titulo": "Sopa de Pollo con Pasta y Verduras",
+    "tiempoPreparacion": 45,
+    "ingredientes": [
+      {
+        "ingredienteTitulo": "Pechuga de Pollo",
+        "tipoDePorcion": "gramos",
+        "porcion": 200,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Fideos (Espagueti roto)",
+        "tipoDePorcion": "gramos",
+        "porcion": 50,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Zanahoria",
+        "tipoDePorcion": "unidades",
+        "porcion": 1,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Apio",
+        "tipoDePorcion": "tallos",
+        "porcion": 1,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Caldo de Pollo",
+        "tipoDePorcion": "mililitros",
+        "porcion": 1000,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Cebolla",
+        "tipoDePorcion": "gramos",
+        "porcion": 30,
+        "obligatoria": false
+      },
+      {
+        "ingredienteTitulo": "Perejil Fresco",
+        "tipoDePorcion": "ramas",
+        "porcion": 1,
+        "obligatoria": false
+      }
+    ],
+    "pasos": [
+      "Cocer la pechuga de pollo en el caldo de pollo, luego deshebrarla.",
+      "Picar zanahoria, apio y cebolla en cubos pequeños.",
+      "En el mismo caldo, añadir las verduras picadas y los fideos (o espagueti roto).",
+      "Cocinar hasta que la pasta y las verduras estén tiernas.",
+      "Regresar el pollo deshebrado a la sopa y servir caliente, espolvorear perejil fresco."
+    ],
+    "EsDesayuno": false,
+    "EsComida": true,
+    "EsCena": true,
+    "EsBotana": false
+  },
+  {
+    "codigo": "0047",
+    "titulo": "Aderezo Ranch Casero",
+    "tiempoPreparacion": 10,
+    "ingredientes": [
+      {
+        "ingredienteTitulo": "Crema Agria",
+        "tipoDePorcion": "mililitros",
+        "porcion": 150,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Mayonesa",
+        "tipoDePorcion": "mililitros",
+        "porcion": 100,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Leche Entera",
+        "tipoDePorcion": "mililitros",
+        "porcion": 50,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Cebolla en Polvo",
+        "tipoDePorcion": "cucharaditas",
+        "porcion": 0.5,
+        "obligatoria": false
+      },
+      {
+        "ingredienteTitulo": "Ajo en Polvo",
+        "tipoDePorcion": "cucharaditas",
+        "porcion": 0.5,
+        "obligatoria": false
+      },
+      {
+        "ingredienteTitulo": "Perejil Seco",
+        "tipoDePorcion": "cucharaditas",
+        "porcion": 1,
+        "obligatoria": false
+      }
+    ],
+    "pasos": [
+      "En un bowl, combinar la crema agria, mayonesa y leche entera.",
+      "Añadir cebolla en polvo, ajo en polvo y perejil seco (o fresco picado).",
+      "Mezclar bien todos los ingredientes hasta que estén completamente combinados y suaves.",
+      "Probar y ajustar el sazón con sal y pimienta. Refrigerar por al menos 30 minutos antes de servir para que los sabores se asienten."
+    ],
+    "EsDesayuno": false,
+    "EsComida": false,
+    "EsCena": false,
+    "EsBotana": false
+  },
+  {
+    "codigo": "0048",
+    "titulo": "Avena con Manzana y Canela",
+    "tiempoPreparacion": 15,
+    "ingredientes": [
+      {
+        "ingredienteTitulo": "Avena",
+        "tipoDePorcion": "gramos",
+        "porcion": 50,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Manzana",
+        "tipoDePorcion": "unidades",
+        "porcion": 1,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Canela Molida",
+        "tipoDePorcion": "cucharaditas",
+        "porcion": 0.5,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Agua",
+        "tipoDePorcion": "mililitros",
+        "porcion": 200,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Miel de Abeja",
+        "tipoDePorcion": "cucharaditas",
+        "porcion": 1,
+        "obligatoria": false
+      }
+    ],
+    "pasos": [
+      "Picar la manzana en cubos pequeños.",
+      "En una olla pequeña, combinar la avena, manzana picada, canela y agua.",
+      "Cocinar a fuego medio, revolviendo ocasionalmente, hasta que la avena esté tierna y haya absorbido el líquido.",
+      "Endulzar con miel de abeja al gusto antes de servir."
+    ],
+    "EsDesayuno": true,
+    "EsComida": false,
+    "EsCena": false,
+    "EsBotana": false
+  },
+  {
+    "codigo": "0049",
+    "titulo": "Tostadas de Aguacate con Huevo",
+    "tiempoPreparacion": 15,
+    "ingredientes": [
+      {
+        "ingredienteTitulo": "Pan Integral",
+        "tipoDePorcion": "rebanadas",
+        "porcion": 2,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Aguacate",
+        "tipoDePorcion": "unidades",
+        "porcion": 1,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Huevo de Gallina",
+        "tipoDePorcion": "unidades",
+        "porcion": 2,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Chile en Polvo",
+        "tipoDePorcion": "cucharaditas",
+        "porcion": 0.25,
+        "obligatoria": false
+      },
+      {
+        "ingredienteTitulo": "Sal de Mar",
+        "tipoDePorcion": "cucharaditas",
+        "porcion": 0.25,
+        "obligatoria": false
+      }
+    ],
+    "pasos": [
+      "Tostar las rebanadas de pan integral.",
+      "Machacar el aguacate con un tenedor y sazonar con sal y chile en polvo.",
+      "Cocinar los huevos al gusto (estrellados o revueltos).",
+      "Untar el aguacate machacado sobre las tostadas y colocar los huevos cocidos encima."
+    ],
+    "EsDesayuno": true,
+    "EsComida": false,
+    "EsCena": false,
+    "EsBotana": true
+  },
+  {
+    "codigo": "0050",
+    "titulo": "Sopa Fría de Pepino y Yogur",
+    "tiempoPreparacion": 20,
+    "ingredientes": [
+      {
+        "ingredienteTitulo": "Pepino",
+        "tipoDePorcion": "unidades",
+        "porcion": 1,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Yogur Natural",
+        "tipoDePorcion": "mililitros",
+        "porcion": 200,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Menta Fresca",
+        "tipoDePorcion": "ramas",
+        "porcion": 3,
+        "obligatoria": true
+      },
+      {
+        "ingredienteTitulo": "Ajo",
+        "tipoDePorcion": "dientes",
+        "porcion": 1,
+        "obligatoria": false
+      },
+      {
+        "ingredienteTitulo": "Aceite de Oliva Extra Virgen",
+        "tipoDePorcion": "cucharadas",
+        "porcion": 1,
+        "obligatoria": false
+      }
+    ],
+    "pasos": [
+      "Pelar y picar el pepino en trozos grandes.",
+      "En una licuadora, combinar el pepino, yogur natural, hojas de menta, ajo (opcional), aceite de oliva, sal y pimienta.",
+      "Licuar hasta obtener una sopa suave y cremosa.",
+      "Refrigerar por al menos 30 minutos antes de servir. Servir fría con un chorrito de aceite de oliva y hojas de menta para decorar."
+    ],
+    "EsDesayuno": false,
+    "EsComida": true,
+    "EsCena": true,
     "EsBotana": true
   }
 ]

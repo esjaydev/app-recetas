@@ -1,21 +1,414 @@
 [
     {
         "Grupo": "Carnes y Aves",
-        "Subgrupos": {
-            "Res": [
-                "Bistec de Res",
-                "Carne Molida de Res",
-                "Asado de Res",
-                "Costillas de Res",
-                "Filete de Res"
-            ],
-            "Pollo": [
-                "Pechuga de Pollo",
-                "Muslo de Pollo",
-                "Alitas de Pollo",
-                "Pollo Entero",
-                "Pierna de Pollo"
-            ]
-        }
+        "Subgrupos": [
+            {
+                "Subgrupo": "Res",
+                "Ingredientes": [
+                    "Bistec de Res",
+                    "Carne Molida de Res",
+                    "Asado de Res",
+                    "Costillas de Res",
+                    "Filete de Res"
+                ]
+            },
+            {
+                "Subgrupo": "Cerdo",
+                "Ingredientes": [
+                    "Chuleta de Cerdo",
+                    "Costillas de Cerdo",
+                    "Tocino",
+                    "Lomo de Cerdo",
+                    "Pierna de Cerdo"
+                ]
+            },
+            {
+                "Subgrupo": "Pollo",
+                "Ingredientes": [
+                    "Pechuga de Pollo",
+                    "Muslo de Pollo",
+                    "Alitas de Pollo",
+                    "Pollo Entero",
+                    "Pierna de Pollo"
+                ]
+            },
+            {
+                "Subgrupo": "Pavo",
+                "Ingredientes": [
+                    "Pechuga de Pavo",
+                    "Carne Molida de Pavo",
+                    "Pavo Entero"
+                ]
+            },
+            {
+                "Subgrupo": "Cordero",
+                "Ingredientes": [
+                    "Pierna de Cordero",
+                    "Chuleta de Cordero"
+                ]
+            }
+        ]
+    },
+    {
+        "Grupo": "Pescados y Mariscos",
+        "Subgrupos": [
+            {
+                "Subgrupo": "Pescado",
+                "Ingredientes": [
+                    "Salmón",
+                    "Atún",
+                    "Tilapia",
+                    "Bacalao",
+                    "Mojarra",
+                    "Mero"
+                ]
+            },
+            {
+                "Subgrupo": "Mariscos",
+                "Ingredientes": [
+                    "Camarones",
+                    "Calamar",
+                    "Mejillones",
+                    "Almejas",
+                    "Pulpo",
+                    "Langosta"
+                ]
+            }
+        ]
+    },
+    {
+        "Grupo": "Lácteos y Huevos",
+        "Subgrupos": [
+            {
+                "Subgrupo": "Lácteos",
+                "Ingredientes": [
+                    "Leche Entera",
+                    "Leche Descremada",
+                    "Yogur Natural",
+                    "Crema Agria",
+                    "Nata",
+                    "Mantequilla"
+                ]
+            },
+            {
+                "Subgrupo": "Quesos",
+                "Ingredientes": [
+                    "Queso Cheddar",
+                    "Queso Mozzarella",
+                    "Queso Parmesano",
+                    "Queso Fresco",
+                    "Queso Crema",
+                    "Queso Panela"
+                ]
+            },
+            {
+                "Subgrupo": "Huevos",
+                "Ingredientes": [
+                    "Huevo de Gallina",
+                    "Clara de Huevo"
+                ]
+            }
+        ]
+    },
+    {
+        "Grupo": "Frutas",
+        "Subgrupos": [
+            {
+                "Subgrupo": "Cítricos",
+                "Ingredientes": [
+                    "Naranja",
+                    "Limón",
+                    "Lima",
+                    "Toronja"
+                ]
+            },
+            {
+                "Subgrupo": "Bayas",
+                "Ingredientes": [
+                    "Fresa",
+                    "Arándano",
+                    "Frambuesa",
+                    "Zarzamora"
+                ]
+            },
+            {
+                "Subgrupo": "Frutas Tropicales",
+                "Ingredientes": [
+                    "Plátano",
+                    "Mango",
+                    "Piña",
+                    "Aguacate",
+                    "Papaya",
+                    "Guayaba"
+                ]
+            },
+            {
+                "Subgrupo": "Frutas de Hueso",
+                "Ingredientes": [
+                    "Durazno",
+                    "Ciruela",
+                    "Cereza",
+                    "Nectarina"
+                ]
+            },
+            {
+                "Subgrupo": "Otras Frutas",
+                "Ingredientes": [
+                    "Manzana",
+                    "Pera",
+                    "Uva",
+                    "Melón",
+                    "Sandía"
+                ]
+            }
+        ]
+    },
+    {
+        "Grupo": "Vegetales",
+        "Subgrupos": [
+            {
+                "Subgrupo": "Verduras de Hoja Verde",
+                "Ingredientes": [
+                    "Lechuga",
+                    "Espinaca",
+                    "Kale",
+                    "Acelga",
+                    "Repollo"
+                ]
+            },
+            {
+                "Subgrupo": "Verduras de Raíz",
+                "Ingredientes": [
+                    "Papa",
+                    "Zanahoria",
+                    "Cebolla",
+                    "Ajo",
+                    "Camote",
+                    "Rábano",
+                    "Jengibre"
+                ]
+            },
+            {
+                "Subgrupo": "Verduras Crucíferas",
+                "Ingredientes": [
+                    "Brócoli",
+                    "Coliflor",
+                    "Col de Bruselas"
+                ]
+            },
+            {
+                "Subgrupo": "Pimientos y Chiles",
+                "Ingredientes": [
+                    "Pimiento Morron Rojo",
+                    "Pimiento Morron Verde",
+                    "Jalapeño",
+                    "Serrano",
+                    "Chile de Árbol",
+                    "Habanero",
+                    "Poblano"
+                ]
+            },
+            {
+                "Subgrupo": "Otras Verduras",
+                "Ingredientes": [
+                    "Tomate",
+                    "Pepino",
+                    "Calabacín",
+                    "Champiñones",
+                    "Elote",
+                    "Apio",
+                    "Ejote",
+                    "Berenjena"
+                ]
+            }
+        ]
+    },
+    {
+        "Grupo": "Granos y Legumbres",
+        "Subgrupos": [
+            {
+                "Subgrupo": "Granos",
+                "Ingredientes": [
+                    "Arroz Blanco",
+                    "Arroz Integral",
+                    "Quinoa",
+                    "Avena",
+                    "Cebada",
+                    "Trigo"
+                ]
+            },
+            {
+                "Subgrupo": "Pasta",
+                "Ingredientes": [
+                    "Espagueti",
+                    "Macarrones",
+                    "Fetuccini",
+                    "Lasaña",
+                    "Penne"
+                ]
+            },
+            {
+                "Subgrupo": "Productos de Panadería",
+                "Ingredientes": [
+                    "Pan Blanco",
+                    "Pan Integral",
+                    "Tortilla de Maíz",
+                    "Tortilla de Harina",
+                    "Bolillo"
+                ]
+            },
+            {
+                "Subgrupo": "Legumbres",
+                "Ingredientes": [
+                    "Frijoles Negros",
+                    "Frijoles Pintos",
+                    "Lentejas",
+                    "Garbanzos",
+                    "Chícharos"
+                ]
+            }
+        ]
+    },
+    {
+        "Grupo": "Aceites y Grasas",
+        "Subgrupos": [
+            {
+                "Subgrupo": "Aceites",
+                "Ingredientes": [
+                    "Aceite de Oliva Extra Virgen",
+                    "Aceite de Girasol",
+                    "Aceite de Coco",
+                    "Aceite de Canola",
+                    "Aceite Vegetal"
+                ]
+            },
+            {
+                "Subgrupo": "Grasas",
+                "Ingredientes": [
+                    "Manteca de Cerdo",
+                    "Mantequilla",
+                    "Margarina"
+                ]
+            }
+        ]
+    },
+    {
+        "Grupo": "Especias y Condimentos",
+        "Subgrupos": [
+            {
+                "Subgrupo": "Sal y Pimienta",
+                "Ingredientes": [
+                    "Sal de Mesa",
+                    "Sal de Mar",
+                    "Pimienta Negra Molida",
+                    "Pimienta Blanca"
+                ]
+            },
+            {
+                "Subgrupo": "Hierbas Secas",
+                "Ingredientes": [
+                    "Orégano Seco",
+                    "Tomillo Seco",
+                    "Romero Seco",
+                    "Laurel",
+                    "Albahaca Seca"
+                ]
+            },
+            {
+                "Subgrupo": "Hierbas Frescas",
+                "Ingredientes": [
+                    "Perejil Fresco",
+                    "Cilantro Fresco",
+                    "Albahaca Fresca",
+                    "Menta Fresca",
+                    "Romero Fresco",
+                    "Tomillo Fresco"
+                ]
+            },
+            {
+                "Subgrupo": "Especias Molidas",
+                "Ingredientes": [
+                    "Comino Molido",
+                    "Pimentón Dulce",
+                    "Chile en Polvo",
+                    "Canela Molida",
+                    "Nuez Moscada Molida",
+                    "Clavo Molido"
+                ]
+            },
+            {
+                "Subgrupo": "Salsas y Aderezos",
+                "Ingredientes": [
+                    "Salsa de Soja",
+                    "Salsa Inglesa (Worcestershire)",
+                    "Mostaza",
+                    "Ketchup",
+                    "Mayonesa",
+                    "Vinagre Blanco",
+                    "Vinagre de Manzana",
+                    "Vinagre Balsámico",
+                    "Salsa Picante",
+                    "Salsa Tamari"
+                ]
+            }
+        ]
+    },
+    {
+        "Grupo": "Productos de Panadería y Repostería",
+        "Subgrupos": [
+            {
+                "Subgrupo": "Harinas",
+                "Ingredientes": [
+                    "Harina de Trigo",
+                    "Harina Integral",
+                    "Harina de Maíz",
+                    "Harina de Arroz",
+                    "Harina de Almendra"
+                ]
+            },
+            {
+                "Subgrupo": "Azúcares y Endulzantes",
+                "Ingredientes": [
+                    "Azúcar Blanca",
+                    "Azúcar Morena",
+                    "Miel de Abeja",
+                    "Jarabe de Agave",
+                    "Piloncillo"
+                ]
+            },
+            {
+                "Subgrupo": "Levaduras y Polvos",
+                "Ingredientes": [
+                    "Levadura Fresca",
+                    "Levadura Seca",
+                    "Polvo para Hornear",
+                    "Bicarbonato de Sodio"
+                ]
+            },
+            {
+                "Subgrupo": "Otros",
+                "Ingredientes": [
+                    "Cacao en Polvo",
+                    "Chocolate Amargo",
+                    "Esencia de Vainilla",
+                    "Coco Rallado"
+                ]
+            }
+        ]
+    },
+    {
+        "Grupo": "Bebidas",
+        "Subgrupos": [
+            {
+                "Subgrupo": "No Alcohólicas",
+                "Ingredientes": [
+                    "Agua",
+                    "Jugo de Naranja",
+                    "Café Molido",
+                    "Té Negro",
+                    "Leche Vegetal (Almendra, Soya)"
+                ]
+            }
+        ]
     }
 ]
