@@ -1,0 +1,21 @@
+[
+    {
+        "Grupo": "Carnes y Aves",
+        "Subgrupos": {
+            "Res": [
+                "Bistec de Res",
+                "Carne Molida de Res",
+                "Asado de Res",
+                "Costillas de Res",
+                "Filete de Res"
+            ],
+            "Pollo": [
+                "Pechuga de Pollo",
+                "Muslo de Pollo",
+                "Alitas de Pollo",
+                "Pollo Entero",
+                "Pierna de Pollo"
+            ]
+        }
+    }
+]
