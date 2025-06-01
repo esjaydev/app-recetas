@@ -241,10 +241,11 @@ function calculateSettingAsThemeString({ localStorageTheme, systemSettingDark })
 }
 
 function updateButton({ buttonEl, isDark }) {
-	const newCta = isDark ? "Change to light theme" : "Change to dark theme";
+	const newCta = isDark ? "light_mode" : "dark_mode";
 
 	buttonEl.setAttribute("aria-label", newCta);
-	buttonEl.innerText = newCta;
+	iconoBotonModoObscuro.innerText = newCta;
+	iconoBotonModoObscuro.style.color = `var(--${newCta}Contrast)`;
 }
 
 function updateThemeOnHtmlEl({ theme }) {
@@ -254,7 +255,7 @@ function updateThemeOnHtmlEl({ theme }) {
 const button = document.querySelector("[data-theme-toggle]");
 const localStorageTheme = localStorage.getItem("theme");
 const systemSettingDark = window.matchMedia("(prefers-color-scheme: dark)");
-
+const iconoBotonModoObscuro = document.querySelector('.material-symbols-outlined')
 let currentThemeSetting = calculateSettingAsThemeString({ localStorageTheme, systemSettingDark });
 
 updateButton({ buttonEl: button, isDark: currentThemeSetting === "dark" });
