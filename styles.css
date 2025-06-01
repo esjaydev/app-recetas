@@ -1,7 +1,7 @@
 :root {
   --blanco: white;
   --grisClaro: #f0f0f0;
-  --grisMedio: #D6D6D6;
+  --grisMedio: #9c9993;
   --grisObscuro: #333533;
   --amarillo: #FFD100;
   --naranja: #ff8c00;
@@ -102,6 +102,10 @@ summary {
   cursor: pointer;
 }
 
+.grupo-ingredientes summary:hover {
+  background-color: var(--amarillo);
+}
+
 .subgrupo-ingredientes {
   background-color: var(--blanco);
 }
@@ -113,6 +117,10 @@ summary {
   border-bottom: 1px solid var(--grisMedio);
   cursor: pointer;
   background-color: var(--blanco);
+}
+
+.subgrupo-ingredientes summary:hover {
+  background-color: var(--amarilloClaro);
 }
 
 .contenedor-ingredientes {
@@ -181,12 +189,17 @@ summary {
   .ingredientes-contenido {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .resultados article img {
+    display: none;
+  }
 }
 
 @media (width > 500px) {
   .ingredientes-contenido {
     grid-template-columns: repeat(4, 1fr);
   }
+
 }
 
 @media (width > 700px) {
@@ -209,6 +222,7 @@ summary {
   .ingredientes-contenido {
     grid-template-columns: repeat(7, 1fr);
   }
+
 }
 
 @media (hover: hover) {
@@ -222,4 +236,74 @@ summary {
     border-color: var(--amarillo);
     background-color: var(--amarilloClaro);
   }
+}
+
+.resultados-receta {
+  background-color: var(--grisClaro);
+  border-radius: 1rem;
+  padding: 0.5rem 0.5rem 0.5rem 1rem;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.resultados-detalles-img {
+  border-radius: 0.5rem;
+  max-width: 33%;
+  min-width: 100px;
+  height: auto;
+  object-fit: cover;
+}
+
+.resultados-titulo-receta {
+  color: var(--grisObscuro);
+  line-height: 16pt;
+  margin-bottom: 3px;
+}
+
+.resultados-receta-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.resultados-label-tiempo {
+  color: var(--grisMedio);
+  line-height: 12pt;
+  margin-bottom: 0.5rem;
+}
+
+.resultados-detalles-summary {
+  color: var(--naranja);
+  line-height: 12pt;
+}
+
+.resultados-detalles {
+  border-left: 2px solid var(--naranja);
+  padding-left: 0.5rem;
+}
+
+.resultados-detalles ul {
+  padding-left: 1rem;
+  list-style: disc;
+  margin-top: 0.5rem;
+}
+
+.resultados-detalles li::marker {
+  color: var(--naranja);
+}
+
+.resultados-detalles-summary:hover {
+  cursor: pointer;
+  color: var(--naranja);
+}
+
+.no-recetas-anuncio {
+  color: var(--naranja);
+  text-align: center;
+  width: 100%;
+  background-color: var(--blanco);
+  padding: 1rem;
+  border-radius: 1rem;
 }

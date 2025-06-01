@@ -2,6 +2,9 @@
   {
     "codigo": "0001",
     "titulo": "Tacos al Pastor Caseros",
+    "imagen": {
+      "url": "./media/imagenes_recetas/tacos_al_pastor_caseros.webp"
+    },
     "tiempoPreparacion": 90,
     "ingredientes": [
       {
@@ -56,6 +59,9 @@
   {
     "codigo": "0002",
     "titulo": "Pozole Rojo Clásico",
+    "imagen": {
+      "url": "./media/imagenes_recetas/pozole_rojo_clasico.webp"
+    },
     "tiempoPreparacion": 180,
     "ingredientes": [
       {
@@ -128,6 +134,9 @@
   {
     "codigo": "0003",
     "titulo": "Chiles en Nogada Tradicionales",
+    "imagen": {
+      "url": "./media/imagenes_recetas/chiles_en_nogada_tradicionales.webp"
+    },
     "tiempoPreparacion": 150,
     "ingredientes": [
       {
@@ -212,6 +221,9 @@
   {
     "codigo": "0004",
     "titulo": "Enchiladas Verdes de Pollo",
+    "imagen": {
+      "url": "./media/imagenes_recetas/enchiladas_verdes_de_pollo.webp"
+    },
     "tiempoPreparacion": 60,
     "ingredientes": [
       {
@@ -285,6 +297,9 @@
   {
     "codigo": "0005",
     "titulo": "Tamales de Elote Dulces",
+    "imagen": {
+      "url": "./media/imagenes_recetas/tamales_de_elote_dulces.webp"
+    },
     "tiempoPreparacion": 120,
     "ingredientes": [
       {
@@ -339,6 +354,9 @@
   {
     "codigo": "0006",
     "titulo": "Sopes con Nopal y Queso Fresco",
+    "imagen": {
+      "url": "./media/imagenes_recetas/sopes_con_nopal_y_queso_fresco.webp"
+    },
     "tiempoPreparacion": 45,
     "ingredientes": [
       {
@@ -398,6 +416,9 @@
   {
     "codigo": "0007",
     "titulo": "Mole Poblano con Pollo",
+    "imagen": {
+      "url": "./media/imagenes_recetas/mole_poblano_con_pollo.webp"
+    },
     "tiempoPreparacion": 180,
     "ingredientes": [
       {
@@ -457,6 +478,9 @@
   {
     "codigo": "0008",
     "titulo": "Tostadas de Tinga de Res",
+    "imagen": {
+      "url": "./media/imagenes_recetas/tostadas_de_tinga_de_res.webp"
+    },
     "tiempoPreparacion": 60,
     "ingredientes": [
       {
@@ -522,6 +546,9 @@
   {
     "codigo": "0009",
     "titulo": "Quesadillas de Champiñones y Epazote",
+    "imagen": {
+      "url": "./media/imagenes_recetas/quesadillas_de_champiñones_y_epazote.webp"
+    },
     "tiempoPreparacion": 40,
     "ingredientes": [
       {
@@ -569,6 +596,9 @@
   {
     "codigo": "0010",
     "titulo": "Chilaquiles Rojos con Huevo y Frijoles",
+    "imagen": {
+      "url": "./media/imagenes_recetas/chilaquiles_rojos_con_huevo_y_frijoles.webp"
+    },
     "tiempoPreparacion": 35,
     "ingredientes": [
       {
@@ -640,6 +670,9 @@
   {
     "codigo": "0011",
     "titulo": "Sopa de Tortilla Tradicional",
+    "imagen": {
+      "url": "./media/imagenes_recetas/sopa_de_tortilla_tradicional.webp"
+    },
     "tiempoPreparacion": 45,
     "ingredientes": [
       {
@@ -699,6 +732,9 @@
   {
     "codigo": "0012",
     "titulo": "Pescado Empapelado con Verduras",
+    "imagen": {
+      "url": "./media/imagenes_recetas/pescado_empapelado_con_verduras.webp"
+    },
     "tiempoPreparacion": 40,
     "ingredientes": [
       {
@@ -766,6 +802,9 @@
   {
     "codigo": "0013",
     "titulo": "Ensalada de Quinoa con Camarones",
+    "imagen": {
+      "url": "./media/imagenes_recetas/ensalada_de_quinoa_con_camarones.webp"
+    },
     "tiempoPreparacion": 30,
     "ingredientes": [
       {
@@ -832,6 +871,9 @@
   {
     "codigo": "0014",
     "titulo": "Omelette de Claras con Espinaca y Queso Panela",
+    "imagen": {
+      "url": "./media/imagenes_recetas/omelette_de_claras_con_espinaca_y_queso_panela.webp"
+    },
     "tiempoPreparacion": 15,
     "ingredientes": [
       {
@@ -880,6 +922,9 @@
   {
     "codigo": "0015",
     "titulo": "Licuado de Plátano y Avena",
+    "imagen": {
+      "url": "./media/imagenes_recetas/licuado_de_platano_y_avena.webp"
+    },
     "tiempoPreparacion": 5,
     "ingredientes": [
       {
@@ -927,6 +972,9 @@
   {
     "codigo": "0016",
     "titulo": "Salmón al Horno con Espárragos",
+    "imagen": {
+      "url": "./media/imagenes_recetas/salmon_al_horno_con_esparragos.webp"
+    },
     "tiempoPreparacion": 30,
     "ingredientes": [
       {
@@ -986,6 +1034,9 @@
   {
     "codigo": "0017",
     "titulo": "Sopa de Lentejas con Verduras",
+    "imagen": {
+      "url": "./media/imagenes_recetas/sopa_de_lentejas_con_verduras.webp"
+    },
     "tiempoPreparacion": 60,
     "ingredientes": [
       {
@@ -1051,6 +1102,9 @@
   {
     "codigo": "0018",
     "titulo": "Tacos de Bistec con Guacamole",
+    "imagen": {
+      "url": "./media/imagenes_recetas/tacos_de_bistec_con_guacamole.webp"
+    },
     "tiempoPreparacion": 30,
     "ingredientes": [
       {
@@ -1104,6 +1158,9 @@
   {
     "codigo": "0019",
     "titulo": "Chiles Rellenos de Queso",
+    "imagen": {
+      "url": "./media/imagenes_recetas/chiles_rellenos_de_queso.webp"
+    },
     "tiempoPreparacion": 75,
     "ingredientes": [
       {
@@ -1145,10 +1202,7 @@
     ],
     "pasos": [
       "Asar, pelar y desvenar los chiles poblanos, procurando no romperlos.",
-      "Rellenar los chiles con rebanadas de queso panela.",
-      "Batir las claras de huevo a punto de nieve y luego incorporar las yemas para capear los chiles.",
-      "Pasar los chiles por harina y luego por el huevo batido, freírlos en aceite caliente.",
-      "Preparar una salsa de tomate licuando tomates con cebolla y sazonar, servir sobre los chiles."
+      "Rellenar los chiles con queso panela."
     ],
     "EsDesayuno": false,
     "EsComida": true,
@@ -1158,6 +1212,9 @@
   {
     "codigo": "0020",
     "titulo": "Ensalada de Atún Fresco",
+    "imagen": {
+      "url": "./media/imagenes_recetas/ensalada_de_atun_fresco.webp"
+    },
     "tiempoPreparacion": 20,
     "ingredientes": [
       {
@@ -1217,6 +1274,9 @@
   {
     "codigo": "0021",
     "titulo": "Pollo al Limón con Arroz Integral",
+    "imagen": {
+      "url": "./media/imagenes_recetas/pollo_al_limon_con_arroz_integral.webp"
+    },
     "tiempoPreparacion": 40,
     "ingredientes": [
       {
@@ -1271,6 +1331,9 @@
   {
     "codigo": "0022",
     "titulo": "Pasta con Brócoli y Aceite de Oliva",
+    "imagen": {
+      "url": "./media/imagenes_recetas/pasta_con_brocoli_y_aceite_de_oliva.webp"
+    },
     "tiempoPreparacion": 25,
     "ingredientes": [
       {
@@ -1319,6 +1382,9 @@
   {
     "codigo": "0023",
     "titulo": "Pan Francés con Frutas y Miel",
+    "imagen": {
+      "url": "./media/imagenes_recetas/pan_frances_con_frutas_y_miel.webp"
+    },
     "tiempoPreparacion": 20,
     "ingredientes": [
       {
@@ -1378,6 +1444,9 @@
   {
     "codigo": "0024",
     "titulo": "Sopa de Champiñones Cremosa",
+    "imagen": {
+      "url": "./media/imagenes_recetas/sopa_de_champinones_cremosa.webp"
+    },
     "tiempoPreparacion": 30,
     "ingredientes": [
       {
@@ -1439,6 +1508,9 @@
   {
     "codigo": "0025",
     "titulo": "Huevos Rancheros con Salsa Casera",
+    "imagen": {
+      "url": "./media/imagenes_recetas/huevos_rancheros_con_salsa_casera.webp"
+    },
     "tiempoPreparacion": 25,
     "ingredientes": [
       {
@@ -1499,6 +1571,9 @@
   {
     "codigo": "0026",
     "titulo": "Carne de Res con Brócoli y Arroz Blanco",
+    "imagen": {
+      "url": "./media/imagenes_recetas/carne_de_res_con_brocoli_y_arroz_blanco.webp"
+    },
     "tiempoPreparacion": 40,
     "ingredientes": [
       {
@@ -1552,6 +1627,9 @@
   {
     "codigo": "0027",
     "titulo": "Burritos de Frijol y Queso",
+    "imagen": {
+      "url": "./media/imagenes_recetas/burritos_de_frijol_y_queso.webp"
+    },
     "tiempoPreparacion": 25,
     "ingredientes": [
       {
@@ -1600,6 +1678,9 @@
   {
     "codigo": "0028",
     "titulo": "Smoothie de Bayas con Yogur",
+    "imagen": {
+      "url": "./media/imagenes_recetas/smoothie_de_bayas_con_yogur.webp"
+    },
     "tiempoPreparacion": 5,
     "ingredientes": [
       {
@@ -1653,6 +1734,9 @@
   {
     "codigo": "0029",
     "titulo": "Curry de Garbanzos con Leche de Coco",
+    "imagen": {
+      "url": "./media/imagenes_recetas/curry_de_garbanzos_con_leche_de_coco.webp"
+    },
     "tiempoPreparacion": 45,
     "ingredientes": [
       {
@@ -1719,6 +1803,9 @@
   {
     "codigo": "0030",
     "titulo": "Costillas de Cerdo en Salsa BBQ",
+    "imagen": {
+      "url": "./media/imagenes_recetas/costillas_de_cerdo_en_salsa_bbq.webp"
+    },
     "tiempoPreparacion": 120,
     "ingredientes": [
       {
@@ -1766,6 +1853,9 @@
   {
     "codigo": "0031",
     "titulo": "Sándwich de Pollo y Aguacate",
+    "imagen": {
+      "url": "./media/imagenes_recetas/sandwich_de_pollo_y_aguacate.webp"
+    },
     "tiempoPreparacion": 15,
     "ingredientes": [
       {
@@ -1820,6 +1910,9 @@
   {
     "codigo": "0032",
     "titulo": "Arroz Frito con Camarones",
+    "imagen": {
+      "url": "./media/imagenes_recetas/arroz_frito_con_camarones.webp"
+    },
     "tiempoPreparacion": 30,
     "ingredientes": [
       {
@@ -1886,6 +1979,9 @@
   {
     "codigo": "0033",
     "titulo": "Sopa de Frijol Negro Cremosa",
+    "imagen": {
+      "url": "./media/imagenes_recetas/sopa_de_frijol_negro_cremosa.webp"
+    },
     "tiempoPreparacion": 50,
     "ingredientes": [
       {
@@ -1940,6 +2036,9 @@
   {
     "codigo": "0034",
     "titulo": "Ensalada de Nopales con Queso Fresco",
+    "imagen": {
+      "url": "./media/imagenes_recetas/ensalada_de_nopales_con_queso_fresco.webp"
+    },
     "tiempoPreparacion": 30,
     "ingredientes": [
       {
@@ -2006,6 +2105,9 @@
   {
     "codigo": "0035",
     "titulo": "Cereal con Frutas y Leche Vegetal",
+    "imagen": {
+      "url": "./media/imagenes_recetas/cereal_con_frutas_y_leche_vegetal.webp"
+    },
     "tiempoPreparacion": 5,
     "ingredientes": [
       {
@@ -2053,6 +2155,9 @@
   {
     "codigo": "0036",
     "titulo": "Enchiladas Suizas",
+    "imagen": {
+      "url": "./media/imagenes_recetas/enchiladas_suizas.webp"
+    },
     "tiempoPreparacion": 70,
     "ingredientes": [
       {
@@ -2119,6 +2224,9 @@
   {
     "codigo": "0037",
     "titulo": "Guisado de Res con Papas",
+    "imagen": {
+      "url": "./media/imagenes_recetas/guisado_de_res_con_papas.webp"
+    },
     "tiempoPreparacion": 90,
     "ingredientes": [
       {
@@ -2184,6 +2292,9 @@
   {
     "codigo": "0038",
     "titulo": "Queso Fundido con Chorizo",
+    "imagen": {
+      "url": "./media/imagenes_recetas/queso_fundido_con_chorizo.webp"
+    },
     "tiempoPreparacion": 20,
     "ingredientes": [
       {
@@ -2226,6 +2337,9 @@
   {
     "codigo": "0039",
     "titulo": "Pescado Zarandeado",
+    "imagen": {
+      "url": "./media/imagenes_recetas/pescado_zarandeado.webp"
+    },
     "tiempoPreparacion": 60,
     "ingredientes": [
       {
@@ -2282,16 +2396,15 @@
       "Preparar una mezcla con mayonesa y mostaza, untar el pescado.",
       "Asar el pescado a la parrilla o en el horno hasta que esté bien cocido y dorado.",
       "Servir el pescado con rodajas de cebolla morada, pepino y más limón."
-    ],
-    "EsDesayuno": false,
-    "EsComida": true,
-    "EsCena": true,
-    "EsBotana": false
+    ]
   },
   {
     "codigo": "0040",
     "titulo": "Hamburguesa Casera de Res",
     "tiempoPreparacion": 30,
+    "imagen": {
+      "url": "./media/imagenes_recetas/hamburguesa_casera_de_res.webp"
+    },
     "ingredientes": [
       {
         "ingredienteTitulo": "Carne Molida de Res",
@@ -2358,6 +2471,9 @@
     "codigo": "0041",
     "titulo": "Sopa de Verduras Mixtas",
     "tiempoPreparacion": 45,
+    "imagen": {
+      "url": "./media/imagenes_recetas/sopa_de_verduras_mixtas.webp"
+    },
     "ingredientes": [
       {
         "ingredienteTitulo": "Zanahoria",
@@ -2423,6 +2539,9 @@
     "codigo": "0042",
     "titulo": "Crepas de Plátano y Chocolate",
     "tiempoPreparacion": 30,
+    "imagen": {
+      "url": "./media/imagenes_recetas/crepas_de_platano_y_chocolate.webp"
+    },
     "ingredientes": [
       {
         "ingredienteTitulo": "Harina de Trigo",
@@ -2483,6 +2602,9 @@
     "codigo": "0043",
     "titulo": "Pechuga de Pavo Asada con Batata",
     "tiempoPreparacion": 60,
+    "imagen": {
+      "url": "./media/imagenes_recetas/pechuga_de_pavo_asada_con_batata.webp"
+    },
     "ingredientes": [
       {
         "ingredienteTitulo": "Pechuga de Pavo",
@@ -2531,6 +2653,9 @@
     "codigo": "0044",
     "titulo": "Tacos de Pescado Ensenada Style",
     "tiempoPreparacion": 40,
+    "imagen": {
+      "url": "./media/imagenes_recetas/tacos_de_pescado_ensenada_style.webp"
+    },
     "ingredientes": [
       {
         "ingredienteTitulo": "Tilapia",
@@ -2590,6 +2715,9 @@
     "codigo": "0045",
     "titulo": "Aderezo de Limón y Cilantro para Ensaladas",
     "tiempoPreparacion": 5,
+    "imagen": {
+      "url": "./media/imagenes_recetas/aderezo_de_limon_y_cilantro_para_ensaladas.webp"
+    },
     "ingredientes": [
       {
         "ingredienteTitulo": "Limón",
@@ -2643,6 +2771,9 @@
     "codigo": "0046",
     "titulo": "Sopa de Pollo con Pasta y Verduras",
     "tiempoPreparacion": 45,
+    "imagen": {
+      "url": "./media/imagenes_recetas/sopa_de_pollo_con_pasta_y_verduras.webp"
+    },
     "ingredientes": [
       {
         "ingredienteTitulo": "Pechuga de Pollo",
@@ -2703,6 +2834,9 @@
     "codigo": "0047",
     "titulo": "Aderezo Ranch Casero",
     "tiempoPreparacion": 10,
+    "imagen": {
+      "url": "./media/imagenes_recetas/aderezo_ranch_casero.webp"
+    },
     "ingredientes": [
       {
         "ingredienteTitulo": "Crema Agria",
@@ -2756,6 +2890,9 @@
     "codigo": "0048",
     "titulo": "Avena con Manzana y Canela",
     "tiempoPreparacion": 15,
+    "imagen": {
+      "url": "./media/imagenes_recetas/avena_con_manzana_y_canela.webp"
+    },
     "ingredientes": [
       {
         "ingredienteTitulo": "Avena",
@@ -2803,6 +2940,9 @@
     "codigo": "0049",
     "titulo": "Tostadas de Aguacate con Huevo",
     "tiempoPreparacion": 15,
+    "imagen": {
+      "url": "./media/imagenes_recetas/tostadas_de_aguacate_con_huevo.webp"
+    },
     "ingredientes": [
       {
         "ingredienteTitulo": "Pan Integral",
@@ -2850,6 +2990,9 @@
     "codigo": "0050",
     "titulo": "Sopa Fría de Pepino y Yogur",
     "tiempoPreparacion": 20,
+    "imagen": {
+      "url": "./media/imagenes_recetas/sopa_fria_de_pepino_y_yogur.webp"
+    },
     "ingredientes": [
       {
         "ingredienteTitulo": "Pepino",

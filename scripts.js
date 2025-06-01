@@ -1,60 +1,3 @@
-let alimentos = {
-	"Carnes": [
-		"Pollo", "Res", "Cerdo", "Cordero", "Pavo", "Pescado",
-		"Cabrito", "Venado", "Atún",
-		"Salmón", "Bacalao", "Camarón", "Langosta", "Pulpo", "Mejillón",
-		"Calamar", "Almeja"
-	],
-	"Lácteos": [
-		"Leche", "Queso", "Yogurt", "Mantequilla", "Crema",
-		"Leche Condensada", "Leche Evaporada", "Queso Crema",
-		"Queso Parmesano", "Queso Mozzarella", "Queso Oaxaca",
-		"Queso Manchego", "Queso Cotija", "Queso Ricotta"
-	],
-	"Frutas": [
-		"Manzana", "Banana", "Naranja", "Uva", "Fresa", "Piña",
-		"Sandía", "Melón", "Papaya", "Mango", "Kiwi", "Durazno",
-		"Ciruela", "Pera", "Mandarina", "Cereza", "Frambuesa",
-		"Mora Azul", "Granada", "Coco", "Lima", "Limón"
-	],
-	"Vegetales": [
-		"Zanahoria", "Espinaca", "Lechuga", "Brócoli", "Pepino",
-		"Pimiento", "Maíz Para Pozole", "Tomate", "Cebolla",
-		"Ajo", "Coliflor", "Calabacita", "Chayote", "Nopal",
-		"Betabel", "Perejil", "Apio", "Rábano", "Champiñón",
-		"Berenjena", "Repollo", "Jitomate", "Alcachofa"
-	],
-	"Cereales": [
-		"Arroz", "Harina De Trigo", "Avena", "Harina De Maíz",
-		"Elote", "Cebada", "Trigo", "Maíz", "Centeno",
-		"Sémola", "Quinoa", "Amaranto", 'Tortillas de Maíz'
-	],
-	"Legumbres": [
-		"Frijoles", "Lentejas", "Soya", "Chícharos", "Garbanzos",
-		"Alubias", "Habas"
-	],
-	"Grasas": [
-		"Aceite De Oliva", "Manteca", "Aguacate", "Nueces",
-		"Aceite Vegetal", "Aceite De Coco", "Aceite De Canola",
-		"Aceite De Girasol", "Semillas De Girasol", "Semillas De Calabaza",
-		"Almendras", "Cacahuates", "Pistaches", "Mantequilla De Maní"
-	],
-	"Salsas": [
-		"Salsa De Tomate", "Salsa Verde", "Salsa Roja", "Salsa Picante",
-		"Salsa De Soya", "Salsa Inglesa", "Salsa Barbacoa", "Salsa De Ajo",
-		"Salsa Teriyaki", "Salsa De Chile", "Salsa De Mango",
-		"Salsa De Tamarindo", "Salsa De Queso", "Salsa De Mostaza",
-		"Salsa Alfredo", "Salsa Bechamel", "Salsa De Chipotle"
-	],
-	"Especias": [
-		"Sal", "Pimienta", "Orégano", "Comino", "Cúrcuma",
-		"Canela", "Clavo", "Nuez Moscada", "Laurel", "Tomillo",
-		"Romero", "Paprika", "Chile En Polvo", "Achiote",
-		"Anís", "Cardamomo", "Jengibre", "Azafrán", "Cilantro Seco",
-		"Mostaza En Polvo", "Curry", "Hinojo"
-	]
-}
-
 async function buscarRecetas(ingredientesUsuario) {
 	try {
 		const response = await fetch('./recetas.json')
@@ -62,6 +5,11 @@ async function buscarRecetas(ingredientesUsuario) {
 		let recetasFiltradas = []
 		let filtroTipo = []
 		let filtroTiempo = []
+		const containerResultados = document.querySelector('.resultados')
+
+		while (containerResultados.hasChildNodes()) {
+			containerResultados.removeChild(containerResultados.firstChild)
+		}
 		recetas.forEach((receta) => {
 			switch (inputCategoria.value) {
 				case "":
@@ -125,12 +73,52 @@ async function buscarRecetas(ingredientesUsuario) {
 				recetasFiltradas.push(receta);
 			}
 		})
-		recetasFiltradas.forEach(e => {
-			console.log(e);
-		})
 		if (recetasFiltradas.length == 0) {
-			console.log("No hay recetas.");
+			const anuncioRecetas = document.createElement('h3')
+			anuncioRecetas.setAttribute('class', 'no-recetas-anuncio')
+			anuncioRecetas.innerText = '😅 No hay recetas con esas características.'
+			containerResultados.appendChild(anuncioRecetas)
+		} else {
+			recetasFiltradas.forEach(e => {
+				const articleReceta = document.createElement('article')
+				articleReceta.setAttribute('class', 'resultados-receta')
+				const recetaInfo = document.createElement('div')
+				recetaInfo.setAttribute('class', 'resultados-receta-info')
+				const tituloReceta = document.createElement('h3')
+				tituloReceta.setAttribute('class', 'resultados-titulo-receta')
+				const labelTiempo = document.createElement('label')
+				labelTiempo.setAttribute('class', 'resultados-label-tiempo')
+				const detalles = document.createElement('details')
+				detalles.setAttribute('class', 'resultados-detalles')
+				const summaryDetalles = document.createElement('summary')
+				summaryDetalles.setAttribute('class', 'resultados-detalles-summary')
+				const listaIngredientes = document.createElement('ul')
+				const imgReceta = document.createElement('img')
 
+
+				tituloReceta.innerText = e.titulo
+				labelTiempo.innerText = `${e.tiempoPreparacion} minutos`
+				summaryDetalles.innerText = 'Ingredientes necesarios'
+
+				recetaInfo.appendChild(tituloReceta)
+				recetaInfo.appendChild(labelTiempo)
+				detalles.appendChild(summaryDetalles)
+				detalles.appendChild(listaIngredientes)
+
+				e.ingredientes.forEach(ing => {
+					const elementolista = document.createElement('li')
+					elementolista.innerText = ing.ingredienteTitulo
+					listaIngredientes.appendChild(elementolista)
+				})
+				imgReceta.src = 'https://picsum.photos/250/150'
+				imgReceta.alt = e.titulo
+				imgReceta.setAttribute('class', 'resultados-detalles-img')
+
+				recetaInfo.appendChild(detalles)
+				articleReceta.appendChild(recetaInfo)
+				articleReceta.appendChild(imgReceta)
+				containerResultados.appendChild(articleReceta)
+			})
 		}
 	} catch (error) {
 		console.error('Error cargando recetas:', error)
@@ -148,96 +136,94 @@ let seccionLegumbres = document.getElementById('seccion-legumbres')
 let seccionGrasas = document.getElementById('seccion-grasas')
 
 const displayIngredientes = document.getElementById('display-ingredientes')
-window.onload = function () {
-	fetch('./ingredientes.json')
-		.then(response => {
-			if (!response.ok) {
-				throw new Error('Error: ' + response.status)
-			} return response.json()
-		})
-		.then(data => {
-			data.forEach(e => {
-				const nuevoGrupo = document.createElement('details')
-				nuevoGrupo.setAttribute('class', 'grupo-ingredientes')
-				const labelGrupo = document.createElement('summary')
-				labelGrupo.innerText = e.Grupo
 
-				nuevoGrupo.appendChild(labelGrupo)
+fetch('./ingredientes.json')
+	.then(response => {
+		if (!response.ok) {
+			throw new Error('Error: ' + response.status)
+		} return response.json()
+	})
+	.then(data => {
+		data.forEach(e => {
+			const nuevoGrupo = document.createElement('details')
+			nuevoGrupo.setAttribute('class', 'grupo-ingredientes')
+			const labelGrupo = document.createElement('summary')
+			labelGrupo.innerText = e.Grupo
 
-				e.Subgrupos.forEach(sub => {
-					const nuevoSubgrupo = document.createElement('details')
-					nuevoSubgrupo.setAttribute('class', 'subgrupo-ingredientes')
-					const labelSubgrupo = document.createElement('summary')
-					labelSubgrupo.innerText = sub.Subgrupo
-					const contenedorIngredientes = document.createElement('div')
-					contenedorIngredientes.setAttribute('class', 'contenedor-ingredientes')
+			nuevoGrupo.appendChild(labelGrupo)
 
-					nuevoSubgrupo.appendChild(labelSubgrupo)
-					nuevoSubgrupo.appendChild(contenedorIngredientes)
-					nuevoGrupo.appendChild(nuevoSubgrupo)
+			e.Subgrupos.forEach(sub => {
+				const nuevoSubgrupo = document.createElement('details')
+				nuevoSubgrupo.setAttribute('class', 'subgrupo-ingredientes')
+				const labelSubgrupo = document.createElement('summary')
+				labelSubgrupo.innerText = sub.Subgrupo
+				const contenedorIngredientes = document.createElement('div')
+				contenedorIngredientes.setAttribute('class', 'contenedor-ingredientes')
 
-					sub.Ingredientes.forEach(ing => {
-						const ingrediente = document.createElement('div')
-						ingrediente.setAttribute('class', 'ingrediente')
+				nuevoSubgrupo.appendChild(labelSubgrupo)
+				nuevoSubgrupo.appendChild(contenedorIngredientes)
+				nuevoGrupo.appendChild(nuevoSubgrupo)
 
-						const ingredienteCheckBox = document.createElement('input')
-						ingredienteCheckBox.type = 'checkbox'
-						ingredienteCheckBox.setAttribute('id', ing)
-						ingredienteCheckBox.setAttribute('class', 'checkboxes-inputs')
+				sub.Ingredientes.forEach(ing => {
+					const ingrediente = document.createElement('div')
+					ingrediente.setAttribute('class', 'ingrediente')
 
-						const labelIngrediente = document.createElement('label')
-						labelIngrediente.setAttribute('for', ing)
-						labelIngrediente.setAttribute('class', 'input-ingrediente')
+					const ingredienteCheckBox = document.createElement('input')
+					ingredienteCheckBox.type = 'checkbox'
+					ingredienteCheckBox.setAttribute('id', ing)
+					ingredienteCheckBox.setAttribute('class', 'checkboxes-inputs')
 
-						const iconoIngrediente = document.createElement('img')
-						iconoIngrediente.src = `./media/ingredientes/${ing}.png`
-						iconoIngrediente.alt = ing
+					const labelIngrediente = document.createElement('label')
+					labelIngrediente.setAttribute('for', ing)
+					labelIngrediente.setAttribute('class', 'input-ingrediente')
 
-						const nombreIngrediente = document.createElement('span')
-						nombreIngrediente.innerText = ing
+					const iconoIngrediente = document.createElement('img')
+					iconoIngrediente.src = `./media/ingredientes/${ing}.png`
+					iconoIngrediente.alt = ing
 
-						ingrediente.appendChild(ingredienteCheckBox)
-						labelIngrediente.appendChild(iconoIngrediente)
-						labelIngrediente.appendChild(nombreIngrediente)
-						ingrediente.appendChild(labelIngrediente)
-						contenedorIngredientes.appendChild(ingrediente)
-					})
+					const nombreIngrediente = document.createElement('span')
+					nombreIngrediente.innerText = ing
+
+					ingrediente.appendChild(ingredienteCheckBox)
+					labelIngrediente.appendChild(iconoIngrediente)
+					labelIngrediente.appendChild(nombreIngrediente)
+					ingrediente.appendChild(labelIngrediente)
+					contenedorIngredientes.appendChild(ingrediente)
 				})
-				displayIngredientes.appendChild(nuevoGrupo)
 			})
-			let checkboxAll = document.getElementById('all')
-			checkboxAll.addEventListener('click', function () {
-				if (checkboxAll.checked) {
-					checkboxesInputs.forEach(e => {
-						e.checked = true
-					})
-				} else {
-					checkboxesInputs.forEach(e => {
-						e.checked = false
-					})
+			displayIngredientes.appendChild(nuevoGrupo)
+		})
 
+		let checkboxesInputs = document.querySelectorAll('.checkboxes-inputs')
+		let checkboxAll = document.getElementById('all')
+		checkboxAll.addEventListener('click', function () {
+			if (checkboxAll.checked) {
+				checkboxesInputs.forEach(e => {
+					e.checked = true
+				})
+			} else {
+				checkboxesInputs.forEach(e => {
+					e.checked = false
+				})
+
+			}
+		})
+		function mostrarRecetas() {
+			let ingredientesInput = []
+			checkboxesInputs.forEach((e) => {
+				if (e.checked == true) {
+					ingredientesInput.push(e.id)
 				}
 			})
-		})
-		.catch(error => {
-			console.error('Fetch error: ', error)
-		})
-}
-
-let checkboxesInputs = document.querySelectorAll('.checkboxes-inputs')
-const botonMostrarRecetas = document.getElementById('mostrar-recetas')
-
-botonMostrarRecetas.addEventListener('click', function () {
-	mostrarRecetas()
-})
-
-function mostrarRecetas() {
-	let ingredientesInput = []
-	checkboxesInputs.forEach((e) => {
-		if (e.checked == true) {
-			ingredientesInput.push(e.id)
+			buscarRecetas(ingredientesInput)
+			console.log('Ingredientes de usuario: ' + ingredientesInput)
 		}
+		const botonMostrarRecetas = document.getElementById('mostrar-recetas')
+		botonMostrarRecetas.addEventListener('click', function () {
+			mostrarRecetas()
+		})
 	})
-	buscarRecetas(ingredientesInput)
-	console.log('Ingredientes de usuario: ' + ingredientesInput)
-}
+	.catch(error => {
+		console.error('Fetch error: ', error)
+	})
+
