@@ -1,3 +1,21 @@
+[data-theme="light"] {
+
+  --text: rgb(46, 40, 25);
+  --background: rgb(240, 233, 224);
+  --primary: rgb(239, 203, 42);
+  --secondary: rgb(148, 128, 107);
+  --accent: rgb(255, 140, 0);
+  --white: rgb(255, 255, 255);
+}
+
+[data-theme="dark"] {
+  --text: rgb(230, 224, 209);
+  --background: rgb(31, 24, 15);
+  --primary: rgb(213, 177, 16);
+  --secondary: rgb(148, 128, 107);
+  --accent: rgb(255, 140, 0);
+}
+
 :root {
   --blanco: white;
   --grisClaro: #f0f0f0;
@@ -11,7 +29,7 @@
 
 body {
   font-family: "DM Sans", sans-serif;
-  background-color: var(--amarillo);
+  background-color: var(--background);
 }
 
 .container {
@@ -29,13 +47,13 @@ p,
 input,
 option,
 select {
-  color: var(--grisObscuro);
+  color: var(--text);
 }
 
 header {
   width: 100%;
   text-align: center;
-  color: var(--grisObscuro);
+  color: var(--text);
   padding-top: 1rem;
 }
 
@@ -44,8 +62,7 @@ h1 {
 }
 
 nav {
-  background-color: var(--blanco);
-  padding: 0.5rem;
+  background-color: var(--background);
   border-radius: 1rem;
   display: flex;
   flex-direction: column;
@@ -61,15 +78,15 @@ nav {
 label,
 summary {
   font-weight: 700;
-  color: var(--grisObscuro);
+  color: var(--secondary);
   display: block;
 }
 
 .nav-item-block {
   width: 100%;
-  border-radius: 0.5rem;
-  padding: 0.5rem;
-  background-color: var(--grisClaro);
+  border-radius: 1rem;
+  padding: 1rem;
+  background-color: var(--white);
   text-align: center;
 }
 
@@ -77,50 +94,46 @@ summary {
   width: 100%;
   text-align: center;
   border-radius: 0.5rem;
-  border: 1px solid var(--grisMedio);
+  border: 1px solid var(--secondary);
   padding: 5px;
-  background-color: var(--blanco);
+  background-color: var(--white);
   cursor: pointer;
 }
 
 .label-grande {
-  margin-bottom: 0.5rem;
-  color: var(--grisObscuro);
+  color: var(--accent);
+}
+
+#all {
+  margin-bottom: 1rem;
 }
 
 .grupo-ingredientes {
   overflow: hidden;
   border-radius: 0.5rem;
-  border: 1px solid var(--amarillo);
   margin-bottom: 0.5rem;
+  border: 2px solid var(--primary);
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
 }
 
 .grupo-ingredientes summary {
-  background-color: var(--amarilloClaro);
-  color: var(--grisObscuro);
+  background-color: var(--primary);
+  color: var(--text);
   padding: 0.5rem;
   cursor: pointer;
-}
-
-.grupo-ingredientes summary:hover {
-  background-color: var(--amarillo);
 }
 
 .subgrupo-ingredientes {
-  background-color: var(--blanco);
+  background-color: var(--white);
 }
 
 .subgrupo-ingredientes summary {
-  color: var(--naranja);
+  color: var(--text);
   padding: 0.5rem;
   padding-bottom: 5px;
-  border-bottom: 1px solid var(--grisMedio);
+  border-bottom: 1px solid var(--primary);
   cursor: pointer;
-  background-color: var(--blanco);
-}
-
-.subgrupo-ingredientes summary:hover {
-  background-color: var(--amarilloClaro);
+  background-color: var(--white);
 }
 
 .contenedor-ingredientes {
@@ -144,7 +157,7 @@ summary {
   gap: 0.5rem;
 
   background-color: #f0f0f0;
-  border: 1px solid #ccc;
+  border: 1px solid var(--background);
   border-radius: 8px;
   cursor: pointer;
   user-select: none;
@@ -158,7 +171,7 @@ summary {
 
 .input-ingrediente span {
   font-size: 0.8rem;
-  color: var(--grisObscuro);
+  color: var(--text);
 }
 
 .ingrediente>input[type="checkbox"]:checked+label {
@@ -167,15 +180,15 @@ summary {
 }
 
 .ingrediente>input[type="checkbox"]:checked+label span {
-  color: var(--blanco);
+  color: var(--white);
 }
 
 .primary {
-  background-color: var(--naranja);
+  background-color: var(--accent);
   border: 0;
   border-radius: 1rem;
   padding: 0.5rem;
-  color: var(--blanco);
+  color: var(--white);
   font-weight: 700;
   font-size: 1.25rem;
   transition: 200ms;
@@ -183,6 +196,12 @@ summary {
 
 .primary:active {
   scale: 0.98 0.9;
+}
+
+.resultados {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 @media (width <=350px) {
@@ -210,11 +229,19 @@ summary {
   .seccion-flex {
     flex-direction: row;
   }
+
 }
 
 @media (width > 950px) {
   .ingredientes-contenido {
     grid-template-columns: repeat(6, 1fr);
+  }
+
+  .resultados {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 1rem;
+    grid-row-gap: 1rem;
   }
 }
 
@@ -227,25 +254,25 @@ summary {
 
 @media (hover: hover) {
   .primary:hover {
-    background-color: var(--amarillo);
+    background-color: var(--primary);
     cursor: pointer;
-    color: var(--grisObscuro);
+    color: var(--text);
   }
 
   .input-ingrediente:hover {
-    border-color: var(--amarillo);
-    background-color: var(--amarilloClaro);
+    border-color: var(--primary);
+    background-color: var(--background);
   }
 }
 
 .resultados-receta {
-  background-color: var(--grisClaro);
+  background-color: var(--white);
   border-radius: 1rem;
   padding: 0.5rem 0.5rem 0.5rem 1rem;
   display: flex;
   gap: 0.5rem;
   justify-content: space-between;
-  margin-bottom: 1rem;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.05);
 }
 
 .resultados-detalles-img {
@@ -257,7 +284,7 @@ summary {
 }
 
 .resultados-titulo-receta {
-  color: var(--grisObscuro);
+  color: var(--text);
   line-height: 16pt;
   margin-bottom: 3px;
 }
@@ -269,18 +296,18 @@ summary {
 }
 
 .resultados-label-tiempo {
-  color: var(--grisMedio);
+  color: var(--secondary);
   line-height: 12pt;
   margin-bottom: 0.5rem;
 }
 
 .resultados-detalles-summary {
-  color: var(--naranja);
+  color: var(--accent);
   line-height: 12pt;
 }
 
 .resultados-detalles {
-  border-left: 2px solid var(--naranja);
+  border-left: 2px solid var(--accent);
   padding-left: 0.5rem;
 }
 
@@ -291,19 +318,39 @@ summary {
 }
 
 .resultados-detalles li::marker {
-  color: var(--naranja);
+  color: var(--accent);
 }
 
 .resultados-detalles-summary:hover {
   cursor: pointer;
-  color: var(--naranja);
+  color: var(--accent);
 }
 
 .no-recetas-anuncio {
-  color: var(--naranja);
+  color: var(--accent);
   text-align: center;
   width: 100%;
-  background-color: var(--blanco);
+  background-color: var(--white);
   padding: 1rem;
   border-radius: 1rem;
+}
+
+.toggle-dark-mode {
+  position: sticky;
+  top: 1rem;
+  left: 1rem;
+  border-radius: 500px;
+  border: none;
+  background-color: var(--text);
+  width: 2.5rem;
+  height: 2.5rem;
+  line-height: 0;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24
 }
