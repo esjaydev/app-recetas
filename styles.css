@@ -1,33 +1,35 @@
-[data-theme="light"] {
-
-  --text: rgb(46, 40, 25);
-  --background: rgb(240, 233, 224);
-  --primary: rgb(239, 203, 42);
-  --secondary: rgb(148, 128, 107);
-  --accent: rgb(255, 140, 0);
-  --white: rgb(255, 255, 255);
-  --dark_modeContrast: rgb(230, 224, 209)
-}
-
-[data-theme="dark"] {
-  --text: rgb(230, 224, 209);
-  --background: rgb(31, 24, 15);
-  --primary: rgb(213, 177, 16);
-  --secondary: rgb(148, 128, 107);
-  --accent: rgb(255, 140, 0);
-  --dark_modeContrast: rgb(46, 40, 25)
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 :root {
-  --blanco: white;
-  --grisClaro: #f0f0f0;
-  --grisMedio: #9c9993;
-  --grisObscuro: #333533;
-  --amarillo: #FFD100;
-  --naranja: #ff8c00;
-  --amarilloClaro: #fff6cf;
-  --negro: #202020;
+  --espaciado-grande: 1rem;
 }
+
+:root[data-theme="light"] {
+
+  --text: #2e2819;
+  --background: #f0e9e0;
+  --primary: #efcb2a;
+  --secondary: #ffffff;
+  --accent: #ff8c00;
+  --dark_modeContrast: rgb(230, 224, 209);
+  --primary-transparent: #efcb2a61;
+}
+
+:root[data-theme="dark"] {
+  --text: #e6e0d1;
+  --background: #1f180f;
+  --primary: #e6e0d1;
+  --secondary: #473b2e;
+  --accent: #d5b110;
+  --dark_modeContrast: rgb(46, 40, 25);
+  --primary-transparent: #efcb2a61;
+}
+
+
 
 body {
   font-family: "DM Sans", sans-serif;
@@ -39,9 +41,6 @@ body {
   max-width: 1200px;
   min-width: 250px;
   margin: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
   padding: 0.5rem;
   position: relative;
 }
@@ -49,15 +48,22 @@ body {
 p,
 input,
 option,
-select {
+select,
+header,
+label,
+summary {
   color: var(--text);
+}
+
+select {
+  background-color: var(--background);
 }
 
 header {
   width: 100%;
   text-align: center;
-  color: var(--text);
   padding-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 h1 {
@@ -65,41 +71,39 @@ h1 {
 }
 
 nav {
-  background-color: var(--background);
   border-radius: 1rem;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: var(--espaciado-grande);
+  margin-bottom: var(--espaciado-grande);
 }
 
 .seccion-flex {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: var(--espaciado-grande);
 }
 
 label,
 summary {
   font-weight: 700;
-  color: var(--secondary);
   display: block;
 }
 
 .nav-item-block {
   width: 100%;
-  border-radius: 1rem;
+  border-radius: 1.5rem;
   padding: 1rem;
-  background-color: var(--white);
+  background-color: var(--secondary);
   text-align: center;
 }
 
 .nav-item {
   width: 100%;
   text-align: center;
-  border-radius: 0.5rem;
-  border: 1px solid var(--secondary);
+  border-radius: 1rem;
+  border: 1px solid var(--background);
   padding: 5px;
-  background-color: var(--white);
   cursor: pointer;
 }
 
@@ -111,30 +115,36 @@ summary {
   margin-bottom: 1rem;
 }
 
+#display-ingredientes {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
 .grupo-ingredientes {
   overflow: hidden;
-  border-radius: 0.5rem;
-  margin-bottom: 0.5rem;
-  border: 2px solid var(--primary);
+  border-radius: 1rem;
+  border: 3px solid var(--accent);
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+  height: fit-content;
 }
 
 .grupo-ingredientes summary {
-  background-color: var(--primary);
-  color: var(--text);
+  background-color: var(--accent);
+  color: var(--background);
   padding: 0.5rem;
   cursor: pointer;
 }
 
 .subgrupo-ingredientes {
-  background-color: var(--white);
+  background-color: var(--secondary);
 }
 
 .subgrupo-ingredientes summary {
-  color: var(--text);
+  color: var(--accent);
   padding: 0.5rem;
   padding-bottom: 5px;
-  border-bottom: 1px solid var(--primary);
+  border-top: 1px solid var(--primary);
   cursor: pointer;
   background-color: var(--white);
 }
@@ -159,8 +169,8 @@ summary {
   justify-content: center;
   gap: 0.5rem;
 
-  background-color: #f0f0f0;
-  border: 1px solid var(--background);
+  background-color: var(--background);
+  border: 1px solid var(--primary);
   border-radius: 8px;
   cursor: pointer;
   user-select: none;
@@ -183,28 +193,40 @@ summary {
 }
 
 .ingrediente>input[type="checkbox"]:checked+label span {
-  color: var(--white);
+  color: var(--secondary);
 }
 
 .primary {
-  background-color: var(--accent);
+  background-color: var(--primary);
   border: 0;
   border-radius: 1rem;
   padding: 0.5rem;
-  color: var(--white);
+  color: var(--text);
   font-weight: 700;
   font-size: 1.25rem;
   transition: 200ms;
+  color: var(--secondary);
+  cursor: pointer;
+}
+
+.primary:hover {
+  box-shadow: 0 10px 10px var(--primary-transparent);
+  color: var(--background);
 }
 
 .primary:active {
   scale: 0.98 0.9;
 }
 
+#mostrar-recetas {
+  width: 100%;
+}
+
 .resultados {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  margin-bottom: 2rem;
 }
 
 @media (width <=350px) {
@@ -233,6 +255,12 @@ summary {
     flex-direction: row;
   }
 
+  #display-ingredientes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 0.5rem;
+    grid-row-gap: 0.5rem;
+  }
 }
 
 @media (width > 950px) {
@@ -260,12 +288,6 @@ summary {
 }
 
 @media (hover: hover) {
-  .primary:hover {
-    background-color: var(--primary);
-    cursor: pointer;
-    color: var(--text);
-  }
-
   .input-ingrediente:hover {
     border-color: var(--primary);
     background-color: var(--background);
@@ -273,18 +295,15 @@ summary {
 }
 
 .resultados-receta {
-  background-color: var(--white);
+  background-color: var(--secondary);
   border-radius: 1rem;
   padding: 0.5rem 0.5rem 0.5rem 1rem;
+  border-left: 0.25rem solid var(--accent);
   display: flex;
   gap: 0.5rem;
   justify-content: space-between;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.05);
   transition: 200ms ease-in-out;
-}
-
-.resultados-receta:hover {
-  transform: scale(1.05);
 }
 
 .resultados-detalles-img {
@@ -301,6 +320,11 @@ summary {
   margin-bottom: 3px;
 }
 
+.resultados-titulo-receta:hover {
+  text-decoration: underline dotted var(--accent);
+  cursor: pointer;
+}
+
 .resultados-receta-info {
   display: flex;
   flex-direction: column;
@@ -308,9 +332,10 @@ summary {
 }
 
 .resultados-label-tiempo {
-  color: var(--secondary);
+  color: var(--text);
   line-height: 12pt;
   margin-bottom: 0.5rem;
+  font-weight: 400;
 }
 
 .resultados-detalles-summary {
@@ -318,9 +343,8 @@ summary {
   line-height: 12pt;
 }
 
-.resultados-detalles {
-  border-left: 2px solid var(--accent);
-  padding-left: 0.5rem;
+.resultados-detalles ul li {
+  color: var(--text);
 }
 
 .resultados-detalles ul {
@@ -367,8 +391,7 @@ summary {
 }
 
 .material-symbols-outlined {
-  font-variation-settings:
-    'FILL' 0,
+  font-variation-settings: 'FILL' 0,
     'wght' 400,
     'GRAD' 0,
     'opsz' 24
