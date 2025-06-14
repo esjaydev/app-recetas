@@ -18,14 +18,14 @@
 <body>
   <div class="container">
     <header>
-      <h1 class="logo">App Recetas</h1>
+      <h1>App Recetas</h1>
       <p>La App para cuando quieres ver recetas.</p>
     </header>
     <nav>
-      <div class="seccion-flex">
-        <div class="nav-item-block">
+      <div class="col-multi">
+        <div class="container-a">
           <label for="categoria" class="label-grande">Categoría</label>
-          <select title="Horario de comida" name="categoria" id="input-categoria" class="nav-item">
+          <select title="Horario de comida" name="categoria" id="input-categoria" class="input-select">
             <option value="">Selecciona una categoría</option>
             <option value="desayunos">🥞 Desayuno</option>
             <option value="comidas">🍝 Comida</option>
@@ -34,9 +34,9 @@
             <option value="categoria-cualquiera">🤷 Cualquiera</option>
           </select>
         </div>
-        <div class="nav-item-block">
+        <div class="container-a">
           <label for="input-tiempo" class="label-grande">Tiempo de preparación</label>
-          <select title="Tiempo de preparación" name="input-tiempo" id="input-tiempo" class="nav-item">
+          <select title="Tiempo de preparación" name="input-tiempo" id="input-tiempo" class="input-select">
             <option value="">¿Cuánto tiempo tienes?</option>
             <option value="rapido">
               Rápido <span class="small-txt">Menos de 30 min.</span>
@@ -50,19 +50,18 @@
           </select>
         </div>
       </div>
-      <div class="nav-item-block">
+      <div class="container-a">
         <label class="label-grande">Ingredientes que tengo</label>
         <input type="checkbox" name="all" id="all">
         <label for="all" style="display: inline;">Todos los Ingredientes</label>
         <div id="display-ingredientes">
         </div>
       </div>
-      <div class="nav-item-block">
-        <button class="primary" id="mostrar-recetas">Muéstrame recetas</button>
-      </div>
-    </nav>
-    <section class="resultados">
-      <!-- <article>
+      <button class="primary" id="mostrar-recetas">Muéstrame recetas</button>
+  </div>
+  </nav>
+  <section class="resultados">
+    <!-- <article>
         <div class="resultado-receta-info">
           <h3>Espagueti a la Carbonara</h3>
           <label>30 minutos</label>
@@ -79,7 +78,7 @@
         </div>
         <img src="https://picsum.photos/250/150" alt="titulo receta">
       </article> -->
-    </section>
+  </section>
   </div>
   <button data-theme-toggle class="toggle-dark-mode"><span class="material-symbols-outlined">
     </span></button>
