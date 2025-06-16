@@ -182,6 +182,64 @@
     background-color: var(--hielo-a7);
   }
 
+  .grupo-ingredientes:open>summary:hover {
+    background-color: var(--naranja-a1);
+  }
+
+  .grupo-ingredientes summary {
+    background-color: var(--naranja-a3);
+    color: var(--naranja-b6);
+  }
+
+  .grupo-ingredientes summary:hover {
+    background-color: var(--naranja-a1);
+  }
+
+  .subgrupo-ingredientes {
+    background-color: var(--naranja-a4);
+  }
+
+  .subgrupo-ingredientes summary {
+    color: var(--naranja-b3);
+    background-color: var(--naranja-a4);
+    border-top: 1px solid var(--naranja-a3);
+
+  }
+
+  .subgrupo-ingredientes:open>summary {
+    background-color: var(--naranja-a2);
+  }
+
+  .subgrupo-ingredientes:open>summary:hover {
+    background-color: var(--naranja-a2);
+  }
+
+  .input-ingrediente {
+    background-color: var(--secondary);
+    border: 2px solid var(--primary);
+  }
+
+  @media (hover: hover) {
+    .input-ingrediente:hover {
+      border-color: var(--naranja-a3);
+      background-color: var(--naranja-a2);
+    }
+  }
+
+  .toggle-dark-mode {
+    color: var(--naranja-a7);
+    background-color: var(--naranja-b4);
+  }
+
+  .primary {
+    background-color: var(--naranja-base);
+    color: var(--naranja-a6);
+  }
+
+  .primary:hover {
+    color: var(--naranja-b5);
+    background-color: var(--naranja-a2);
+  }
 }
 
 :root[data-theme="dark"] {
@@ -218,7 +276,63 @@
     background-color: var(--naranja-b3);
   }
 
+  .grupo-ingredientes:open>summary:hover {
+    background-color: var(--naranja-b3);
+  }
 
+  .grupo-ingredientes summary {
+    background-color: var(--naranja-b3);
+    color: var(--naranja-a7);
+  }
+
+  .grupo-ingredientes summary:hover {
+    background-color: var(--naranja-b2);
+  }
+
+  .subgrupo-ingredientes {
+    background-color: var(--naranja-b4);
+  }
+
+  .subgrupo-ingredientes summary {
+    color: var(--naranja-a5);
+    background-color: var(--naranja-b4);
+    border-top: 1px solid var(--naranja-b3);
+  }
+
+  .subgrupo-ingredientes:open>summary {
+    background-color: var(--naranja-b2);
+  }
+
+  .subgrupo-ingredientes:open>summary:hover {
+    background-color: var(--naranja-b2);
+  }
+
+  .input-ingrediente {
+    background-color: var(--naranja-b1);
+    border: 2px solid var(--naranja-a0);
+  }
+
+  @media (hover: hover) {
+    .input-ingrediente:hover {
+      border-color: var(--naranja-base);
+      background-color: var(--naranja-a0);
+    }
+  }
+
+  .toggle-dark-mode {
+    color: var(--naranja-b7);
+    background-color: var(--naranja-a4);
+  }
+
+  .primary {
+    background-color: var(--banana-a0);
+    color: var(--naranja-b5);
+  }
+
+  .primary:hover {
+    color: var(--naranja-b5);
+    background-color: var(--banana-a4);
+  }
 }
 
 body {
@@ -300,42 +414,20 @@ summary {
 .grupo-ingredientes {
   overflow: hidden;
   border-radius: var(--radius-1);
-  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
   height: fit-content;
 }
 
-.grupo-ingredientes:open>summary:hover {
-  background-color: var(--menu-label);
-}
-
 .grupo-ingredientes summary {
-  background-color: var(--menu-label);
-  color: var(--text);
   padding: 0.5rem;
   cursor: pointer;
-  color: var(--text);
-}
-
-.grupo-ingredientes summary:hover {
-  background-color: var(--primary-hover);
-  border-color: var(--primary);
-}
-
-.subgrupo-ingredientes {
-  background-color: var(--background);
 }
 
 .subgrupo-ingredientes summary {
-  color: var(--menu-label);
   padding: 0.5rem;
   padding-bottom: 5px;
   cursor: pointer;
-  background-color: var(--background);
 }
 
-.subgrupo-ingredientes summary:hover {
-  color: var(--text);
-}
 
 .contenedor-ingredientes {
   display: grid;
@@ -357,8 +449,7 @@ summary {
   justify-content: center;
   gap: var(--spacing-3);
 
-  background-color: var(--secondary);
-  border: 2px solid var(--primary);
+
   border-radius: var(--radius-3);
   cursor: pointer;
   user-select: none;
@@ -376,12 +467,12 @@ summary {
 }
 
 .ingrediente>input[type="checkbox"]:checked+label {
-  background-color: var(--lechuga-a2);
-  border-color: var(--lechuga-base);
+  background-color: var(--lechuga-a1);
+  border: 2px solid var(--lechuga-base);
 }
 
 .ingrediente>input[type="checkbox"]:checked+label span {
-  color: var(--lechuga-b2);
+  color: var(--lechuga-b4);
 }
 
 .primary {
@@ -475,12 +566,7 @@ summary {
 
 }
 
-@media (hover: hover) {
-  .input-ingrediente:hover {
-    border-color: var(--text);
-    background-color: var(--background);
-  }
-}
+
 
 .resultados-receta {
   background-color: var(--secondary);
@@ -551,7 +637,7 @@ summary {
 }
 
 .no-recetas-anuncio {
-  color: var(--accent);
+  color: var(--naranja-base);
   text-align: center;
   width: 100%;
   background-color: var(--white);
@@ -564,7 +650,6 @@ summary {
   top: 2rem;
   border-radius: 0 1rem 1rem 0;
   border: none;
-  background-color: var(--text);
   width: 3rem;
   height: 3rem;
   line-height: 0;
