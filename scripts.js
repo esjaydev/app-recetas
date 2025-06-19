@@ -104,7 +104,9 @@ async function buscarRecetas(ingredientesUsuario) {
 				recetaInfo.appendChild(labelTiempo)
 				detalles.appendChild(summaryDetalles)
 				detalles.appendChild(listaIngredientes)
-
+				tituloReceta.addEventListener('click', function () {
+					window.open(`./receta.html?r=${e["codigo"]}`, '_self')
+				})
 				e.ingredientes.forEach(ing => {
 					const elementolista = document.createElement('li')
 					elementolista.innerText = ing.ingredienteTitulo
