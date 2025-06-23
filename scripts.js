@@ -1,3 +1,43 @@
+const buttonColorMode = document.querySelector("[data-theme-toggle]");
+const localStorageTheme = localStorage.getItem("theme");
+const systemSettingDark = window.matchMedia("(prefers-color-scheme: dark)");
+const iconoBotonModoObscuro = document.querySelector('.material-symbols-outlined')
+let currentThemeSetting = calculateSettingAsThemeString({ localStorageTheme, systemSettingDark });
+
+updateButton({ buttonEl: buttonColorMode, isDark: currentThemeSetting === "dark" });
+updateThemeOnHtmlEl({ theme: currentThemeSetting });
+
+function calculateSettingAsThemeString({ localStorageTheme, systemSettingDark }) {
+	if (localStorageTheme !== null) {
+		return localStorageTheme;
+	}
+
+	if (systemSettingDark.matches) {
+		return "dark";
+	}
+
+	return "light";
+}
+function updateButton({ buttonEl, isDark }) {
+	const newCta = isDark ? "light_mode" : "dark_mode";
+
+	buttonEl.setAttribute("aria-label", newCta);
+	iconoBotonModoObscuro.innerText = newCta;
+	iconoBotonModoObscuro.style.color = `var(--${newCta}Contrast)`;
+}
+function updateThemeOnHtmlEl({ theme }) {
+	document.querySelector("html").setAttribute("data-theme", theme);
+}
+buttonColorMode.addEventListener("click", (event) => {
+	const newTheme = currentThemeSetting === "dark" ? "light" : "dark";
+
+	localStorage.setItem("theme", newTheme);
+	updateButton({ buttonEl: buttonColorMode, isDark: newTheme === "dark" });
+	updateThemeOnHtmlEl({ theme: newTheme });
+
+	currentThemeSetting = newTheme;
+});
+
 async function buscarRecetas(ingredientesUsuario) {
 	try {
 		const response = await fetch('./recetas.json')
@@ -95,7 +135,6 @@ async function buscarRecetas(ingredientesUsuario) {
 				const listaIngredientes = document.createElement('ul')
 				const imgReceta = document.createElement('img')
 
-
 				tituloReceta.innerText = e.titulo
 				labelTiempo.innerText = `${e.tiempoPreparacion} minutos`
 				summaryDetalles.innerText = 'Ingredientes necesarios'
@@ -118,6 +157,10 @@ async function buscarRecetas(ingredientesUsuario) {
 				articleReceta.appendChild(recetaInfo)
 				articleReceta.appendChild(imgReceta)
 				containerResultados.appendChild(articleReceta)
+
+				tituloReceta.addEventListener('click', function () {
+					verReceta(e["codigo"])
+				})
 			})
 		}
 	} catch (error) {
@@ -208,7 +251,8 @@ fetch('./ingredientes.json')
 
 			}
 		})
-		function mostrarRecetas() {
+		const botonMostrarRecetas = document.getElementById('mostrar-recetas')
+		botonMostrarRecetas.addEventListener('click', function () {
 			let ingredientesInput = []
 			checkboxesInputs.forEach((e) => {
 				if (e.checked == true) {
@@ -216,57 +260,34 @@ fetch('./ingredientes.json')
 				}
 			})
 			buscarRecetas(ingredientesInput)
-			console.log('Ingredientes de usuario: ' + ingredientesInput)
-		}
-		const botonMostrarRecetas = document.getElementById('mostrar-recetas')
-		botonMostrarRecetas.addEventListener('click', function () {
-			mostrarRecetas()
 		})
 	})
 	.catch(error => {
 		console.error('Fetch error: ', error)
 	})
 
+function verReceta(urlID) {
+	const receta = obtenerReceta(urlID)
 
-function calculateSettingAsThemeString({ localStorageTheme, systemSettingDark }) {
-	if (localStorageTheme !== null) {
-		return localStorageTheme;
+	// Limpiar contenido anterior
+}
+
+async function obtenerReceta(urlID) {
+	try {
+		const response = await fetch('./recetas.json');
+		const recetas = await response.json();
+
+		const receta = recetas.find(e => e.codigo === urlID);
+
+		if (receta) {
+			console.log(receta);
+			return receta
+		} else {
+			titulo.innerText = 'Receta no encontrada';
+		}
+
+	} catch (error) {
+		console.error('Error cargando la receta:', error);
+		titulo.innerText = 'Error al cargar la receta';
 	}
-
-	if (systemSettingDark.matches) {
-		return "dark";
-	}
-
-	return "light";
 }
-
-function updateButton({ buttonEl, isDark }) {
-	const newCta = isDark ? "light_mode" : "dark_mode";
-
-	buttonEl.setAttribute("aria-label", newCta);
-	iconoBotonModoObscuro.innerText = newCta;
-	iconoBotonModoObscuro.style.color = `var(--${newCta}Contrast)`;
-}
-
-function updateThemeOnHtmlEl({ theme }) {
-	document.querySelector("html").setAttribute("data-theme", theme);
-}
-
-const button = document.querySelector("[data-theme-toggle]");
-const localStorageTheme = localStorage.getItem("theme");
-const systemSettingDark = window.matchMedia("(prefers-color-scheme: dark)");
-const iconoBotonModoObscuro = document.querySelector('.material-symbols-outlined')
-let currentThemeSetting = calculateSettingAsThemeString({ localStorageTheme, systemSettingDark });
-
-updateButton({ buttonEl: button, isDark: currentThemeSetting === "dark" });
-updateThemeOnHtmlEl({ theme: currentThemeSetting });
-
-button.addEventListener("click", (event) => {
-	const newTheme = currentThemeSetting === "dark" ? "light" : "dark";
-
-	localStorage.setItem("theme", newTheme);
-	updateButton({ buttonEl: button, isDark: newTheme === "dark" });
-	updateThemeOnHtmlEl({ theme: newTheme });
-
-	currentThemeSetting = newTheme;
-}); 

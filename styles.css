@@ -413,6 +413,11 @@ h1 {
   line-height: 36px;
 }
 
+h2 {
+  font-size: 36px;
+  line-height: 36px;
+}
+
 nav {
   border-radius: 1rem;
   display: flex;
@@ -610,6 +615,11 @@ summary {
   .container {
     padding: 2rem;
   }
+
+  .resultados {
+    margin: 0.5rem 1rem 2rem 1rem;
+
+  }
 }
 
 @media (width >=1200px) {
@@ -617,9 +627,11 @@ summary {
     grid-template-columns: repeat(7, 1fr);
   }
 
+  .resultados {
+    margin: 0.5rem 2rem 2rem 2rem;
+
+  }
 }
-
-
 
 .resultados-receta {
   border-radius: 1rem;
@@ -697,6 +709,7 @@ summary {
   transition: 200ms ease-in-out;
   text-align: right;
   padding-right: 0.5rem;
+  z-index: 3;
 }
 
 .toggle-dark-mode:hover {
@@ -716,4 +729,117 @@ header h1 {
 
 header p {
   color: var(--caption)
+}
+
+.receta-completa {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--banana-a7);
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 1rem;
+}
+
+.contenedor-receta {
+  max-width: 800px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.img-receta {
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: var(--radius-3);
+}
+
+.titulo-receta {
+  color: var(--naranja-base);
+  margin-bottom: 0.25rem;
+}
+
+.duracion-receta {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--naranja-b3) !important;
+}
+
+.duracion-receta .material-symbols-outlined {
+  transform: translateY(-1px);
+}
+
+.ingredientes-receta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.ing-receta,
+.ing-receta-obli {
+  width: 100%;
+  border: 1px solid var(--naranja-a3);
+  background-color: var(--naranja-a5);
+  padding: 0.25rem;
+  color: var(--naranja-b1) !important;
+  border-radius: var(--radius-3);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  position: relative;
+}
+
+.ing-receta:hover {
+  border: 1px solid var(--naranja-a4);
+  background-color: var(--naranja-a6);
+  cursor: pointer;
+}
+
+.receta-completa h3 {
+  color: var(--naranja-b3) !important;
+}
+
+.checkbox-receta,
+.checkbox-paso {
+  height: 1rem;
+  width: 1rem;
+}
+
+.obligatorio {
+  position: absolute;
+  top: 2px;
+  left: 5px;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 1pt;
+}
+
+.ing-receta-obli {
+  padding-top: 1rem;
+  border: 1px solid var(--cherry-a2);
+  background-color: var(--cherry-a5);
+  color: var(--cherry-b1) !important;
+}
+
+.ing-receta-obli:hover {
+  background-color: var(--cherry-a6);
+  color: var(--cherry-a3);
+  cursor: pointer;
+}
+
+.paso {
+  display: flex;
+  gap: 1rem;
+  align-items: start;
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-bottom: 1px solid var(--naranja-base);
+}
+
+.paso .checkbox-paso {
+  transform: translateY(6px);
 }
