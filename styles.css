@@ -812,8 +812,9 @@ header p {
 
 .obligatorio {
   position: absolute;
-  top: 2px;
-  left: calc(1rem + 5px);
+  top: 50%;
+  transform: translateY(-50%);
+  right: calc(1rem + 5px);
   text-transform: uppercase;
   font-size: 0.8rem;
   font-weight: 800;
@@ -821,7 +822,6 @@ header p {
 }
 
 .ing-receta-obli {
-  padding-top: 1rem;
   border: 1px solid var(--cherry-a2);
   background-color: var(--cherry-a5);
   color: var(--cherry-b1) !important;
@@ -843,6 +843,23 @@ header p {
 .ing-receta:has(.checkbox-receta:checked),
 .ing-receta-obli:has(.checkbox-receta:checked) {
   opacity: 0.5;
+}
+
+.ing-receta .cantidad,
+.ing-receta-obli .cantidad {
+  margin-left: 1rem;
+  border-left: 1px solid var(--naranja-b1);
+  padding-left: 1rem;
+}
+
+.ing-receta-obli .cantidad {
+  border-left: 1px solid var(--cherry-b1);
+}
+
+.paso,
+.ing-receta,
+.ing-receta-obli {
+  transition: 300ms;
 }
 
 .paso {
