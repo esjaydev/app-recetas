@@ -895,3 +895,41 @@ header p {
   padding-right: 0;
   padding-left: 0.5rem;
 }
+
+.social {
+  width: 100%;
+}
+
+.social-contenedor {
+  width: 100%;
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.boton-social {
+  display: flex;
+  border-radius: var(--radius-1);
+  background-color: var(--naranja-base);
+  align-items: center;
+  gap: 5px;
+  padding: 0.5rem;
+  width: 100%;
+  transition: 250ms;
+}
+
+.boton-social:hover {
+  padding-left: 2rem;
+  cursor: pointer;
+}
+
+.boton-social img {
+  width: 35px;
+  filter: invert(100%);
+}
+
+.boton-social span {
+  line-height: 1;
+  font-weight: 700;
+  color: var(--naranja-a6);
+}
