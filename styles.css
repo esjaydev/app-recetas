@@ -148,6 +148,12 @@
 
 }
 
+body {
+  display: grid;
+  min-height: 100dvh;
+  grid-template-rows: auto 1fr auto;
+}
+
 :root[data-theme="light"] {
   body {
     background-color: var(--naranja-a7);
@@ -418,7 +424,7 @@ h2 {
   line-height: 36px;
 }
 
-nav {
+.input-usuario {
   border-radius: 1rem;
   display: flex;
   flex-direction: column;
@@ -735,7 +741,7 @@ header p {
 
 .receta-completa {
   width: 100%;
-  min-height: 100%;
+  min-height: 100vh;
   background-color: var(--neutral-a7);
   position: absolute;
   left: 0;
@@ -759,7 +765,7 @@ header p {
 }
 
 .titulo-receta {
-  color: var(--hielo-base);
+  color: var(--naranja-b0);
   margin-bottom: 0.25rem;
 }
 
@@ -786,7 +792,6 @@ header p {
   border: 1px solid var(--hielo-a3);
   background-color: var(--hielo-a5);
   padding: 0.25rem;
-  color: var(--neutral-b2) !important;
   border-radius: var(--radius-3);
   display: flex;
   align-items: center;
@@ -800,8 +805,10 @@ header p {
   cursor: pointer;
 }
 
-.receta-completa h3 {
-  color: var(--neutral-b1) !important;
+.receta-completa h3,
+.paso-descripcion,
+.ing-receta {
+  color: var(--hielo-b4) !important;
 }
 
 .checkbox-receta,
@@ -898,7 +905,6 @@ header p {
 .paso-descripcion {
   font-weight: normal;
   cursor: pointer;
-  color: var(--naranja-b7);
 }
 
 .cerrar-receta {
@@ -923,7 +929,7 @@ header p {
 .boton-social {
   display: flex;
   border-radius: var(--radius-1);
-  background-color: var(--hielo-base);
+  background-color: var(--naranja-base);
   align-items: center;
   gap: 5px;
   padding: 0.5rem;
@@ -934,16 +940,7 @@ header p {
 
 .boton-social:hover {
   cursor: pointer;
-}
-
-.boton-social:hover span {
-  visibility: hidden;
-}
-
-.boton-social:hover img {
-  transform: translateX(-50%);
-  position: absolute;
-  left: 50%;
+  background-color: var(--naranja-a1);
 }
 
 .boton-social img {
@@ -955,4 +952,21 @@ header p {
   line-height: 1;
   font-weight: 700;
   color: var(--naranja-a6);
+  transition: 500ms;
+}
+
+.receta-completa {
+  display: none;
+}
+
+footer {
+  background-color: var(--naranja-b1);
+  width: 100%;
+  padding: 1rem;
+  text-align: center;
+}
+
+footer h2,
+footer p {
+  color: var(--naranja-a7) !important;
 }

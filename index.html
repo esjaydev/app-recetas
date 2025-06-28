@@ -16,121 +16,129 @@
 </head>
 
 <body>
-  <div class="container">
+  <header>
     <header>
       <h1>App Recetas</h1>
       <p>La App para cuando quieres ver recetas.</p>
     </header>
-    <nav>
-      <div class="col-multi">
+  </header>
+  <main>
+    <div class="container">
+      <div class="input-usuario">
+        <div class="col-multi">
+          <div class="container-a">
+            <label for="categoria" class="label-grande">Categoría</label>
+            <select title="Horario de comida" name="categoria" id="input-categoria" class="input-select">
+              <option value="">Selecciona una categoría</option>
+              <option value="desayunos">🥞 Desayuno</option>
+              <option value="comidas">🍝 Comida</option>
+              <option value="cenas">🥘 Cena</option>
+              <option value="botanas">🍟 Botanas y Aderezos</option>
+              <option value="categoria-cualquiera">🤷 Cualquiera</option>
+            </select>
+          </div>
+          <div class="container-a">
+            <label for="input-tiempo" class="label-grande">Tiempo de preparación</label>
+            <select title="Tiempo de preparación" name="input-tiempo" id="input-tiempo" class="input-select">
+              <option value="">¿Cuánto tiempo tienes?</option>
+              <option value="rapido">
+                Rápido <span class="small-txt">Menos de 30 min.</span>
+              </option>
+              <option value="moderado">
+                Moderado <span class="small-txt">De 30 a 90 min.</span>
+              </option>
+              <option value="extendido">
+                Extendido <span class="small-txt">Más de 90 min.</span>
+              </option>
+            </select>
+          </div>
+        </div>
         <div class="container-a">
-          <label for="categoria" class="label-grande">Categoría</label>
-          <select title="Horario de comida" name="categoria" id="input-categoria" class="input-select">
-            <option value="">Selecciona una categoría</option>
-            <option value="desayunos">🥞 Desayuno</option>
-            <option value="comidas">🍝 Comida</option>
-            <option value="cenas">🥘 Cena</option>
-            <option value="botanas">🍟 Botanas y Aderezos</option>
-            <option value="categoria-cualquiera">🤷 Cualquiera</option>
-          </select>
-        </div>
-        <div class="container-a">
-          <label for="input-tiempo" class="label-grande">Tiempo de preparación</label>
-          <select title="Tiempo de preparación" name="input-tiempo" id="input-tiempo" class="input-select">
-            <option value="">¿Cuánto tiempo tienes?</option>
-            <option value="rapido">
-              Rápido <span class="small-txt">Menos de 30 min.</span>
-            </option>
-            <option value="moderado">
-              Moderado <span class="small-txt">De 30 a 90 min.</span>
-            </option>
-            <option value="extendido">
-              Extendido <span class="small-txt">Más de 90 min.</span>
-            </option>
-          </select>
-        </div>
-      </div>
-      <div class="container-a">
-        <label class="label-grande">Ingredientes que tengo</label>
-        <input type="checkbox" name="all" id="all">
-        <label for="all" style="display: inline;">Todos los Ingredientes</label>
-        <div id="display-ingredientes">
-        </div>
-      </div>
-      <button class="primary" id="mostrar-recetas">Muéstrame recetas</button>
-  </div>
-  </nav>
-  <section class="resultados">
-  </section>
-  </div>
-  <button data-theme-toggle class="toggle-dark-mode"><span class="material-symbols-outlined">
-    </span></button>
-  <div class="receta-completa">
-    <div class="contenedor-receta">
-      <img src="./media/imagenes-recetas/ejemplo.webp" alt="" class="img-receta">
-      <div class="header-receta">
-        <h2 class="titulo-receta">Ramen con Camarones y Huevo Cocido</h2>
-        <p class="duracion-receta"><span class="material-symbols-outlined">
-            schedule
-          </span> 60 minutos</p>
-      </div>
-      <div class="ingredientes-receta">
-        <h3>Ingredientes</h3>
-        <label class="ing-receta-obli" for="ing2">
-          <input type="checkbox" class="checkbox-receta" id="ing2">
-          <span class="ingrediente-titulo">Fideos precocidos</span>
-          <span class="cantidad">5</span>
-          <span class="tipo-porcion">fideos</span>
-          <span class="obligatorio">¡Es muy necesario!</span>
-        </label>
-        <label class="ing-receta" for="ing">
-          <input type="checkbox" class="checkbox-receta" id="ing">
-          <span class="ingrediente-titulo">Fideos precocidos</span>
-          <span class="cantidad">5</span>
-          <span class="tipo-porcion">fideos</span>
-        </label>
-      </div>
-      <div class="procedimiento">
-        <h3>¡Hora de cocinar!</h3>
-        <div class="paso">
-          <input type="checkbox" class="checkbox-paso" id="p1">
-          <label class="paso-descripcion" for="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
-            consectetur
-            sapiente cupiditate necessitatibus qui voluptates ipsa deserunt suscipit dolore eaque.</label>
-        </div>
-        <div class="paso">
-          <input type="checkbox" class="checkbox-paso" id="p2">
-          <label class="paso-descripcion" for="p2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
-            consectetur
-            sapiente cupiditate necessitatibus qui voluptates ipsa deserunt suscipit dolore eaque.</label>
-        </div>
-        <div class="paso">
-          <input type="checkbox" class="checkbox-paso" id="p3">
-          <label class="paso-descripcion" for="p3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
-            consectetur
-            sapiente cupiditate necessitatibus qui voluptates ipsa deserunt suscipit dolore eaque.</label>
-        </div>
-      </div>
-      <div class="social">
-        <h3>Comparte esta receta</h3>
-        <div class="social-contenedor">
-          <div class="boton-social">
-            <img src="./media/social/facebook.png" alt="icono-facebook">
-            <span>Facebook</span>
-          </div>
-          <div class="boton-social">
-            <img src="./media/social/whatsapp.png" alt="icono-whatsapp">
-            <span>WhatsApp</span>
-          </div>
-          <div class="boton-social">
-            <img src="./media/social/link.png" alt="icono-link">
-            <span>Copia el enlace</span>
+          <label class="label-grande">Ingredientes que tengo</label>
+          <input type="checkbox" name="all" id="all">
+          <label for="all" style="display: inline;">Todos los Ingredientes</label>
+          <div id="display-ingredientes">
           </div>
         </div>
+        <button class="primary" id="mostrar-recetas">Muéstrame recetas</button>
       </div>
     </div>
-    <button class="cerrar-receta">X</button>
-  </div>
+    <section class="resultados">
+    </section>
+    </div>
+    <button data-theme-toggle class="toggle-dark-mode"><span class="material-symbols-outlined">
+      </span></button>
+    <div class="receta-completa">
+      <div class="contenedor-receta">
+        <img src="./media/imagenes-recetas/ejemplo.webp" alt="" class="img-receta">
+        <div class="header-receta">
+          <h2 class="titulo-receta">Ramen con Camarones y Huevo Cocido</h2>
+          <p class="duracion-receta"><span class="material-symbols-outlined">
+              schedule
+            </span> 60 minutos</p>
+        </div>
+        <div class="ingredientes-receta">
+          <h3>Ingredientes</h3>
+          <label class="ing-receta-obli" for="ing2">
+            <input type="checkbox" class="checkbox-receta" id="ing2">
+            <span class="ingrediente-titulo">Fideos precocidos</span>
+            <span class="cantidad">5</span>
+            <span class="tipo-porcion">fideos</span>
+            <span class="obligatorio">¡Es muy necesario!</span>
+          </label>
+          <label class="ing-receta" for="ing">
+            <input type="checkbox" class="checkbox-receta" id="ing">
+            <span class="ingrediente-titulo">Fideos precocidos</span>
+            <span class="cantidad">5</span>
+            <span class="tipo-porcion">fideos</span>
+          </label>
+        </div>
+        <div class="procedimiento">
+          <h3>¡Hora de cocinar!</h3>
+          <div class="paso">
+            <input type="checkbox" class="checkbox-paso" id="p1">
+            <label class="paso-descripcion" for="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
+              consectetur
+              sapiente cupiditate necessitatibus qui voluptates ipsa deserunt suscipit dolore eaque.</label>
+          </div>
+          <div class="paso">
+            <input type="checkbox" class="checkbox-paso" id="p2">
+            <label class="paso-descripcion" for="p2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
+              consectetur
+              sapiente cupiditate necessitatibus qui voluptates ipsa deserunt suscipit dolore eaque.</label>
+          </div>
+          <div class="paso">
+            <input type="checkbox" class="checkbox-paso" id="p3">
+            <label class="paso-descripcion" for="p3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
+              consectetur
+              sapiente cupiditate necessitatibus qui voluptates ipsa deserunt suscipit dolore eaque.</label>
+          </div>
+        </div>
+        <div class="social">
+          <h3>Comparte esta receta</h3>
+          <div class="social-contenedor">
+            <div class="boton-social">
+              <img src="./media/social/facebook.png" alt="icono-facebook">
+              <span>Facebook</span>
+            </div>
+            <div class="boton-social">
+              <img src="./media/social/whatsapp.png" alt="icono-whatsapp">
+              <span>WhatsApp</span>
+            </div>
+            <div class="boton-social">
+              <img src="./media/social/link.png" alt="icono-link">
+              <span>Copia el enlace</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="cerrar-receta">X</button>
+    </div>
+  </main>
+  <footer>
+    <h2>App Recetas</h2>
+    <p>Un experimento de esjaydev. 2025.</p>
+  </footer>
 </body>
 <script src="./scripts.js"></script>
 
