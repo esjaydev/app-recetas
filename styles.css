@@ -272,6 +272,78 @@ body {
   .resultados-detalles-summary:hover {
     color: var(--naranja-b5);
   }
+
+  .cerrar-receta {
+    color: var(--naranja-a7);
+    background-color: var(--naranja-base);
+  }
+
+  .receta-completa {
+    background-color: var(--neutral-a7);
+  }
+
+  .titulo-receta {
+    color: var(--naranja-b0);
+  }
+
+  .duracion-receta {
+    color: var(--neutral-base);
+  }
+
+  .ing-receta {
+    border: 1px solid var(--hielo-a3);
+    background-color: var(--hielo-a5);
+  }
+
+  .ing-receta:hover {
+    border: 1px solid var(--neutral-a5);
+    background-color: var(--neutral-a7);
+  }
+
+  .receta-completa h3,
+  .paso-descripcion,
+  .ing-receta {
+    color: var(--hielo-b4) !important;
+  }
+
+  .ing-receta-obli {
+    border: 1px solid var(--cherry-a2);
+    background-color: var(--cherry-a5);
+    color: var(--cherry-b1) !important;
+  }
+
+  .ing-receta-obli:hover {
+    background-color: var(--cherry-a6);
+    color: var(--cherry-a3);
+    cursor: pointer;
+  }
+
+  .ing-receta .cantidad,
+  .ing-receta-obli .cantidad {
+    border-left: 1px solid var(--neutral-b1);
+  }
+
+  .ing-receta-obli .cantidad {
+    border-left: 1px solid var(--cherry-b1);
+  }
+
+  .paso {
+    border: 1px solid var(--hielo-a3);
+    background-color: var(--hielo-a5);
+  }
+
+  .paso:hover {
+    border: 1px solid var(--hielo-a5);
+    background-color: var(--hielo-a7);
+  }
+
+  .boton-social {
+    background-color: var(--naranja-base);
+  }
+
+  .boton-social:hover {
+    background-color: var(--naranja-a1);
+  }
 }
 
 :root[data-theme="dark"] {
@@ -392,6 +464,78 @@ body {
     color: var(--naranja-a5);
   }
 
+  .cerrar-receta {
+    color: var(--naranja-a7);
+    background-color: var(--naranja-base);
+  }
+
+  .receta-completa {
+    background-color: var(--hielo-b6);
+  }
+
+  .titulo-receta {
+    color: var(--naranja-a3);
+  }
+
+  .duracion-receta {
+    color: var(--neutral-base);
+  }
+
+  .ing-receta {
+    border: 1px solid var(--hielo-b1);
+    background-color: var(--hielo-b3);
+  }
+
+  .ing-receta:hover {
+    border: 1px solid var(--hielo-a0);
+    background-color: var(--hielo-b0);
+  }
+
+  .receta-completa h3,
+  .paso-descripcion,
+  .ing-receta {
+    color: var(--hielo-a4) !important;
+  }
+
+  .ing-receta-obli {
+    border: 1px solid var(--cherry-b1);
+    background-color: var(--cherry-b3);
+    color: var(--cherry-a3) !important;
+  }
+
+  .ing-receta-obli:hover {
+    border: 1px solid var(--cherry-b0);
+    background-color: var(--cherry-b1);
+    color: var(--cherry-b);
+    cursor: pointer;
+  }
+
+  .ing-receta .cantidad,
+  .ing-receta-obli .cantidad {
+    border-left: 1px solid var(--neutral-a1);
+  }
+
+  .ing-receta-obli .cantidad {
+    border-left: 1px solid var(--cherry-b1);
+  }
+
+  .paso {
+    border: 1px solid var(--hielo-b1);
+    background-color: var(--hielo-b3);
+  }
+
+  .paso:hover {
+    border: 1px solid var(--hielo-base);
+    background-color: var(--hielo-b1);
+  }
+
+  .boton-social {
+    background-color: var(--naranja-b0);
+  }
+
+  .boton-social:hover {
+    background-color: var(--naranja-b2);
+  }
 }
 
 body {
@@ -742,7 +886,6 @@ header p {
 .receta-completa {
   width: 100%;
   min-height: 100vh;
-  background-color: var(--neutral-a7);
   position: absolute;
   left: 0;
   top: 0;
@@ -765,7 +908,6 @@ header p {
 }
 
 .titulo-receta {
-  color: var(--naranja-b0);
   margin-bottom: 0.25rem;
 }
 
@@ -773,7 +915,6 @@ header p {
   display: flex;
   align-items: center;
   gap: 5px;
-  color: var(--neutral-base) !important;
 }
 
 .duracion-receta .material-symbols-outlined {
@@ -789,8 +930,6 @@ header p {
 .ing-receta,
 .ing-receta-obli {
   width: 100%;
-  border: 1px solid var(--hielo-a3);
-  background-color: var(--hielo-a5);
   padding: 0.25rem;
   border-radius: var(--radius-3);
   display: flex;
@@ -800,15 +939,7 @@ header p {
 }
 
 .ing-receta:hover {
-  border: 1px solid var(--neutral-a5);
-  background-color: var(--neutral-a7);
   cursor: pointer;
-}
-
-.receta-completa h3,
-.paso-descripcion,
-.ing-receta {
-  color: var(--hielo-b4) !important;
 }
 
 .checkbox-receta,
@@ -828,18 +959,6 @@ header p {
   letter-spacing: 1pt;
 }
 
-.ing-receta-obli {
-  border: 1px solid var(--cherry-a2);
-  background-color: var(--cherry-a5);
-  color: var(--cherry-b1) !important;
-}
-
-.ing-receta-obli:hover {
-  background-color: var(--cherry-a6);
-  color: var(--cherry-a3);
-  cursor: pointer;
-}
-
 .checkbox-receta:checked+.ingrediente-titulo,
 .checkbox-receta:checked+.ingrediente-titulo+.cantidad,
 .checkbox-receta:checked+.ingrediente-titulo+.cantidad+.tipo-porcion,
@@ -855,13 +974,10 @@ header p {
 .ing-receta .cantidad,
 .ing-receta-obli .cantidad {
   margin-left: 1rem;
-  border-left: 1px solid var(--neutral-b1);
   padding-left: 1rem;
 }
 
-.ing-receta-obli .cantidad {
-  border-left: 1px solid var(--cherry-b1);
-}
+
 
 .paso,
 .ing-receta,
@@ -879,15 +995,9 @@ header p {
   display: flex;
   gap: 1rem;
   align-items: start;
-  border: 1px solid var(--hielo-a3);
-  background-color: var(--hielo-a5);
+
   padding: 0.5rem;
   border-radius: var(--radius-2);
-}
-
-.paso:hover {
-  border: 1px solid var(--hielo-a5);
-  background-color: var(--hielo-a7);
 }
 
 .checkbox-paso {
@@ -905,6 +1015,10 @@ header p {
 .paso-descripcion {
   font-weight: normal;
   cursor: pointer;
+}
+
+.boton-social {
+  border-radius: var(--radius-1);
 }
 
 .cerrar-receta {
@@ -928,8 +1042,6 @@ header p {
 
 .boton-social {
   display: flex;
-  border-radius: var(--radius-1);
-  background-color: var(--naranja-base);
   align-items: center;
   gap: 5px;
   padding: 0.5rem;
@@ -940,7 +1052,6 @@ header p {
 
 .boton-social:hover {
   cursor: pointer;
-  background-color: var(--naranja-a1);
 }
 
 .boton-social img {
