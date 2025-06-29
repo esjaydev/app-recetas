@@ -1067,7 +1067,7 @@ header p {
 }
 
 .receta-completa {
-  display: none;
+  display: block;
 }
 
 footer {

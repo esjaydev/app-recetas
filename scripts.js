@@ -143,9 +143,9 @@ async function buscarRecetas(ingredientesUsuario) {
 				recetaInfo.appendChild(labelTiempo)
 				detalles.appendChild(summaryDetalles)
 				detalles.appendChild(listaIngredientes)
-				tituloReceta.addEventListener('click', function () {
-					window.open(`./receta.html?r=${e["codigo"]}`, '_self')
-				})
+				// tituloReceta.addEventListener('click', function () {
+				// 	window.open(`./receta.html?r=${e["codigo"]}`, '_self')
+				// })
 				e.ingredientes.forEach(ing => {
 					const elementolista = document.createElement('li')
 					elementolista.innerText = ing.ingredienteTitulo
@@ -269,9 +269,26 @@ fetch('./ingredientes.json')
 	})
 
 function verReceta(urlID) {
-	const receta = obtenerReceta(urlID)
+	// const receta = obtenerReceta(urlID)
 
 	// Limpiar contenido anterior
+	const recetaCompleta = document.createElement('div')
+	recetaCompleta.setAttribute('class', 'receta-completa')
+
+	const contenedorReceta = document.createElement('div')
+	contenedorReceta.setAttribute('class', 'cerrar-receta')
+	recetaCompleta.appendChild(contenedorReceta)
+
+	const botonCerrar = document.createElement('button')
+	botonCerrar.setAttribute('class', 'cerrar-receta')
+	recetaCompleta.appendChild(botonCerrar)
+
+	const iconoBotonCerrar = document.createElement('span')
+	iconoBotonCerrar.setAttribute('class', 'material-symbols-outlined')
+	iconoBotonCerrar.innerText = 'close'
+	botonCerrar.appendChild(iconoBotonCerrar)
+
+	mainSection.appendChild(recetaCompleta)
 }
 
 async function obtenerReceta(urlID) {
@@ -293,3 +310,4 @@ async function obtenerReceta(urlID) {
 		titulo.innerText = 'Error al cargar la receta';
 	}
 }
+const mainSection = document.querySelector('.main-section')
