@@ -1082,7 +1082,31 @@ footer p {
   color: var(--naranja-a7) !important;
 }
 
+.opcion-input-contenedor input[type="checkbox"] {
+  display: none;
+}
+
+.opcion-input-contenedor {
+  background-color: var(--naranja-a3);
+  border-radius: var(--radius-3);
+  width: 70px;
+  padding: 0.5rem;
+}
+
 .opcion-input img {
-  max-width: 50px;
-  ;
+  /* max-width: 50px; */
+}
+
+.opcion-input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  user-select: none;
+  transition: 150ms;
+}
+
+.opcion-input-contenedor:hover {
+  background-color: var(--naranja-a4);
 }
