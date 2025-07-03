@@ -970,3 +970,8 @@ footer h2,
 footer p {
   color: var(--naranja-a7) !important;
 }
+
+.opcion-input img {
+  max-width: 50px;
+  ;
+}
