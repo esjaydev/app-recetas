@@ -1086,15 +1086,23 @@ footer p {
   display: none;
 }
 
+.opcion-input-contenedor:has(.checkbox-opcion-input:checked) {
+  background-color: var(--lechuga-a0);
+}
+
 .opcion-input-contenedor {
   background-color: var(--naranja-a3);
   border-radius: var(--radius-3);
-  width: 70px;
   padding: 0.5rem;
+  min-width: 100%;
 }
 
 .opcion-input img {
-  /* max-width: 50px; */
+  max-width: 35px;
+}
+
+.opcion-input span {
+  font-size: 0.8rem;
 }
 
 .opcion-input {
@@ -1105,6 +1113,7 @@ footer p {
   cursor: pointer;
   user-select: none;
   transition: 150ms;
+  gap: 0.25rem;
 }
 
 .opcion-input-contenedor:hover {
