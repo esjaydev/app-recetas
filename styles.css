@@ -1190,6 +1190,7 @@ footer p {
   cursor: pointer;
 }
 
+<<<<<<< Updated upstream
 .col-vertical {
   display: flex;
   width: 100%;
@@ -1214,4 +1215,40 @@ footer p {
   border: 1px solid var(--naranja-base);
   border-radius: var(--radius-3);
   padding: var(--spacing-2);
+=======
+.contenedor-categorias {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+}
+
+.boton-categoria {
+  width: 100%;
+  background-color: var(--naranja-a3);
+  padding: var(--spacing-2);
+  border-radius: var(--radius-3);
+}
+
+.boton-categoria:hover {
+  background-color: var(--naranja-a4);
+}
+
+.contenido-boton-categoria {
+  display: flex;
+  gap: var(--spacing-2);
+  align-items: center;
+  cursor: pointer;
+}
+
+.boton-categoria img {
+  max-width: 50px;
+}
+
+.boton-categoria>input[type="checkbox"] {
+  display: none;
+}
+
+.boton-categoria:has(input[type="checkbox"]:checked) {
+  background-color: var(--lechuga-a0);
+>>>>>>> Stashed changes
 }
