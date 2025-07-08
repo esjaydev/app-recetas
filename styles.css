@@ -1190,32 +1190,6 @@ footer p {
   cursor: pointer;
 }
 
-<<<<<<< Updated upstream
-.col-vertical {
-  display: flex;
-  width: 100%;
-  flex-direction: column;
-  gap: var(--spacing-1);
-}
-
-.col-vertical>* {
-  height: 100%;
-}
-
-.contenedor-categorias {
-  display: flex;
-  gap: var(--spacing-2);
-}
-
-.boton-categoria input[type="checkbox"] {
-  display: none;
-}
-
-.boton-categoria {
-  border: 1px solid var(--naranja-base);
-  border-radius: var(--radius-3);
-  padding: var(--spacing-2);
-=======
 .contenedor-categorias {
   display: flex;
   flex-direction: column;
@@ -1249,6 +1223,6 @@ footer p {
 }
 
 .boton-categoria:has(input[type="checkbox"]:checked) {
-  background-color: var(--lechuga-a0);
->>>>>>> Stashed changes
+  background-color: var(--checkbox-selected-bg);
+  border: var(--checkbox-selected-stroke);
 }
