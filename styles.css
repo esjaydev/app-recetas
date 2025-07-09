@@ -1201,6 +1201,7 @@ footer p {
   background-color: var(--naranja-a3);
   padding: var(--spacing-2);
   border-radius: var(--radius-3);
+  box-sizing: border-box;
 }
 
 .boton-categoria:hover {
@@ -1215,7 +1216,7 @@ footer p {
 }
 
 .boton-categoria img {
-  max-width: 50px;
+  max-width: 45px;
 }
 
 .boton-categoria>input[type="checkbox"] {
@@ -1225,4 +1226,11 @@ footer p {
 .boton-categoria:has(input[type="checkbox"]:checked) {
   background-color: var(--checkbox-selected-bg);
   border: var(--checkbox-selected-stroke);
+}
+
+#block-colapsable-i1 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-1);
 }
