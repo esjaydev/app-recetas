@@ -376,6 +376,12 @@ body {
     background-color: var(--checkbox-selected-bg);
     border: var(--checkbox-selected-stroke);
   }
+
+  .boton-categoria:has(input[type="checkbox"]:checked) {
+    background-color: var(--checkbox-selected-bg);
+    border: var(--checkbox-selected-stroke);
+  }
+
 }
 
 :root[data-theme="dark"] {
@@ -582,6 +588,24 @@ body {
   .opcion-input-contenedor:has(.checkbox-opcion-input:checked) {
     background-color: var(--checkbox-selected-bg);
     border: var(--checkbox-selected-stroke);
+  }
+
+  .boton-categoria:has(input[type="checkbox"]:checked) {
+    background-color: var(--checkbox-selected-bg);
+    border: var(--checkbox-selected-stroke);
+  }
+
+  .boton-categoria:has(input[type="checkbox"]:checked) span,
+  .opcion-input-contenedor:has(input[type="checkbox"]:checked) span {
+    color: var(--lechuga-b3);
+  }
+
+  .boton-categoria {
+    background-color: var(--naranja-b3);
+  }
+
+  .boton-categoria:hover {
+    background-color: var(--naranja-b2);
   }
 }
 
@@ -1198,7 +1222,6 @@ footer p {
 
 .boton-categoria {
   width: 100%;
-  background-color: var(--naranja-a3);
   padding: var(--spacing-2);
   border-radius: var(--radius-3);
   box-sizing: border-box;
@@ -1221,11 +1244,6 @@ footer p {
 
 .boton-categoria>input[type="checkbox"] {
   display: none;
-}
-
-.boton-categoria:has(input[type="checkbox"]:checked) {
-  background-color: var(--checkbox-selected-bg);
-  border: var(--checkbox-selected-stroke);
 }
 
 #block-colapsable-i1 {

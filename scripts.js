@@ -311,3 +311,12 @@ async function obtenerReceta(urlID) {
 	}
 }
 const mainSection = document.querySelector('.main-section')
+const rangoTiempo = document.getElementById('rango-tiempo')
+const displayTiempo = document.getElementById('display-tiempo')
+rangoTiempo.addEventListener('input', function () {
+	if (rangoTiempo.value == 240) {
+		displayTiempo.innerText = 'Más de 2 horas'
+	} else {
+		displayTiempo.innerText = `Máximo ${Math.round(rangoTiempo.value / 10) * 10} minutos`
+	}
+})
