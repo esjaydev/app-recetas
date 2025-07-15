@@ -362,17 +362,17 @@ body {
     background-color: var(--naranja-a1);
   }
 
-  .opcion-input-contenedor {
+  .boton-pais {
     background-color: var(--checkbox-normal-bg-lm);
     border: var(--checkbox-normal-stroke-lm);
   }
 
-  .opcion-input-contenedor:hover {
+  .boton-pais:hover {
     background-color: var(--checkbox-hover-bg-lm);
     border: var(--checkbox-hover-stroke-lm);
   }
 
-  .opcion-input-contenedor:has(.checkbox-opcion-input:checked) {
+  .boton-pais:has(.checkbox-boton-pais:checked) {
     background-color: var(--checkbox-selected-bg);
     border: var(--checkbox-selected-stroke);
   }
@@ -575,17 +575,17 @@ body {
     background-color: var(--naranja-b2);
   }
 
-  .opcion-input-contenedor {
+  .boton-pais {
     background-color: var(--checkbox-normal-bg-dm);
     border: var(--checkbox-normal-stroke-dm);
   }
 
-  .opcion-input-contenedor:hover {
+  .boton-pais:hover {
     background-color: var(--checkbox-hover-bg-dm);
     border: var(--checkbox-hover-stroke-dm);
   }
 
-  .opcion-input-contenedor:has(.checkbox-opcion-input:checked) {
+  .boton-pais:has(.checkbox-boton-pais:checked) {
     background-color: var(--checkbox-selected-bg);
     border: var(--checkbox-selected-stroke);
   }
@@ -596,7 +596,7 @@ body {
   }
 
   .boton-categoria:has(input[type="checkbox"]:checked) span,
-  .opcion-input-contenedor:has(input[type="checkbox"]:checked) span {
+  .boton-pais:has(input[type="checkbox"]:checked) span {
     color: var(--lechuga-b3);
   }
 
@@ -639,7 +639,7 @@ h2 {
   line-height: 36px;
 }
 
-.input-usuario {
+.parametros-usuario {
   border-radius: 1rem;
   display: flex;
   flex-direction: column;
@@ -1153,25 +1153,25 @@ footer p {
   color: var(--naranja-a7) !important;
 }
 
-.opcion-input-contenedor input[type="checkbox"] {
+.boton-pais input[type="checkbox"] {
   display: none;
 }
 
-.opcion-input-contenedor {
+.boton-pais {
   border-radius: var(--radius-3);
   padding: 0.5rem;
   min-width: 100%;
 }
 
-.opcion-input img {
+.label-boton-pais img {
   max-width: 35px;
 }
 
-.opcion-input span {
+.label-boton-pais span {
   font-size: 0.8rem;
 }
 
-.opcion-input {
+.label-boton-pais {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1246,7 +1246,7 @@ footer p {
   display: none;
 }
 
-#block-colapsable-i1 {
+.block-flex {
   width: 100%;
   display: flex;
   flex-direction: column;
