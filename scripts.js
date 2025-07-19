@@ -52,9 +52,36 @@ async function buscarRecetas(ingredientesUsuario) {
 			containerResultados.removeChild(containerResultados.firstChild)
 		}
 		recetas.forEach((receta) => {
-			inputDesayunos, inputComidas, inputCenas, inputBotanas, inputPostres
 			if (inputDesayunos.checked) {
-				filtroTipo.push(receta)
+				if (receta["EsDesayuno"] == true) {
+					console.log(receta);
+
+					filtroTipo.push(receta)
+				}
+			}
+			if (inputComidas.checked) {
+				if (receta["EsComida"] == true) {
+					console.log(receta);
+					filtroTipo.push(receta)
+				}
+			}
+			if (inputCenas.checked) {
+				if (receta["EsCena"] == true) {
+					console.log(receta);
+					filtroTipo.push(receta)
+				}
+			}
+			if (inputBotanas.checked) {
+				if (receta["EsBotana"] == true) {
+					console.log(receta);
+					filtroTipo.push(receta)
+				}
+			}
+			if (inputPostres.checked) {
+				if (receta["EsPostres"] == true) {
+					console.log(receta);
+					filtroTipo.push(receta)
+				}
 			}
 		});
 		filtroTipo.forEach(receta => {
