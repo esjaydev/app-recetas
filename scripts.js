@@ -1,3 +1,4 @@
+// MODO OBSCURO / CLARO
 const buttonColorMode = document.querySelector("[data-theme-toggle]");
 const localStorageTheme = localStorage.getItem("theme");
 const systemSettingDark = window.matchMedia("(prefers-color-scheme: dark)");
@@ -51,55 +52,14 @@ async function buscarRecetas(ingredientesUsuario) {
 			containerResultados.removeChild(containerResultados.firstChild)
 		}
 		recetas.forEach((receta) => {
-			switch (inputCategoria.value) {
-				case "":
-					console.log('Selecciona una opción');
-					break
-				case "desayunos":
-					if (receta.EsDesayuno) {
-						filtroTipo.push(receta)
-					}
-					break
-				case "comidas":
-					if (receta.EsComida) {
-						filtroTipo.push(receta)
-					}
-					break
-				case "cenas":
-					if (receta.EsCena) {
-						filtroTipo.push(receta)
-					}
-					break
-				case "botanas":
-					if (receta.EsBotana) {
-						filtroTipo.push(receta)
-					}
-					break
-				case "categoria-cualquiera":
-					filtroTipo.push(receta)
-					break
-				default:
-					filtroTipo.push(receta)
-					break
+			inputDesayunos, inputComidas, inputCenas, inputBotanas, inputPostres
+			if (inputDesayunos.checked) {
+				filtroTipo.push(receta)
 			}
 		});
 		filtroTipo.forEach(receta => {
-			switch (inputTiempo.value) {
-				case "rapido":
-					if (receta.tiempoPreparacion <= 30) {
-						filtroTiempo.push(receta)
-					}
-					break
-				case "moderado":
-					if (receta.tiempoPreparacion > 30 && receta.tiempoPreparacion <= 90) {
-						filtroTiempo.push(receta)
-					}
-					break
-				case "extendido":
-					if (receta.tiempoPreparacion > 90) {
-						filtroTiempo.push(receta)
-					}
-					break
+			if (receta.tiempoPreparacion <= rangoTiempo.value) {
+				filtroTiempo.push(receta)
 			}
 		})
 		filtroTiempo.forEach(receta => {
@@ -169,7 +129,12 @@ async function buscarRecetas(ingredientesUsuario) {
 		console.error('Error cargando recetas:', error)
 	}
 }
-let inputCategoria = document.getElementById('input-categoria')
+let inputDesayunos = document.getElementById('desayunos')
+let inputComidas = document.getElementById('comidas')
+let inputCenas = document.getElementById('cenas')
+let inputBotanas = document.getElementById('botanas')
+let inputPostres = document.getElementById('postres')
+
 let inputTiempo = document.getElementById('input-tiempo')
 
 let seccionCarnes = document.getElementById('seccion-carnes')
