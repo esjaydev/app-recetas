@@ -38,114 +38,6 @@ buttonColorMode.addEventListener("click", (event) => {
 
 	currentThemeSetting = newTheme;
 });
-
-async function buscarRecetas(ingredientesUsuario) {
-	try {
-		const response = await fetch('./recetas.json')
-		const recetas = await response.json()
-		let recetasFiltradas = []
-		let filtroTipo = []
-		let filtroTiempo = []
-		const containerResultados = document.querySelector('.resultados')
-
-		while (containerResultados.hasChildNodes()) {
-			containerResultados.removeChild(containerResultados.firstChild)
-		}
-		recetas.forEach((receta) => {
-			if ((inputDesayunos.checked && receta["EsDesayuno"] == true) || (inputCenas.checked && receta["EsCena"] == true) || (inputBotanas.checked && receta["EsBotana"] == true) || (inputPostres.checked && receta["EsPostres"] == true)) {
-				filtroTipo.push(receta)
-			}
-		});
-		filtroTipo.forEach(receta => {
-			if (receta.tiempoPreparacion <= rangoTiempo.value) {
-				filtroTiempo.push(receta)
-			}
-		})
-		filtroTiempo.forEach(receta => {
-			let filtroIngredientes = receta.ingredientes.map(ingrediente => {
-				if (ingrediente.obligatoria) {
-					return ingredientesUsuario.includes(ingrediente.ingredienteTitulo);
-				}
-				return true;
-			});
-			if (filtroIngredientes.every(valor => valor)) {
-				recetasFiltradas.push(receta);
-			}
-		})
-		if (recetasFiltradas.length == 0) {
-			const anuncioRecetas = document.createElement('h3')
-			anuncioRecetas.setAttribute('class', 'no-recetas-anuncio')
-			anuncioRecetas.innerText = '😅 No hay recetas con esas características.'
-			containerResultados.appendChild(anuncioRecetas)
-		} else {
-			recetasFiltradas.forEach(e => {
-				const articleReceta = document.createElement('article')
-				articleReceta.setAttribute('class', 'resultados-receta')
-				const recetaInfo = document.createElement('div')
-				recetaInfo.setAttribute('class', 'resultados-receta-info')
-				const tituloReceta = document.createElement('h3')
-				tituloReceta.setAttribute('class', 'resultados-titulo-receta')
-				const labelTiempo = document.createElement('label')
-				labelTiempo.setAttribute('class', 'resultados-label-tiempo')
-				const detalles = document.createElement('details')
-				detalles.setAttribute('class', 'resultados-detalles')
-				const summaryDetalles = document.createElement('summary')
-				summaryDetalles.setAttribute('class', 'resultados-detalles-summary')
-				const listaIngredientes = document.createElement('ul')
-				const imgReceta = document.createElement('img')
-
-				tituloReceta.innerText = e.titulo
-				labelTiempo.innerText = `${e.tiempoPreparacion} minutos`
-				summaryDetalles.innerText = 'Ingredientes necesarios'
-
-				recetaInfo.appendChild(tituloReceta)
-				recetaInfo.appendChild(labelTiempo)
-				detalles.appendChild(summaryDetalles)
-				detalles.appendChild(listaIngredientes)
-				// tituloReceta.addEventListener('click', function () {
-				// 	window.open(`./receta.html?r=${e["codigo"]}`, '_self')
-				// })
-				e.ingredientes.forEach(ing => {
-					const elementolista = document.createElement('li')
-					elementolista.innerText = ing.ingredienteTitulo
-					listaIngredientes.appendChild(elementolista)
-				})
-				imgReceta.src = 'https://picsum.photos/250/150'
-				imgReceta.alt = e.titulo
-				imgReceta.setAttribute('class', 'resultados-detalles-img')
-
-				recetaInfo.appendChild(detalles)
-				articleReceta.appendChild(recetaInfo)
-				articleReceta.appendChild(imgReceta)
-				containerResultados.appendChild(articleReceta)
-
-				tituloReceta.addEventListener('click', function () {
-					verReceta(e["codigo"])
-				})
-			})
-		}
-	} catch (error) {
-		console.error('Error cargando recetas:', error)
-	}
-}
-let inputDesayunos = document.getElementById('desayunos')
-let inputComidas = document.getElementById('comidas')
-let inputCenas = document.getElementById('cenas')
-let inputBotanas = document.getElementById('botanas')
-let inputPostres = document.getElementById('postres')
-
-let inputTiempo = document.getElementById('input-tiempo')
-
-let seccionCarnes = document.getElementById('seccion-carnes')
-let seccionLacteos = document.getElementById('seccion-lacteos')
-let seccionFrutas = document.getElementById('seccion-frutas')
-let seccionVegetales = document.getElementById('seccion-vegetales')
-let seccionCereales = document.getElementById('seccion-cereales')
-let seccionLegumbres = document.getElementById('seccion-legumbres')
-let seccionGrasas = document.getElementById('seccion-grasas')
-
-const displayIngredientes = document.getElementById('display-ingredientes')
-
 fetch('./ingredientes.json')
 	.then(response => {
 		if (!response.ok) {
@@ -232,10 +124,148 @@ fetch('./ingredientes.json')
 		console.error('Fetch error: ', error)
 	})
 
-function verReceta(urlID) {
-	// const receta = obtenerReceta(urlID)
+let inputDesayunos = document.getElementById('desayunos')
+let inputComidas = document.getElementById('comidas')
+let inputCenas = document.getElementById('cenas')
+let inputBotanas = document.getElementById('botanas')
+let inputPostres = document.getElementById('postres')
 
+const mainSection = document.querySelector('.main-section')
+const rangoTiempo = document.getElementById('rango-tiempo')
+const displayTiempo = document.getElementById('display-tiempo')
+
+let seccionCarnes = document.getElementById('seccion-carnes')
+let seccionLacteos = document.getElementById('seccion-lacteos')
+let seccionFrutas = document.getElementById('seccion-frutas')
+let seccionVegetales = document.getElementById('seccion-vegetales')
+let seccionCereales = document.getElementById('seccion-cereales')
+let seccionLegumbres = document.getElementById('seccion-legumbres')
+let seccionGrasas = document.getElementById('seccion-grasas')
+
+const displayIngredientes = document.getElementById('display-ingredientes')
+
+rangoTiempo.addEventListener('input', function () {
+	if (rangoTiempo.value == 240) {
+		displayTiempo.innerText = 'Más de 2 horas'
+	} else {
+		displayTiempo.innerText = `Máximo ${Math.round(rangoTiempo.value / 10) * 10} minutos`
+	}
+})
+
+async function buscarRecetas(ingredientesUsuario) {
+	try {
+		const response = await fetch('./recetas.json')
+		const recetas = await response.json()
+		let recetasFiltradas = []
+		let filtroTipo = []
+		let filtroTiempo = []
+		const containerResultados = document.querySelector('.resultados')
+
+		while (containerResultados.hasChildNodes()) {
+			containerResultados.removeChild(containerResultados.firstChild)
+		}
+		recetas.forEach((receta) => {
+			if ((inputDesayunos.checked && receta["EsDesayuno"] == true) || (inputCenas.checked && receta["EsCena"] == true) || (inputBotanas.checked && receta["EsBotana"] == true) || (inputPostres.checked && receta["EsPostres"] == true)) {
+				filtroTipo.push(receta)
+			}
+		});
+		filtroTipo.forEach(receta => {
+			if (receta.tiempoPreparacion <= rangoTiempo.value) {
+				filtroTiempo.push(receta)
+			}
+		})
+		filtroTiempo.forEach(receta => {
+			let filtroIngredientes = receta.ingredientes.map(ingrediente => {
+				if (ingrediente.obligatoria) {
+					return ingredientesUsuario.includes(ingrediente.ingredienteTitulo);
+				}
+				return true;
+			});
+			if (filtroIngredientes.every(valor => valor)) {
+				recetasFiltradas.push(receta);
+			}
+		})
+		if (recetasFiltradas.length == 0) {
+			const anuncioRecetas = document.createElement('h3')
+			anuncioRecetas.setAttribute('class', 'no-recetas-anuncio')
+			anuncioRecetas.innerText = '😅 No hay recetas con esas características.'
+			containerResultados.appendChild(anuncioRecetas)
+		} else {
+			recetasFiltradas.forEach(e => {
+				const articleReceta = document.createElement('article')
+				articleReceta.setAttribute('class', 'resultados-receta')
+				const recetaInfo = document.createElement('div')
+				recetaInfo.setAttribute('class', 'resultados-receta-info')
+				const tituloReceta = document.createElement('h3')
+				tituloReceta.setAttribute('class', 'resultados-titulo-receta')
+				const labelTiempo = document.createElement('label')
+				labelTiempo.setAttribute('class', 'resultados-label-tiempo')
+				const detalles = document.createElement('details')
+				detalles.setAttribute('class', 'resultados-detalles')
+				const summaryDetalles = document.createElement('summary')
+				summaryDetalles.setAttribute('class', 'resultados-detalles-summary')
+				const listaIngredientes = document.createElement('ul')
+				const imgReceta = document.createElement('img')
+
+				tituloReceta.innerText = e.titulo
+				labelTiempo.innerText = `${e.tiempoPreparacion} minutos`
+				summaryDetalles.innerText = 'Ingredientes necesarios'
+
+				recetaInfo.appendChild(tituloReceta)
+				recetaInfo.appendChild(labelTiempo)
+				detalles.appendChild(summaryDetalles)
+				detalles.appendChild(listaIngredientes)
+				// tituloReceta.addEventListener('click', function () {
+				// 	window.open(`./receta.html?r=${e["codigo"]}`, '_self')
+				// })
+				e.ingredientes.forEach(ing => {
+					const elementolista = document.createElement('li')
+					elementolista.innerText = ing.ingredienteTitulo
+					listaIngredientes.appendChild(elementolista)
+				})
+				imgReceta.src = 'https://picsum.photos/250/150'
+				imgReceta.alt = e.titulo
+				imgReceta.setAttribute('class', 'resultados-detalles-img')
+
+				recetaInfo.appendChild(detalles)
+				articleReceta.appendChild(recetaInfo)
+				articleReceta.appendChild(imgReceta)
+				containerResultados.appendChild(articleReceta)
+
+				tituloReceta.addEventListener('click', function () {
+					verReceta(e)
+				})
+			})
+		}
+	} catch (error) {
+		console.error('Error cargando recetas:', error)
+	}
+}
+
+async function obtenerReceta(urlID) {
+	try {
+		const response = await fetch('./recetas.json');
+		const recetas = await response.json();
+
+		const receta = recetas.find(e => e.codigo === urlID);
+
+		if (receta) {
+			// console.log(receta);
+			return receta
+		} else {
+			titulo.innerText = 'Receta no encontrada';
+		}
+
+	} catch (error) {
+		console.error('Error cargando la receta:', error);
+		// titulo.innerText = 'Error al cargar la receta';
+	}
+}
+
+function verReceta(recetaObject) {
 	// Limpiar contenido anterior
+	const receta = recetaObject
+
 	const recetaCompleta = document.createElement('div')
 	recetaCompleta.setAttribute('class', 'receta-completa')
 
@@ -247,40 +277,82 @@ function verReceta(urlID) {
 	botonCerrar.setAttribute('class', 'cerrar-receta')
 	recetaCompleta.appendChild(botonCerrar)
 
+	const imagenReceta = document.createElement('img')
+	imagenReceta.setAttribute('class', 'img-receta')
+
+	imagenReceta.src = recetaObject.imagen.url
+	console.log(recetaObject.imagen.url);
+
+	contenedorReceta.appendChild(imagenReceta)
+
 	const iconoBotonCerrar = document.createElement('span')
 	iconoBotonCerrar.setAttribute('class', 'material-symbols-outlined')
 	iconoBotonCerrar.innerText = 'close'
 	botonCerrar.appendChild(iconoBotonCerrar)
+	botonCerrar.onclick = function () {
+		recetaCompleta.remove()
+	}
 
 	mainSection.appendChild(recetaCompleta)
 }
 
-async function obtenerReceta(urlID) {
-	try {
-		const response = await fetch('./recetas.json');
-		const recetas = await response.json();
-
-		const receta = recetas.find(e => e.codigo === urlID);
-
-		if (receta) {
-			console.log(receta);
-			return receta
-		} else {
-			titulo.innerText = 'Receta no encontrada';
-		}
-
-	} catch (error) {
-		console.error('Error cargando la receta:', error);
-		titulo.innerText = 'Error al cargar la receta';
+window.addEventListener('load', function () {
+	const x = {
+		"codigo": "0001",
+		"titulo": "Tacos al Pastor Caseros",
+		"imagen": {
+			"url": "./media/imagenes_recetas/ejemplo.webp"
+		},
+		"tiempoPreparacion": 90,
+		"ingredientes": [
+			{
+				"ingredienteTitulo": "Lomo de Cerdo",
+				"tipoDePorcion": "gramos",
+				"porcion": 500,
+				"obligatoria": true
+			},
+			{
+				"ingredienteTitulo": "Piña",
+				"tipoDePorcion": "gramos",
+				"porcion": 150,
+				"obligatoria": true
+			},
+			{
+				"ingredienteTitulo": "Tortilla de Maíz",
+				"tipoDePorcion": "unidades",
+				"porcion": 16,
+				"obligatoria": true
+			},
+			{
+				"ingredienteTitulo": "Cilantro Fresco",
+				"tipoDePorcion": "ramas",
+				"porcion": 5,
+				"obligatoria": false
+			},
+			{
+				"ingredienteTitulo": "Cebolla",
+				"tipoDePorcion": "gramos",
+				"porcion": 50,
+				"obligatoria": false
+			},
+			{
+				"ingredienteTitulo": "Salsa Picante",
+				"tipoDePorcion": "mililitros",
+				"porcion": 30,
+				"obligatoria": false
+			}
+		],
+		"pasos": [
+			"Marinar el lomo de cerdo con achiote, especias y jugo de piña por al menos 1 hora.",
+			"Cocinar el cerdo marinado en una sartén o en un asador hasta que esté bien cocido.",
+			"Calentar las tortillas de maíz.",
+			"Picar finamente el cilantro y la cebolla.",
+			"Servir el cerdo en las tortillas con trozos de piña, cilantro, cebolla y salsa picante al gusto."
+		],
+		"EsDesayuno": false,
+		"EsComida": true,
+		"EsCena": true,
+		"EsBotana": true
 	}
-}
-const mainSection = document.querySelector('.main-section')
-const rangoTiempo = document.getElementById('rango-tiempo')
-const displayTiempo = document.getElementById('display-tiempo')
-rangoTiempo.addEventListener('input', function () {
-	if (rangoTiempo.value == 240) {
-		displayTiempo.innerText = 'Más de 2 horas'
-	} else {
-		displayTiempo.innerText = `Máximo ${Math.round(rangoTiempo.value / 10) * 10} minutos`
-	}
+	verReceta(x)
 })

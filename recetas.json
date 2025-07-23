@@ -3,7 +3,7 @@
     "codigo": "0001",
     "titulo": "Tacos al Pastor Caseros",
     "imagen": {
-      "url": "./media/imagenes_recetas/tacos_al_pastor_caseros.webp"
+      "url": "./media/imagenes_recetas/ejemplo.webp"
     },
     "tiempoPreparacion": 90,
     "ingredientes": [
