@@ -270,20 +270,39 @@ function verReceta(recetaObject) {
 	recetaCompleta.setAttribute('class', 'receta-completa')
 
 	const contenedorReceta = document.createElement('div')
-	contenedorReceta.setAttribute('class', 'cerrar-receta')
-	recetaCompleta.appendChild(contenedorReceta)
-
-	const botonCerrar = document.createElement('button')
-	botonCerrar.setAttribute('class', 'cerrar-receta')
-	recetaCompleta.appendChild(botonCerrar)
+	contenedorReceta.setAttribute('class', 'contenedor-receta')
 
 	const imagenReceta = document.createElement('img')
 	imagenReceta.setAttribute('class', 'img-receta')
-
 	imagenReceta.src = recetaObject.imagen.url
 	console.log(recetaObject.imagen.url);
-
 	contenedorReceta.appendChild(imagenReceta)
+
+	const headerReceta = document.createElement('div')
+	headerReceta.setAttribute('class', 'header-receta')
+	contenedorReceta.appendChild(headerReceta)
+
+	const tituloRecetaDOM = document.createElement('h2')
+	tituloRecetaDOM.setAttribute('class', 'titulo-receta')
+	tituloRecetaDOM.innerText = recetaObject.titulo
+	headerReceta.appendChild(tituloRecetaDOM)
+
+	const duracionReceta = document.createElement('p')
+	duracionReceta.setAttribute('class', 'duracion-receta')
+
+	const iconoDuracion = document.createElement('span')
+	iconoDuracion.setAttribute('class', 'material-symbols-outlined')
+	iconoDuracion.innerText = 'schedule'
+
+	const textoDuracion = document.createElement('span')
+	textoDuracion.innerText = `${receta.tiempoPreparacion} minutos`
+
+	duracionReceta.appendChild(iconoDuracion)
+	duracionReceta.appendChild(textoDuracion)
+	headerReceta.appendChild(duracionReceta)
+
+	const botonCerrar = document.createElement('button')
+	botonCerrar.setAttribute('class', 'cerrar-receta')
 
 	const iconoBotonCerrar = document.createElement('span')
 	iconoBotonCerrar.setAttribute('class', 'material-symbols-outlined')
@@ -292,7 +311,9 @@ function verReceta(recetaObject) {
 	botonCerrar.onclick = function () {
 		recetaCompleta.remove()
 	}
+	recetaCompleta.appendChild(botonCerrar)
 
+	recetaCompleta.appendChild(contenedorReceta)
 	mainSection.appendChild(recetaCompleta)
 }
 
