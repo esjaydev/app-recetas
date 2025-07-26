@@ -301,6 +301,14 @@ function verReceta(recetaObject) {
 	duracionReceta.appendChild(textoDuracion)
 	headerReceta.appendChild(duracionReceta)
 
+	const ingredientesReceta = document.createElement('div')
+	ingredientesReceta.setAttribute('class', 'ingredientes-receta')
+	contenedorReceta.appendChild(ingredientesReceta)
+
+	const tituloIngredientes = document.createElement('h3')
+	tituloIngredientes.innerText = 'Ingredientes'
+	ingredientesReceta.appendChild(tituloIngredientes)
+
 	const botonCerrar = document.createElement('button')
 	botonCerrar.setAttribute('class', 'cerrar-receta')
 
