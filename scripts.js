@@ -394,7 +394,7 @@ function verReceta(recetaObject) {
 
 	botonSocialFacebook.onclick = function () {
 		window.open(`https://www.facebook.com/dialog/share?
-  app_id=24664638086467123&display=popup&href=http://esjaydev.github.io/AppRecetas&redirect_uri=https%3A%2F%2Fdevelopers.facebook.com%2Ftools%2Fexplorer`, '_blank')
+  app_id=24664638086467123&display=popup&href=http://esjaydev.github.io/app-recetas&redirect_uri=https%3A%2F%2Fdevelopers.facebook.com%2Ftools%2Fexplorer`, '_blank')
 	}
 
 	const iconoFacebook = document.createElement('img')
