@@ -376,6 +376,58 @@ function verReceta(recetaObject) {
 		contenedorPaso.appendChild(contenidoPaso)
 	})
 
+	const recetaSocial = document.createElement('div')
+	recetaSocial.setAttribute('class', 'social')
+	contenedorReceta.appendChild(recetaSocial)
+
+	const tituloSocial = document.createElement('h3')
+	tituloSocial.innerText = 'Comparte esta receta'
+	recetaSocial.appendChild(tituloSocial)
+
+	const contenedorSocial = document.createElement('div')
+	contenedorSocial.setAttribute('class', 'social-contenedor')
+	recetaSocial.appendChild(contenedorSocial)
+
+	const botonSocialFacebook = document.createElement('div')
+	botonSocialFacebook.setAttribute('class', 'boton-social')
+	contenedorSocial.appendChild(botonSocialFacebook)
+
+	botonSocialFacebook.onclick = function () {
+		window.open(`https://www.facebook.com/dialog/share?
+  app_id=24664638086467123&display=popup&href=http://esjaydev.github.io/AppRecetas&redirect_uri=https%3A%2F%2Fdevelopers.facebook.com%2Ftools%2Fexplorer`, '_blank')
+	}
+
+	const iconoFacebook = document.createElement('img')
+	iconoFacebook.src = './media/social/facebook.png'
+	botonSocialFacebook.appendChild(iconoFacebook)
+
+	const nombreFacebook = document.createElement('span')
+	nombreFacebook.innerText = 'Facebook'
+	botonSocialFacebook.appendChild(nombreFacebook)
+
+	const botonSocialWhatsApp = document.createElement('div')
+	botonSocialWhatsApp.setAttribute('class', 'boton-social')
+	contenedorSocial.appendChild(botonSocialWhatsApp)
+
+	const iconoWhatsApp = document.createElement('img')
+	iconoWhatsApp.src = './media/social/whatsapp.png'
+	botonSocialWhatsApp.appendChild(iconoWhatsApp)
+
+	const nombreWhatsApp = document.createElement('span')
+	nombreWhatsApp.innerText = 'WhatsApp'
+	botonSocialWhatsApp.appendChild(nombreWhatsApp)
+
+	const botonSocialEnlace = document.createElement('div')
+	botonSocialEnlace.setAttribute('class', 'boton-social')
+	contenedorReceta.appendChild(botonSocialEnlace)
+
+	const iconoEnlace = document.createElement('img')
+	iconoEnlace.src = './media/social/link.png'
+	botonSocialEnlace.appendChild(iconoEnlace)
+
+	const nombreEnlace = document.createElement('span')
+	nombreEnlace.innerText = 'Copia el enlace'
+	botonSocialEnlace.appendChild(nombreEnlace)
 
 	const botonCerrar = document.createElement('button')
 	botonCerrar.setAttribute('class', 'cerrar-receta')
