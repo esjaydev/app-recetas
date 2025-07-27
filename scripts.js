@@ -309,6 +309,74 @@ function verReceta(recetaObject) {
 	tituloIngredientes.innerText = 'Ingredientes'
 	ingredientesReceta.appendChild(tituloIngredientes)
 
+	receta["ingredientes"].forEach(e => {
+		const ingredienteReceta = document.createElement('label')
+		ingredienteReceta.for = e["ingredienteTitulo"]
+		ingredientesReceta.appendChild(ingredienteReceta)
+
+		if (e["obligatoria"]) {
+			ingredienteReceta.setAttribute('class', 'ing-receta-obli')
+		} else {
+			ingredienteReceta.setAttribute('class', 'ing-receta')
+		}
+
+		const checkboxIngrediente = document.createElement('input')
+		checkboxIngrediente.type = 'checkbox'
+		checkboxIngrediente.setAttribute('class', 'checkbox-receta')
+		checkboxIngrediente.id = e["ingredienteTitulo"]
+		ingredienteReceta.appendChild(checkboxIngrediente)
+
+		const iTitulo = document.createElement('span')
+		iTitulo.innerText = e["ingredienteTitulo"]
+		iTitulo.setAttribute('class', 'ingrediente-titulo')
+		ingredienteReceta.appendChild(iTitulo)
+
+		const iCantidad = document.createElement('span')
+		iCantidad.innerText = e["porcion"]
+		iCantidad.setAttribute('class', 'cantidad')
+		ingredienteReceta.appendChild(iCantidad)
+
+		const iTipoPorcion = document.createElement('span')
+		iTipoPorcion.innerText = e["tipoDePorcion"]
+		iTipoPorcion.setAttribute('class', 'tipo-porcion')
+		ingredienteReceta.appendChild(iTipoPorcion)
+
+		if (e["obligatoria"]) {
+			const iObligatorio = document.createElement('span')
+			iObligatorio.innerText = '¡Es muy necesario!'
+			iObligatorio.setAttribute('class', 'obligatorio')
+			ingredienteReceta.appendChild(iObligatorio)
+		}
+
+	})
+	const recetaProcedimiento = document.createElement('span')
+	recetaProcedimiento.setAttribute('class', 'procedimiento')
+	contenedorReceta.appendChild(recetaProcedimiento)
+
+	const tituloProcedimiento = document.createElement('h3')
+	tituloProcedimiento.innerText = '¡Hora de cocinar!'
+	recetaProcedimiento.appendChild(tituloProcedimiento)
+
+	receta["pasos"].forEach(e => {
+		const contenedorPaso = document.createElement('div')
+		contenedorPaso.setAttribute('class', 'paso')
+		recetaProcedimiento.appendChild(contenedorPaso)
+
+		const idPaso = receta["pasos"].indexOf(e)
+		const checkboxPaso = document.createElement('input')
+		checkboxPaso.type = 'checkbox'
+		checkboxPaso.setAttribute('class', 'checkbox-paso')
+		checkboxPaso.id = idPaso
+		contenedorPaso.appendChild(checkboxPaso)
+
+		const contenidoPaso = document.createElement('label')
+		contenidoPaso.setAttribute('class', 'paso-descripcion')
+		contenidoPaso.setAttribute('for', idPaso)
+		contenidoPaso.innerText = e
+		contenedorPaso.appendChild(contenidoPaso)
+	})
+
+
 	const botonCerrar = document.createElement('button')
 	botonCerrar.setAttribute('class', 'cerrar-receta')
 
