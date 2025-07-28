@@ -234,6 +234,10 @@ async function buscarRecetas(ingredientesUsuario) {
 
 				tituloReceta.addEventListener('click', function () {
 					verReceta(e)
+					const paramOriginal = new URLSearchParams(window.location.search)
+					paramOriginal.set('r', e["codigo"])
+					const nuevoURL = `${window.location.pathname}?${paramOriginal.toString()}${window.location.hash}`
+					history.pushState({}, '', nuevoURL)
 				})
 			})
 		}
@@ -263,7 +267,7 @@ async function obtenerReceta(urlID) {
 }
 
 function verReceta(recetaObject) {
-	// Limpiar contenido anterior
+	document.body.style.overflow = 'hidden'
 	const receta = recetaObject
 
 	const recetaCompleta = document.createElement('div')
@@ -394,7 +398,7 @@ function verReceta(recetaObject) {
 
 	botonSocialFacebook.onclick = function () {
 		window.open(`https://www.facebook.com/dialog/share?
-  app_id=24664638086467123&display=popup&href=http://esjaydev.github.io/app-recetas&redirect_uri=https%3A%2F%2Fdevelopers.facebook.com%2Ftools%2Fexplorer`, '_blank')
+  app_id=24664638086467123&display=popup&href=${window.location.href}&redirect_uri=https%3A%2F%2Fdevelopers.facebook.com%2Ftools%2Fexplorer`, '_blank')
 	}
 
 	const iconoFacebook = document.createElement('img')
@@ -416,7 +420,11 @@ function verReceta(recetaObject) {
 	const nombreWhatsApp = document.createElement('span')
 	nombreWhatsApp.innerText = 'WhatsApp'
 	botonSocialWhatsApp.appendChild(nombreWhatsApp)
-
+	botonSocialWhatsApp.setAttribute('data-href', window.location.href)
+	botonSocialWhatsApp.setAttribute('data-text', `Receta de ${receta["titulo"]}`)
+	botonSocialWhatsApp.onclick = function () {
+		window.open(`whatsapp://send`, '_blank')
+	}
 	const botonSocialEnlace = document.createElement('div')
 	botonSocialEnlace.setAttribute('class', 'boton-social')
 	contenedorReceta.appendChild(botonSocialEnlace)
@@ -428,6 +436,17 @@ function verReceta(recetaObject) {
 	const nombreEnlace = document.createElement('span')
 	nombreEnlace.innerText = 'Copia el enlace'
 	botonSocialEnlace.appendChild(nombreEnlace)
+	botonSocialEnlace.onclick = function () {
+		navigator.clipboard.writeText(window.location.href)
+		botonSocialEnlace.classList.add('popup-texto-copiado')
+		nombreEnlace.innerText = '¡Enlace copiado!'
+
+		setTimeout(() => {
+			botonSocialEnlace.classList.remove('popup-texto-copiado')
+			nombreEnlace.innerText = 'Copia el enlace'
+		}, 1000);
+
+	}
 
 	const botonCerrar = document.createElement('button')
 	botonCerrar.setAttribute('class', 'cerrar-receta')
@@ -438,6 +457,15 @@ function verReceta(recetaObject) {
 	botonCerrar.appendChild(iconoBotonCerrar)
 	botonCerrar.onclick = function () {
 		recetaCompleta.remove()
+		document.body.style.overflow = 'scroll'
+
+		const parametroABorrar = new URLSearchParams(window.location.search)
+		parametroABorrar.delete('r')
+		const nuevoURL = `${window.location.pathname}`
+		history.pushState({}, '', nuevoURL)
+
+		// window.location.search = parametroABorrar.toString()
+
 	}
 	recetaCompleta.appendChild(botonCerrar)
 
@@ -446,62 +474,15 @@ function verReceta(recetaObject) {
 }
 
 window.addEventListener('load', function () {
-	const x = {
-		"codigo": "0001",
-		"titulo": "Tacos al Pastor Caseros",
-		"imagen": {
-			"url": "./media/imagenes_recetas/ejemplo.webp"
-		},
-		"tiempoPreparacion": 90,
-		"ingredientes": [
-			{
-				"ingredienteTitulo": "Lomo de Cerdo",
-				"tipoDePorcion": "gramos",
-				"porcion": 500,
-				"obligatoria": true
-			},
-			{
-				"ingredienteTitulo": "Piña",
-				"tipoDePorcion": "gramos",
-				"porcion": 150,
-				"obligatoria": true
-			},
-			{
-				"ingredienteTitulo": "Tortilla de Maíz",
-				"tipoDePorcion": "unidades",
-				"porcion": 16,
-				"obligatoria": true
-			},
-			{
-				"ingredienteTitulo": "Cilantro Fresco",
-				"tipoDePorcion": "ramas",
-				"porcion": 5,
-				"obligatoria": false
-			},
-			{
-				"ingredienteTitulo": "Cebolla",
-				"tipoDePorcion": "gramos",
-				"porcion": 50,
-				"obligatoria": false
-			},
-			{
-				"ingredienteTitulo": "Salsa Picante",
-				"tipoDePorcion": "mililitros",
-				"porcion": 30,
-				"obligatoria": false
-			}
-		],
-		"pasos": [
-			"Marinar el lomo de cerdo con achiote, especias y jugo de piña por al menos 1 hora.",
-			"Cocinar el cerdo marinado en una sartén o en un asador hasta que esté bien cocido.",
-			"Calentar las tortillas de maíz.",
-			"Picar finamente el cilantro y la cebolla.",
-			"Servir el cerdo en las tortillas con trozos de piña, cilantro, cebolla y salsa picante al gusto."
-		],
-		"EsDesayuno": false,
-		"EsComida": true,
-		"EsCena": true,
-		"EsBotana": true
+	const queryString = window.location.search
+	const paramURL = new URLSearchParams(queryString)
+	const recetaURL = paramURL.get('r')
+	if (recetaURL) {
+		obtenerReceta(recetaURL)
+			.then(resultado => {
+				verReceta(resultado)
+			}).catch(error => {
+				console.error(error)
+			})
 	}
-	verReceta(x)
 })

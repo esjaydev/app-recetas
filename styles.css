@@ -368,6 +368,17 @@ body {
     border: var(--checkbox-selected-stroke-lm);
   }
 
+  .popup-texto-copiado {
+    background-color: var(--checkbox-selected-bg-lm);
+  }
+
+  .popup-texto-copiado:hover {
+    background-color: var(--checkbox-selected-bg-lm);
+  }
+
+  .popup-texto-copiado:active {
+    background-color: var(--checkbox-selected-bg-lm);
+  }
 }
 
 :root[data-theme="dark"] {
@@ -562,6 +573,18 @@ body {
   .ingrediente:has(input[type="checkbox"]:checked) {
     background-color: var(--checkbox-selected-bg-dm);
     border: var(--checkbox-selected-stroke-dm);
+  }
+
+  .popup-texto-copiado {
+    background-color: var(--checkbox-selected-bg-dm);
+  }
+
+  .popup-texto-copiado:hover {
+    background-color: var(--checkbox-selected-bg-dm);
+  }
+
+  .popup-texto-copiado:active {
+    background-color: var(--checkbox-selected-bg-dm);
   }
 }
 
