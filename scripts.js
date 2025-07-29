@@ -420,10 +420,9 @@ function verReceta(recetaObject) {
 	const nombreWhatsApp = document.createElement('span')
 	nombreWhatsApp.innerText = 'WhatsApp'
 	botonSocialWhatsApp.appendChild(nombreWhatsApp)
-	botonSocialWhatsApp.setAttribute('data-href', window.location.href)
-	botonSocialWhatsApp.setAttribute('data-text', `Receta de ${receta["titulo"]}`)
+	botonSocialWhatsApp.setAttribute('data-action', 'share/whatsapp/share')
 	botonSocialWhatsApp.onclick = function () {
-		window.open(`whatsapp://send`, '_blank')
+		window.open(`whatsapp://send?text=Receta de ${receta["titulo"]}`, '_blank')
 	}
 	const botonSocialEnlace = document.createElement('div')
 	botonSocialEnlace.setAttribute('class', 'boton-social')
