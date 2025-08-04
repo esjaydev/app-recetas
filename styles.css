@@ -1158,7 +1158,7 @@ footer p {
   -webkit-appearance: none;
   appearance: none;
   width: 1rem;
-  height: 1rem;
+  height: 2rem;
   background: var(--banana-a0);
   cursor: pointer;
   border-radius: var(--radius-3);
@@ -1170,9 +1170,7 @@ footer p {
 }
 
 .slider::-moz-range-thumb {
-  width: 1rem;
-  height: 2rem;
-  background: var(--banana-a0);
+  background: var(--banana-a3);
   cursor: pointer;
 }
 
