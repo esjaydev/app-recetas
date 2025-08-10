@@ -209,15 +209,18 @@ async function buscarRecetas(ingredientesUsuario) {
 
 				tituloReceta.innerText = e.titulo
 				labelTiempo.innerText = `${e.tiempoPreparacion} minutos`
-				summaryDetalles.innerText = 'Ingredientes necesarios'
+				const iconoDesplegarLista = document.createElement('span')
+				iconoDesplegarLista.setAttribute('class', 'material-symbols-outlined')
+				iconoDesplegarLista.innerText = 'arrow_right'
+				summaryDetalles.appendChild(iconoDesplegarLista)
+				const labelListaDetalles = document.createTextNode('Ingredientes necesarios')
+				summaryDetalles.appendChild(labelListaDetalles)
 
 				recetaInfo.appendChild(tituloReceta)
 				recetaInfo.appendChild(labelTiempo)
 				detalles.appendChild(summaryDetalles)
 				detalles.appendChild(listaIngredientes)
-				// tituloReceta.addEventListener('click', function () {
-				// 	window.open(`./receta.html?r=${e["codigo"]}`, '_self')
-				// })
+
 				e.ingredientes.forEach(ing => {
 					const elementolista = document.createElement('li')
 					elementolista.innerText = ing.ingredienteTitulo
@@ -231,13 +234,15 @@ async function buscarRecetas(ingredientesUsuario) {
 				articleReceta.appendChild(recetaInfo)
 				articleReceta.appendChild(imgReceta)
 				containerResultados.appendChild(articleReceta)
-
-				tituloReceta.addEventListener('click', function () {
-					verReceta(e)
-					const paramOriginal = new URLSearchParams(window.location.search)
-					paramOriginal.set('r', e["codigo"])
-					const nuevoURL = `${window.location.pathname}?${paramOriginal.toString()}${window.location.hash}`
-					history.pushState({}, '', nuevoURL)
+				const elemClickeables = [tituloReceta, imgReceta]
+				elemClickeables.forEach(elem => {
+					elem.addEventListener('click', function () {
+						verReceta(e)
+						const paramOriginal = new URLSearchParams(window.location.search)
+						paramOriginal.set('r', e["codigo"])
+						const nuevoURL = `${window.location.pathname}?${paramOriginal.toString()}${window.location.hash}`
+						history.pushState({}, '', nuevoURL)
+					})
 				})
 			})
 		}
@@ -422,7 +427,8 @@ function verReceta(recetaObject) {
 	botonSocialWhatsApp.appendChild(nombreWhatsApp)
 	botonSocialWhatsApp.setAttribute('data-action', 'share/whatsapp/share')
 	botonSocialWhatsApp.onclick = function () {
-		window.open(`whatsapp://send?text=Receta de ${receta["titulo"]}`, '_blank')
+		window.open(`whatsapp://send?text=Receta de ${receta["titulo"]}:
+			${window.location.href}`, '_blank')
 	}
 	const botonSocialEnlace = document.createElement('div')
 	botonSocialEnlace.setAttribute('class', 'boton-social')

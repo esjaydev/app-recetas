@@ -12,6 +12,8 @@
   --radius-1: 1.5rem;
   --radius-2: 1rem;
   --radius-3: 0.5rem;
+
+  --timing-1: 200ms;
   /* Dark Theme Body */
   --black: #000000;
   --night: #2b2724;
@@ -488,7 +490,7 @@ body {
   }
 
   .titulo-receta {
-    color: var(--naranja-a3);
+    color: var(--neutral-a7);
   }
 
   .duracion-receta {
@@ -757,11 +759,16 @@ summary {
   }
 }
 
+@media (width < 550px) {
+  .obligatorio {
+    display: none;
+  }
+}
+
 @media (width > 500px) {
   .ingredientes-contenido {
     grid-template-columns: repeat(4, 1fr);
   }
-
 }
 
 @media (width > 700px) {
@@ -831,6 +838,12 @@ summary {
   min-width: 100px;
   height: auto;
   object-fit: cover;
+  transition: var(--timing-1);
+}
+
+.resultados-detalles-img:hover {
+  opacity: 0.8;
+  cursor: pointer;
 }
 
 .resultados-titulo-receta {
@@ -839,7 +852,7 @@ summary {
 }
 
 .resultados-titulo-receta:hover {
-  text-decoration: underline dotted var(--accent);
+  text-decoration: underline dotted var(--naranja-base);
   cursor: pointer;
 }
 
@@ -857,6 +870,19 @@ summary {
 
 .resultados-detalles-summary {
   line-height: 12pt;
+  display: flex;
+  align-items: center;
+  margin-left: -9px;
+}
+
+.resultados-detalles {
+  transition: var(--timing-1);
+
+}
+
+.resultados-detalles:open .resultados-detalles-summary .material-symbols-outlined {
+  rotate: 90deg;
+  transition: var(--timing-1);
 }
 
 .resultados-detalles ul {
@@ -963,11 +989,10 @@ header p {
 .ing-receta,
 .ing-receta-obli {
   width: 100%;
-  padding: 0.25rem;
-  border-radius: var(--radius-3);
+  padding: 0.25rem 1rem;
+  border-radius: var(--radius-2);
   display: flex;
   align-items: center;
-  gap: 5px;
   position: relative;
 }
 
@@ -975,10 +1000,18 @@ header p {
   cursor: pointer;
 }
 
+.checkbox-receta {
+  margin-right: 1rem;
+}
+
 .checkbox-receta,
 .checkbox-paso {
   height: 1rem;
   width: 1rem;
+}
+
+.tipo-porcion {
+  margin-left: 1ch;
 }
 
 .obligatorio {
@@ -1029,13 +1062,12 @@ header p {
   gap: 1rem;
   align-items: start;
 
-  padding: 0.5rem;
+  padding: 0.5rem 1rem;
   border-radius: var(--radius-2);
 }
 
 .checkbox-paso {
   transform: translateY(6px);
-  margin-left: calc(1px + 0.25rem);
   min-width: 1rem;
   height: 1rem;
   cursor: pointer;
