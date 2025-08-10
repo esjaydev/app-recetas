@@ -1,4 +1,5 @@
 // MODO OBSCURO / CLARO
+const nombreSitio = 'Recetas Chidas'
 const buttonColorMode = document.querySelector("[data-theme-toggle]");
 const localStorageTheme = localStorage.getItem("theme");
 const systemSettingDark = window.matchMedia("(prefers-color-scheme: dark)");
@@ -274,6 +275,7 @@ async function obtenerReceta(urlID) {
 function verReceta(recetaObject) {
 	document.body.style.overflow = 'hidden'
 	const receta = recetaObject
+	document.title = `${receta.titulo} | ${nombreSitio}`
 
 	const recetaCompleta = document.createElement('div')
 	recetaCompleta.setAttribute('class', 'receta-completa')
@@ -427,7 +429,7 @@ function verReceta(recetaObject) {
 	botonSocialWhatsApp.appendChild(nombreWhatsApp)
 	botonSocialWhatsApp.setAttribute('data-action', 'share/whatsapp/share')
 	botonSocialWhatsApp.onclick = function () {
-		window.open(`whatsapp://send?text=Receta de ${receta["titulo"]}:
+		window.open(`whatsapp://send?text=Receta de ${receta["titulo"]} en ${nombreSitio}:
 			${window.location.href}`, '_blank')
 	}
 	const botonSocialEnlace = document.createElement('div')
@@ -468,7 +470,7 @@ function verReceta(recetaObject) {
 		parametroABorrar.delete('r')
 		const nuevoURL = `${window.location.pathname}`
 		history.pushState({}, '', nuevoURL)
-
+		document.title = nombreSitio
 		// window.location.search = parametroABorrar.toString()
 
 	}
