@@ -45,10 +45,13 @@
       }
     ],
     "pasos": [
+      "#Preparación",
       "Marinar el lomo de cerdo con achiote, especias y jugo de piña por al menos 1 hora.",
+      "#Cocinada",
       "Cocinar el cerdo marinado en una sartén o en un asador hasta que esté bien cocido.",
       "Calentar las tortillas de maíz.",
       "Picar finamente el cilantro y la cebolla.",
+      "#Pasos finales",
       "Servir el cerdo en las tortillas con trozos de piña, cilantro, cebolla y salsa picante al gusto."
     ],
     "EsDesayuno": false,
@@ -282,9 +285,11 @@
       }
     ],
     "pasos": [
+      "#Preparar ingredientes",
       "Cocer y desmenuzar la pechuga de pollo.",
       "Cocer tomatillos, jalapeños, cebolla y ajo, luego licuarlos para hacer la salsa verde.",
       "Pasar las tortillas por aceite caliente y luego por la salsa.",
+      "#Armar las enchiladas",
       "Rellenar las tortillas con el pollo desmenuzado, enrollarlas y colocarlas en un refractario.",
       "Bañar con más salsa y hornear por unos minutos.",
       "Servir con crema, queso fresco desmoronado y cilantro picado."

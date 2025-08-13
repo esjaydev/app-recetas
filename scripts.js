@@ -146,7 +146,7 @@ let seccionGrasas = document.getElementById('seccion-grasas')
 const displayIngredientes = document.getElementById('display-ingredientes')
 
 rangoTiempo.addEventListener('input', function () {
-	if (rangoTiempo.value == 240) {
+	if (rangoTiempo.value == 120) {
 		displayTiempo.innerText = 'Más de 2 horas'
 	} else {
 		displayTiempo.innerText = `Máximo ${Math.round(rangoTiempo.value / 10) * 10} minutos`
@@ -369,22 +369,31 @@ function verReceta(recetaObject) {
 	recetaProcedimiento.appendChild(tituloProcedimiento)
 
 	receta["pasos"].forEach(e => {
-		const contenedorPaso = document.createElement('div')
-		contenedorPaso.setAttribute('class', 'paso')
-		recetaProcedimiento.appendChild(contenedorPaso)
+		if (e.startsWith("#")) {
+			const seccionReceta = document.createElement('h4')
+			seccionReceta.setAttribute('class', 'seccion-receta')
+			const texto = e.slice(1)
+			seccionReceta.innerText = texto
+			recetaProcedimiento.appendChild(seccionReceta)
 
-		const idPaso = receta["pasos"].indexOf(e)
-		const checkboxPaso = document.createElement('input')
-		checkboxPaso.type = 'checkbox'
-		checkboxPaso.setAttribute('class', 'checkbox-paso')
-		checkboxPaso.id = idPaso
-		contenedorPaso.appendChild(checkboxPaso)
+		} else {
+			const contenedorPaso = document.createElement('div')
+			contenedorPaso.setAttribute('class', 'paso')
+			recetaProcedimiento.appendChild(contenedorPaso)
 
-		const contenidoPaso = document.createElement('label')
-		contenidoPaso.setAttribute('class', 'paso-descripcion')
-		contenidoPaso.setAttribute('for', idPaso)
-		contenidoPaso.innerText = e
-		contenedorPaso.appendChild(contenidoPaso)
+			const idPaso = receta["pasos"].indexOf(e)
+			const checkboxPaso = document.createElement('input')
+			checkboxPaso.type = 'checkbox'
+			checkboxPaso.setAttribute('class', 'checkbox-paso')
+			checkboxPaso.id = idPaso
+			contenedorPaso.appendChild(checkboxPaso)
+
+			const contenidoPaso = document.createElement('label')
+			contenidoPaso.setAttribute('class', 'paso-descripcion')
+			contenidoPaso.setAttribute('for', idPaso)
+			contenidoPaso.innerText = e
+			contenedorPaso.appendChild(contenidoPaso)
+		}
 	})
 
 	const recetaSocial = document.createElement('div')
@@ -463,21 +472,30 @@ function verReceta(recetaObject) {
 	iconoBotonCerrar.innerText = 'close'
 	botonCerrar.appendChild(iconoBotonCerrar)
 	botonCerrar.onclick = function () {
-		recetaCompleta.remove()
-		document.body.style.overflow = 'scroll'
+		recetaCompleta.style.transition = '300ms'
+		recetaCompleta.style.left = '100vw'
+		setTimeout(() => {
+			recetaCompleta.remove()
+			document.body.style.overflow = 'scroll'
 
-		const parametroABorrar = new URLSearchParams(window.location.search)
-		parametroABorrar.delete('r')
-		const nuevoURL = `${window.location.pathname}`
-		history.pushState({}, '', nuevoURL)
-		document.title = nombreSitio
-		// window.location.search = parametroABorrar.toString()
-
+			const parametroABorrar = new URLSearchParams(window.location.search)
+			parametroABorrar.delete('r')
+			const nuevoURL = `${window.location.pathname}`
+			history.pushState({}, '', nuevoURL)
+			document.title = nombreSitio
+			// window.location.search = parametroABorrar.toString()
+			recetaCompleta.style.transition = '1000ms'
+		}, 300);
 	}
 	recetaCompleta.appendChild(botonCerrar)
 
 	recetaCompleta.appendChild(contenedorReceta)
 	mainSection.appendChild(recetaCompleta)
+
+	setTimeout(() => {
+		recetaCompleta.style.left = '0'
+	}, 1);
+
 }
 
 window.addEventListener('load', function () {
