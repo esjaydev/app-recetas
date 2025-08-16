@@ -386,7 +386,8 @@ body {
   }
 
   .ingredientes-receta h3,
-  .procedimiento h3 {
+  .procedimiento h3,
+  .social h3 {
     color: var(--naranja-b0);
   }
 }
@@ -601,7 +602,8 @@ body {
   }
 
   .ingredientes-receta h3,
-  .procedimiento h3 {
+  .procedimiento h3,
+  .social h3 {
     color: var(--naranja-a0);
   }
 }
@@ -1264,6 +1266,17 @@ footer p {
 }
 
 .ingredientes-receta h3,
-.procedimiento h3 {
+.procedimiento h3,
+.social h3 {
   font-size: x-large;
+}
+
+.seccion-titulo-receta {
+  display: flex;
+  justify-content: space-between;
+}
+
+.icono-favorito {
+  font-size: 2rem !important;
+  color: var(--banana-a0);
 }

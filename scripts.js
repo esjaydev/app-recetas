@@ -293,10 +293,20 @@ function verReceta(recetaObject) {
 	headerReceta.setAttribute('class', 'header-receta')
 	contenedorReceta.appendChild(headerReceta)
 
+	const seccionTitulo = document.createElement('div')
+	seccionTitulo.setAttribute('class', 'seccion-titulo-receta')
+	headerReceta.appendChild(seccionTitulo)
+
 	const tituloRecetaDOM = document.createElement('h2')
 	tituloRecetaDOM.setAttribute('class', 'titulo-receta')
 	tituloRecetaDOM.innerText = recetaObject.titulo
-	headerReceta.appendChild(tituloRecetaDOM)
+	seccionTitulo.appendChild(tituloRecetaDOM)
+
+	const iconoFavorito = document.createElement('span')
+	iconoFavorito.setAttribute('class', 'material-symbols-outlined')
+	iconoFavorito.classList.add('icono-favorito')
+	iconoFavorito.innerText = 'star'
+	seccionTitulo.appendChild(iconoFavorito)
 
 	const duracionReceta = document.createElement('p')
 	duracionReceta.setAttribute('class', 'duracion-receta')
